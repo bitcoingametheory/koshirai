@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kanji-translator"
+version = "0.2.0"
+description = "Literal-preserving Japanese lexical lookup and evidence-aware parsing"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+dependencies = ["mecab-python3==1.0.12", "unidic-lite==1.0.8", "beautifulsoup4==4.15.0"]
+
+[project.optional-dependencies]
+images = ["Pillow==12.3.0", "numpy==2.5.4", "opencv-python-headless==4.14.0.94", "PyMuPDF==1.28.2"]
+test = ["pytest==9.2.0"]
+bert = ["torch==2.15.0", "transformers==5.22.2", "fugashi==1.5.2"]
+
+[project.scripts]
+kanji-translator = "kanji_translator.command_line:main"
+kanji-dictionaries = "kanji_translator.install_dictionaries:main"
+
+[tool.setuptools]
+packages = ["kanji_translator", "kanji_translator.readers", "kanji_translator.readers.html", "kanji_translator.readers.ocr"]
+package-dir = {kanji_translator = "kanji_translator"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+
+[tool.setuptools.package-data]
+kanji_translator = ["resources/*.json", "resources/*.gz", "resources/*.txt"]

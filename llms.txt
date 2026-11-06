@@ -1,0 +1,103 @@
+# Koshirai researcher agent guide
+
+README.md owns the public pipeline explanation. benchmarks/README.md owns counting
+rules, reproducibility and measured evidence. This is the agent entry point.
+
+The core result is raw OCR/general meanings, complete identified sequences,
+sword-specific meanings with library citations, and closest supported alternatives.
+An attested PrimaryReference or SupportingReference sequence-to-English mapping is source evidence.
+The same sequence in Fujishiro supports that sword meaning, subject to context and conflicts.
+Qwen vision only distinguishes visible strokes and similar character shapes.
+It must not perform semantic reasoning, translation, term selection, or identity resolution.
+
+[1. Source scan]
+        ↓
+[2. Regions, titles, chapters and oshigata links]
+        ↓
+[3. Reading order and raw kanji from NDLOCR]
+        ↓
+[4. Group characters with the sword/name library]
+        ↓
+[5. Select supported Japanese meanings and clause relationships]
+        ↓
+[6. Cited English presentation and reviewed corrections]
+
+OCR extracts characters, not their English meaning. Vertical Japanese reads top
+to bottom within a column and right to left between columns; horizontal segments
+are separate. Headings, sections, captions and figure boundaries constrain joins.
+Unknown chapters and uncertain figure associations must remain explicit.
+
+Match complete supported library spans with literal offsets and boxes. Preserve
+printed historical forms while normalizing lookup. 雲次 can support the smith name
+Unji; 雲 alone cannot. Context selects supported meanings and preserves alternatives.
+徳川 alone supports Tokugawa as a family name, not a specific historical person.
+
+The contextual selector now handles cited multi-character technical terms inside
+Japanese prose. Inspect each candidate's boundary evidence and complete_candidate
+when a larger compound is withheld. Do not apply a smaller term's English to an
+unmapped whole. Bilingual facts retain distinct edition/page hashes and provisional
+image review. Two editions of one work do not supply independent votes.
+The library_ocr input reads an explicit hash-bound saved export without new OCR.
+It preserves raw lines, polygons, engine and corrected/ordered fields separately.
+See docs/researcher_guide.md for its input contract.
+
+Keep Japanese as the authoritative parsing language. entry_structure.py owns explicit
+headings and bracketed era/province fields. japanese_clauses.py owns bounded relation
+proposals with polarity and modality. interpretations.jsonl retains those units.
+English summaries follow supported native argument/predicate selection; unsupported
+wording remains visible. Do not pivot through a whole-page English translation.
+The optional frontier_semantics.py experiment compares Astra and Sol on identical
+inputs; live model evaluation is pending. See docs/native_semantics.md.
+Preserve both legacy area-overlap and native_line_projection_v1 scores. The geometry
+repair is explicit, applies to both comparison sides and never changes references.
+
+PrimaryReference leads technical sword meanings. Club registers, SupportingReference and named scholarly
+sources support smiths and relationships; dealer records are attributed supplements.
+Keep technical terms, smiths/artisans, schools, sword traditions, measurements, historical people,
+clans, places/provinces, eras/dates, ordinary language and unresolved spans distinct.
+Retain measurement quantities/units and supported dimension links. Cite the actual
+source for each assertion; repeated dealer records are not independent evidence.
+
+NDLOCR owns literal recognition; layout logic owns order and relations; the span
+matcher proposes supported groupings; source evidence ranks supported
+category/reading/meaning candidates. Unvalidated vision and translation adapters
+are retired; explicit source-reviewed character corrections remain separate.
+Similarity retrieval narrows candidates and cannot establish characters or identity.
+The optional bert profile uses a pinned Japanese BERT encoder and trained role head.
+It selects supported roles or abstains. Preserve competing readings and meanings.
+Do not call model scores measured correctness probabilities, AI labels expert truth,
+or lookup rules a trained model. No paid inference starts by default.
+
+Install: sh setup.sh --install-ocr; add --install-bert for the optional classifier.
+CLI: the printed executable accepts scan INPUT --semantic-profile contextual --output OUTPUT.
+Data: KANJI_DATA_DIR, default ${XDG_DATA_HOME:-$HOME/.local/share}/kanji-translator.
+Inputs, outputs, environments, models and dictionaries stay outside the checkout.
+Evaluate: python3 -B benchmarks/evaluate_semantics.py --manifest MANIFEST
+--config CONFIG --output /external/evaluation; add --references REFERENCES
+--score-only after independent reference freeze. Inference runs in parse/scan.
+
+One application lives in kanji_translator/. Starting owners: document_parser.py
+(routing); image_regions.py and document_layout.py (structure); readers/ocr/ndlocr_lite.py
+(literal OCR); semantic_groups.py (grouping/interpretation); region_enrichment.py (lexical cache); scan_folder.py and research_corpus.py
+(scan/import). Consolidate these owners as needed; do not create competing routes.
+
+Benchmark grouped mentions per page/category, including false positives and misses.
+benchmarks/README.md defines counting rules, source-exclusive splits, ten smoke frames and 50 declared test regions,
+three baselines, label origins and supporting relation/OCR measures. Historical
+selected-target and character-rewrite scores are not this benchmark. Keep compact
+unique negative evidence; never invent exhaustive labels or wins.
+
+Preserve source hashes, original OCR, unique human corrections and accepted receipts.
+Corpus import must be idempotent and separate human review from proposals. Accepted
+source acquisition remains terminal. Private originals, credentials and private URLs
+never enter a release. Public samples require documented reuse rights.
+
+Cardinal rule: every file needs a current runtime, installation, verification,
+reproducibility, rights or unique-evidence purpose. Human steering replaces old
+methods and backlog. Verify successor/callers, then delete superseded executable
+routes, models, configuration, tests and duplicate instructions. Do not keep a failed
+method as an optional legacy mode. Preserve necessary historical evidence compactly;
+do not rely on Git history when publishing a one-commit repository.
+
+Run appropriate behavior/install/publication checks and one file-purpose inventory.
+Use the installed Python environment. Stop auditing after acceptance succeeds.

@@ -1,0 +1,10 @@
+{
+  "model_id": "tohoku-nlp/bert-base-japanese-char-v3",
+  "revision": "ccddee593a9e03a589ae1feedcd4d1eb06d6ba02",
+  "files": {
+    "config.json": "555245f0e3c4fc2362fc39026d665f605be28aa03a47b2ea99d6f5aeb9bebabf",
+    "tokenizer_config.json": "d433b268e882ad1771cf0803c7f39f0bf444355bbeb299479d1c1a302b38b7ca",
+    "vocab.txt": "57411bcac5e9559f2aa4d316a2217289048cb40fe23187b02a81aeb3e5d61cf3",
+    "pytorch_model.bin": "eb91b018b5226bdede70a07333ad58507a0479ffd3f2698109c29110e9078ee0"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "schema": "public-scan-examples-v1",
+  "examples": [
+    {
+      "id": "ndl-1116200-0239",
+      "pid": "1116200",
+      "frame": 239,
+      "title": "日本刀工辞典. 古刀篇",
+      "width": 3643,
+      "height": 2787,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1116200/R0000239/full/full/0/default.jpg",
+        "sha256": "f61fbfa4576cab5f9534104d46f91b87a5f8dde8a80903624c24cbae85f77c85",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1116200",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1116200/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1116200-0077",
+      "pid": "1116200",
+      "frame": 77,
+      "title": "日本刀工辞典. 古刀篇",
+      "width": 3643,
+      "height": 2787,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1116200/R0000077/full/full/0/default.jpg",
+        "sha256": "50dd9eb1c4039be780248fbe3d1ab37a8d77dcc2215911e950a691d3e9c90dff",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1116200",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1116200/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1116200-0011",
+      "pid": "1116200",
+      "frame": 11,
+      "title": "日本刀工辞典. 古刀篇",
+      "width": 3643,
+      "height": 2787,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1116200/R0000011/full/full/0/default.jpg",
+        "sha256": "ea829367d339a0152a71e9a48c8c5373afdfb08bf73d73776b372630a63fdc69",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1116200",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1116200/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1116191-0144",
+      "pid": "1116191",
+      "frame": 144,
+      "title": "日本刀工辞典. 新刀篇",
+      "width": 3616,
+      "height": 2795,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1116191/R0000144/full/full/0/default.jpg",
+        "sha256": "4d09f624cd5690867b94a0a754ec4de3ca0dcb0d05833beb29ce5dffc6cb5339",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1116191",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1116191/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1125196-0093",
+      "pid": "1125196",
+      "frame": 93,
+      "title": "新刀集 : 刃文と銘字",
+      "width": 3944,
+      "height": 2608,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1125196/R0000093/full/full/0/default.jpg",
+        "sha256": "26c5d0a50c30898489bcda6b3ee3882690ada6f1fe1f8a60f00b37fd2ad6c982",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1125196",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1125196/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1116200-0099",
+      "pid": "1116200",
+      "frame": 99,
+      "title": "日本刀工辞典. 古刀篇",
+      "width": 3643,
+      "height": 2787,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1116200/R0000099/full/full/0/default.jpg",
+        "sha256": "e5616feeae38c5cc9d87cf0678240e9a14a96d2f50d763beda159e91086163f6",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1116200",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1116200/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1125196-0095",
+      "pid": "1125196",
+      "frame": 95,
+      "title": "新刀集 : 刃文と銘字",
+      "width": 3944,
+      "height": 2608,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1125196/R0000095/full/full/0/default.jpg",
+        "sha256": "7e0d481299393ac30ec66b9fed7149303b194ea9d1541eb718d7b282f2e909d9",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1125196",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1125196/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1125196-0055",
+      "pid": "1125196",
+      "frame": 55,
+      "title": "新刀集 : 刃文と銘字",
+      "width": 3944,
+      "height": 2608,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1125196/R0000055/full/full/0/default.jpg",
+        "sha256": "7fabcbeb2f574f091dedcbbfe5b0195adb9da6d630a90d78d13f46cb2d7caa1f",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1125196",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1125196/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1125196-0051",
+      "pid": "1125196",
+      "frame": 51,
+      "title": "新刀集 : 刃文と銘字",
+      "width": 3944,
+      "height": 2608,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1125196/R0000051/full/full/0/default.jpg",
+        "sha256": "f54ccf5e2a6aa3808f318ddc22d31393bed698535f440e0040b3a1821bea616b",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1125196",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1125196/manifest.json"
+      }
+    },
+    {
+      "id": "ndl-1125196-0118",
+      "pid": "1125196",
+      "frame": 118,
+      "title": "新刀集 : 刃文と銘字",
+      "width": 3944,
+      "height": 2608,
+      "public_image": true,
+      "source": {
+        "url": "https://dl.ndl.go.jp/api/iiif/1125196/R0000118/full/full/0/default.jpg",
+        "sha256": "223977c99f4e77708d75836d7b8cca0844e9a24769aa6adb0164919731b7489a",
+        "attribution": "国立国会図書館 National Diet Library, JAPAN",
+        "rights": "PDM",
+        "rights_url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1125196",
+        "manifest_url": "https://dl.ndl.go.jp/api/iiif/1125196/manifest.json"
+      }
+    }
+  ],
+  "usage": "Public repository-only workflow examples; selected old labels are historical evidence, not exhaustive page truth."
+}

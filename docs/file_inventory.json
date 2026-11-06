@@ -1,0 +1,917 @@
+{
+  "schema": "release-file-inventory-v1",
+  "files": [
+    {
+      "path": ".gitignore",
+      "role": "installation and entry points",
+      "reason_retained": "Keeps private inputs, caches and environments out of releases.",
+      "runtime_required": false,
+      "sha256": "50a16db5d7ad0dfbfeceea0628ffe4ca6e534e65c6c63bdeca809fbf8bb99386"
+    },
+    {
+      "path": "LICENSE",
+      "role": "installation and entry points",
+      "reason_retained": "Permissions for original project contributions.",
+      "runtime_required": false,
+      "sha256": "e9d593418898badf3bc255965c9dec56ead71df86b08d03cb7a49fea2cdb8f32"
+    },
+    {
+      "path": "README.md",
+      "role": "installation and entry points",
+      "reason_retained": "Researcher starting point and accurate capability statement.",
+      "runtime_required": false,
+      "sha256": "61d72e166d7f5586191864c05d4b05d7e426cb9b5b0ac9eedff7d1cb045d11a1"
+    },
+    {
+      "path": "benchmarks/README.md",
+      "role": "evaluation evidence",
+      "reason_retained": "Canonical counting, annotation, supervision and evaluation interpretation rules.",
+      "runtime_required": false,
+      "sha256": "fb0c243da1f0244d6af60c8f06532ae38731a7d7c69e79ed9ce51450fe8c8692"
+    },
+    {
+      "path": "benchmarks/bert_evaluation.json",
+      "role": "evaluation evidence",
+      "reason_retained": "BERT training, same-source comparison, installed inference and reproduction receipts.",
+      "runtime_required": false,
+      "sha256": "80d2ec7670336ff0a3a0e654414b6f56e57ed50a0a158aeb2cfdbdb93d6e9144"
+    },
+    {
+      "path": "benchmarks/bert_predictions.jsonl.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Frozen BERT page predictions with pseudonymous provenance and local paths removed.",
+      "runtime_required": false,
+      "sha256": "c479a4f37a8b32c6b37f959b4fa57a1502c4515dc4fc5e0e2a3e0171d6410143"
+    },
+    {
+      "path": "benchmarks/bert_source_priority_predictions.jsonl.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Paired source-priority page predictions for the BERT comparison.",
+      "runtime_required": false,
+      "sha256": "1f4183b60f8314109694d9f12333bcd40fe5ebd2064663628077d322d3632b3b"
+    },
+    {
+      "path": "benchmarks/bert_training.json.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Frozen public OCR labels and synthetic teaching cases used for classifier reproduction.",
+      "runtime_required": false,
+      "sha256": "4819680de17f0c253ff89765e7d79d5e460cd08da9aafbc68bdb6c544f55acc3"
+    },
+    {
+      "path": "benchmarks/boundary_evaluation.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Paired complete-group counts, failed first pass and bounded retained-OCR evidence.",
+      "runtime_required": false,
+      "sha256": "7ff5c59f124b2721fac245905e0e6afce066cb04f4999ba8a0ded11d4b8a5a5b"
+    },
+    {
+      "path": "benchmarks/boundary_predictions.jsonl.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Frozen same-OCR predictions for the Japanese technical-boundary repair.",
+      "runtime_required": false,
+      "sha256": "9457d14af9ddba9ae32ab0b5030fa3821a058ec08219f116aa533a0b20ac1ffd"
+    },
+    {
+      "path": "benchmarks/build_role_facts.py",
+      "role": "evaluation",
+      "reason_retained": "Derive bounded school/tradition facts from hash-selected PrimaryReference headings.",
+      "runtime_required": false,
+      "sha256": "104e285783785e2f019c89ecf4099e70ffb20d7d18471e3c59f1563e1459c2ac"
+    },
+    {
+      "path": "benchmarks/compare_predictions.py",
+      "role": "evaluation",
+      "reason_retained": "Compare complete sword groups only after verifying identical pages and OCR.",
+      "runtime_required": false,
+      "sha256": "3245eb198a007f0f184f9f0eecb85a4d801acf8d304c846942610b803b32c3ab"
+    },
+    {
+      "path": "benchmarks/download_scans.py",
+      "role": "evaluation",
+      "reason_retained": "Fetch hash-bound public full pages outside this checkout.",
+      "runtime_required": false,
+      "sha256": "9c2f53e9b3fdd99e75d5f8f3abb11973ddb4b45bb46e4e2207241b87b10a0b71"
+    },
+    {
+      "path": "benchmarks/evaluate_bert.py",
+      "role": "evaluation",
+      "reason_retained": "Compare source priority and BERT on the same frozen, recovered source targets.",
+      "runtime_required": false,
+      "sha256": "d246b9f102e501b61b1433b81135549f44cbf6697fff6c8532d15ec5be04a3d5"
+    },
+    {
+      "path": "benchmarks/evaluate_frontier.py",
+      "role": "evaluation",
+      "reason_retained": "Prepare, run and compare the same bounded Japanese corpus on Astra and Sol.",
+      "runtime_required": false,
+      "sha256": "8fa606e29d1d6e5b5d636c7073b837399ebb4e70b3152a804f6f0cbb7e8a0bad"
+    },
+    {
+      "path": "benchmarks/evaluate_jev.py",
+      "role": "evaluation",
+      "reason_retained": "Compare live or replayed Jev with source priority on frozen recovered targets.",
+      "runtime_required": false,
+      "sha256": "269a02232da93b71bcef4a7ebd56a1f730b9c477c53abb5ed1123998a137e382"
+    },
+    {
+      "path": "benchmarks/evaluate_layout.py",
+      "role": "evaluation",
+      "reason_retained": "Score frozen source-image panel/link targets without supplying labels to inference.",
+      "runtime_required": false,
+      "sha256": "26360e5cb36fed0e5dc8d3909f1b60773703d1b79072f53ce361c24db2c42d5c"
+    },
+    {
+      "path": "benchmarks/evaluate_semantics.py",
+      "role": "evaluation",
+      "reason_retained": "Frozen same-OCR 10/50-page execution and exhaustive grouped-mention scoring.",
+      "runtime_required": false,
+      "sha256": "41df295d51a93585305c95804e4092ab0ff832fb9160cee4ed04fb5121973957"
+    },
+    {
+      "path": "benchmarks/export_predictions.py",
+      "role": "evaluation",
+      "reason_retained": "Publish frozen prediction evidence without machine-local crop cache paths.",
+      "runtime_required": false,
+      "sha256": "74bb2c541e175c9840ba2d276ef9ed1423db9fa372b8b043f9607c28faa7c7b9"
+    },
+    {
+      "path": "benchmarks/historical_evidence.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Sole consolidated original/corrected annotations and compact negative results preserved independently of Git history.",
+      "runtime_required": false,
+      "sha256": "c3092ba62ed28e33b858740d4c4451626f6b0c89a6f0ec9949c0395669dc1ff0"
+    },
+    {
+      "path": "benchmarks/jev_decisions.jsonl.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Checksum-verified provider decisions for credential-free offline replay.",
+      "runtime_required": false,
+      "sha256": "5199cd54d5c9d63289604531108cc363562d17b71cfbb794a2d2d07f49c64302"
+    },
+    {
+      "path": "benchmarks/jev_evaluation.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Live Jev, conditional-role, page, layout and offline-replay evidence.",
+      "runtime_required": false,
+      "sha256": "edc05ec61ff800fedd1143fd0562f1b04cfc8c5e5af7c49b0de0c5ac2070b0c4"
+    },
+    {
+      "path": "benchmarks/jev_predictions.jsonl.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Frozen Jev page predictions without local cache paths.",
+      "runtime_required": false,
+      "sha256": "def546048b27de2444b023562ae6634124b609c8d626a55bb680ff5fd4c29763"
+    },
+    {
+      "path": "benchmarks/native_semantics_evaluation.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Native entry/clause evidence, paired location policies, failed passes and pending model comparison.",
+      "runtime_required": false,
+      "sha256": "1b66aeec3bafbbcd4d7db04c987c10f3e9f1756200589200aad9db317ca6a1bd"
+    },
+    {
+      "path": "benchmarks/native_semantics_predictions.jsonl.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Frozen same-OCR native-entry predictions without machine-local cache paths.",
+      "runtime_required": false,
+      "sha256": "ad1c42f2a1e7734ccd8555ae1892df37bce94433cb040e16220d3dbcefe6cb5d"
+    },
+    {
+      "path": "benchmarks/sample_manifest.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Public sample frame identities, hashes and reuse rights used by downloader/release checks.",
+      "runtime_required": false,
+      "sha256": "cd6489949ddf43f84b15492af111d6f45b0ea3a05a5d006ddcb35d8e3cf19cfa"
+    },
+    {
+      "path": "benchmarks/sample_scans/fujishiro_koto_1116200_0011.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan fujishiro_koto_1116200_0011 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "ea829367d339a0152a71e9a48c8c5373afdfb08bf73d73776b372630a63fdc69"
+    },
+    {
+      "path": "benchmarks/sample_scans/fujishiro_koto_1116200_0077.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan fujishiro_koto_1116200_0077 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "50dd9eb1c4039be780248fbe3d1ab37a8d77dcc2215911e950a691d3e9c90dff"
+    },
+    {
+      "path": "benchmarks/sample_scans/fujishiro_koto_1116200_0099.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan fujishiro_koto_1116200_0099 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "e5616feeae38c5cc9d87cf0678240e9a14a96d2f50d763beda159e91086163f6"
+    },
+    {
+      "path": "benchmarks/sample_scans/fujishiro_koto_1116200_0239.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan fujishiro_koto_1116200_0239 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "f61fbfa4576cab5f9534104d46f91b87a5f8dde8a80903624c24cbae85f77c85"
+    },
+    {
+      "path": "benchmarks/sample_scans/fujishiro_shinto_1116191_0144.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan fujishiro_shinto_1116191_0144 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "4d09f624cd5690867b94a0a754ec4de3ca0dcb0d05833beb29ce5dffc6cb5339"
+    },
+    {
+      "path": "benchmarks/sample_scans/index.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Maps immutable public frame IDs to researcher-readable image filenames.",
+      "runtime_required": false,
+      "sha256": "152a93542149ea73f748fa28ee9792fb60768f15f406f82e6801663e2a3c257a"
+    },
+    {
+      "path": "benchmarks/sample_scans/shinto_hamon_signatures_1125196_0051.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan shinto_hamon_signatures_1125196_0051 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "f54ccf5e2a6aa3808f318ddc22d31393bed698535f440e0040b3a1821bea616b"
+    },
+    {
+      "path": "benchmarks/sample_scans/shinto_hamon_signatures_1125196_0055.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan shinto_hamon_signatures_1125196_0055 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "7fabcbeb2f574f091dedcbbfe5b0195adb9da6d630a90d78d13f46cb2d7caa1f"
+    },
+    {
+      "path": "benchmarks/sample_scans/shinto_hamon_signatures_1125196_0093.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan shinto_hamon_signatures_1125196_0093 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "26c5d0a50c30898489bcda6b3ee3882690ada6f1fe1f8a60f00b37fd2ad6c982"
+    },
+    {
+      "path": "benchmarks/sample_scans/shinto_hamon_signatures_1125196_0095.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan shinto_hamon_signatures_1125196_0095 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "7e0d481299393ac30ec66b9fed7149303b194ea9d1541eb718d7b282f2e909d9"
+    },
+    {
+      "path": "benchmarks/sample_scans/shinto_hamon_signatures_1125196_0118.jpg",
+      "role": "evaluation evidence",
+      "reason_retained": "Public original scan shinto_hamon_signatures_1125196_0118 for repository-only workflow validation; hash/rights in sample manifest.",
+      "runtime_required": false,
+      "sha256": "223977c99f4e77708d75836d7b8cca0844e9a24769aa6adb0164919731b7489a"
+    },
+    {
+      "path": "benchmarks/scan_rights.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Original public-scan rights receipts supporting redistributable examples.",
+      "runtime_required": false,
+      "sha256": "8b5ff74341c504bd70cb4200d6559f7871e6f731a8e7b88793eaf5f886566489"
+    },
+    {
+      "path": "benchmarks/semantic_evaluation.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Current measured workflow/evaluation receipt with unscored limitations.",
+      "runtime_required": false,
+      "sha256": "9cdca8f0702ae863904e42b9a28350886f20a9d722caea7c791a62c25427dd11"
+    },
+    {
+      "path": "benchmarks/semantic_predictions.jsonl.gz",
+      "role": "evaluation evidence",
+      "reason_retained": "Same-scan general, exact and contextual predictions needed to reproduce published grouping scores.",
+      "runtime_required": false,
+      "sha256": "0e30ff9125a0c7e1a783e1453c6c97b818c424e499e27337c9887cec87d94e28"
+    },
+    {
+      "path": "benchmarks/semantic_references.json",
+      "role": "evaluation evidence",
+      "reason_retained": "Frozen source-only declared-region annotations, public frame identities and reuse citations.",
+      "runtime_required": false,
+      "sha256": "4e44d35cd2e2f1e4aeaca742c4d21c0ea102aa5860ef88f831213a4d963c5935"
+    },
+    {
+      "path": "benchmarks/train_bert.py",
+      "role": "evaluation",
+      "reason_retained": "Train a reproducible BERT role head with page-disjoint source and template tests.",
+      "runtime_required": false,
+      "sha256": "8df349a064c0bb98be387c1bd247040809f5e266b3271cd6b4f9967320437f4c"
+    },
+    {
+      "path": "docs/approaches.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "9609e1bf7be0e7fbfec5dc75331b036598e5817a24d089cd03f3760cea113af7"
+    },
+    {
+      "path": "docs/bert_evaluation.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "2abe10d8dd41b64a375b79bafa6add43db69ef3ce70e63995b03e7ce07376e80"
+    },
+    {
+      "path": "docs/evaluation.html",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "f7e165938ce8c955561fa34dfdc27dd880fc3924697b554b41793cc2a90a25f3"
+    },
+    {
+      "path": "docs/file_guide.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": null
+    },
+    {
+      "path": "docs/file_inventory.json",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": null
+    },
+    {
+      "path": "docs/jev_research.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "3bf340ab4bec845cb1646954c826c873f7470f4d2029991eed2ecff70022889b"
+    },
+    {
+      "path": "docs/library_coverage.json",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "fdd37febda0832a7323a3a83af0d4b94fdbb5ae88ea95d5805a1e68e517025ff"
+    },
+    {
+      "path": "docs/native_semantics.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "0f5b90e6758e15dd692a6a6fe47f8518ae672c549e9093955b1db9210dc8dee1"
+    },
+    {
+      "path": "docs/notices/third_party_data.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "efa636a9338b62632706283a121f9bb88f46134ee1ad5a2fd885dec812550a1c"
+    },
+    {
+      "path": "docs/notices/unicode.txt",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    {
+      "path": "docs/researcher_guide.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "8ee29e779c76e0b3a4be976313cd66b33f91129e55417c636348ba79bc3ef313"
+    },
+    {
+      "path": "docs/reviewed_contributions.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "fe5db33794c6bd9eb72b193e6fa1a98636de1e05ca22ea0e623fe01af205521a"
+    },
+    {
+      "path": "docs/source_coverage.md",
+      "role": "researcher documentation",
+      "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
+      "runtime_required": false,
+      "sha256": "b90d0441540c7ac39e57de292cd4fb3e706c81b51665849b6d7680672475d602"
+    },
+    {
+      "path": "kanji_translator/__init__.py",
+      "role": "application",
+      "reason_retained": "Canonical public parser API. All operations preserve source-owned originals.",
+      "runtime_required": true,
+      "sha256": "6c00db83ab8a54805d0b41dd2884f4bda543c0ee726012a907bbdfadce3ba0e8"
+    },
+    {
+      "path": "kanji_translator/__main__.py",
+      "role": "application",
+      "reason_retained": "Package integration and public imports.",
+      "runtime_required": true,
+      "sha256": "a51d149b6d1dd2b388df5f1086e36d099ec42f8703fb898047514b1909356c4b"
+    },
+    {
+      "path": "kanji_translator/audit_library.py",
+      "role": "library maintenance",
+      "reason_retained": "Count retained mappings and inspect every stored English pair reproducibly.",
+      "runtime_required": false,
+      "sha256": "2b053bd0a7824cb562e2c23ba9ab9abf5dff8fe3887630861672720ddffbcd3a"
+    },
+    {
+      "path": "kanji_translator/bert_context.py",
+      "role": "application",
+      "reason_retained": "Frozen Japanese BERT features and a trained, evidence-constrained role head.",
+      "runtime_required": true,
+      "sha256": "fa04272ee17f74d7fd453aeb7ae8d39db8d7f8c844abc574fb24e5833b000c67"
+    },
+    {
+      "path": "kanji_translator/build_sword_library.py",
+      "role": "library maintenance",
+      "reason_retained": "Build a factual release from an explicitly supplied read-only parsed master.",
+      "runtime_required": false,
+      "sha256": "cd0c81bc3482f6159866fc82b371798b4b4c88646bdba2c0a1c1662dcf629205"
+    },
+    {
+      "path": "kanji_translator/candidate_lookup.py",
+      "role": "application",
+      "reason_retained": "Compatibility API for exact lexical lookup; gap completion is retired.",
+      "runtime_required": true,
+      "sha256": "41db8a2e32de744493720b9c202278eb9c5de33887a5d38014b8ef23a515c3c6"
+    },
+    {
+      "path": "kanji_translator/command_line.py",
+      "role": "application",
+      "reason_retained": "The sole public executable parser entry point; JSON in, deterministic JSON out.",
+      "runtime_required": true,
+      "sha256": "68a8d32934f9b2c4306f88d8204edd7ddc8c55be1a453401b447eaff5e3b7370"
+    },
+    {
+      "path": "kanji_translator/context_constraints.py",
+      "role": "application",
+      "reason_retained": "Typed constraints; absent context provides no evidence.",
+      "runtime_required": true,
+      "sha256": "bfd154540793897bf4be48170d823eecffc3085f78f1c0b175b7c3a16ea79d80"
+    },
+    {
+      "path": "kanji_translator/data_paths.py",
+      "role": "application",
+      "reason_retained": "External writable locations; no data or environments belong in the checkout.",
+      "runtime_required": true,
+      "sha256": "989fe3bd043ce5ca68a4d24c17c41d007b4ce07bcfa3c44c60f1cbbab3f97de8"
+    },
+    {
+      "path": "kanji_translator/dictionary_lookup.py",
+      "role": "application",
+      "reason_retained": "One typed lexical adapter for native text and recognized literal spans.",
+      "runtime_required": true,
+      "sha256": "7ecebac6a83bf243493bc3f34b28a6d1bd62416f85cd68174d8a13b434512516"
+    },
+    {
+      "path": "kanji_translator/dictionary_sources.py",
+      "role": "application",
+      "reason_retained": "Streaming public dictionary builder. Source restrictions remain first-class data.",
+      "runtime_required": true,
+      "sha256": "81a17360f371e0a2f59ffd68c55df3cd5401aa9ffa1fa90ed956270e53322ba9"
+    },
+    {
+      "path": "kanji_translator/document_layout.py",
+      "role": "application",
+      "reason_retained": "Source-owned document groups and associations, before lexical enrichment.",
+      "runtime_required": true,
+      "sha256": "1c1c4443d1e0bdbeecfa7e61436490bcb3c5e68f58c6191a54c827fc6dc79915"
+    },
+    {
+      "path": "kanji_translator/document_parser.py",
+      "role": "application",
+      "reason_retained": "Native -> exact reviewed transcript -> failed-region OCR -> proposal queue.",
+      "runtime_required": true,
+      "sha256": "b38ff880036323c326f4681a46d85c1f13d6830d808317402634c3e1d2b65e20"
+    },
+    {
+      "path": "kanji_translator/entry_structure.py",
+      "role": "application",
+      "reason_retained": "Read explicit Japanese dictionary-entry fields without inventing name splits.",
+      "runtime_required": true,
+      "sha256": "8081c8d5354a6458899ca3c3174251f815ba07d6e81381e45abdf4e2fd2a0856"
+    },
+    {
+      "path": "kanji_translator/frontier_semantics.py",
+      "role": "application",
+      "reason_retained": "Opt-in, bounded native-Japanese model experiment with closed source choices.",
+      "runtime_required": true,
+      "sha256": "d032b4f8bb96c2e2cfb9fd3876261e67f505780e5b02e3e619129c7e54e7e9e7"
+    },
+    {
+      "path": "kanji_translator/glossary_bridge.py",
+      "role": "application",
+      "reason_retained": "Join reviewed PrimaryReference glossary headwords to attested SupportingReference kanji forms.",
+      "runtime_required": true,
+      "sha256": "20821674ed1324535d2c73564ca5c3722a98e044f50e3f2b597c8ae8549b774d"
+    },
+    {
+      "path": "kanji_translator/image_regions.py",
+      "role": "application",
+      "reason_retained": "Bounded native-pixel layout/crops; derived data only, no source-owner writes.",
+      "runtime_required": true,
+      "sha256": "fece7ac5a247e74049bd412ab9a988b4dd5245b88afb78736b0bd0089d8aa192"
+    },
+    {
+      "path": "kanji_translator/install_bert.py",
+      "role": "installation",
+      "reason_retained": "Install the pinned Japanese BERT encoder into an external directory.",
+      "runtime_required": false,
+      "sha256": "ce1cf7813d8b158a91d9cf1901eb44ebe9fb810b59ad2007eb6da6e619528475"
+    },
+    {
+      "path": "kanji_translator/install_dictionaries.py",
+      "role": "installation",
+      "reason_retained": "Credential-free HTTPS downloads and repeatable external public-data build.",
+      "runtime_required": false,
+      "sha256": "e4673fa4a37756ad4a61089e22afcde702e99be9041668eae9e185aae4e359db"
+    },
+    {
+      "path": "kanji_translator/install_ocr.py",
+      "role": "installation",
+      "reason_retained": "Install the pinned CPU NDLOCR reader outside the checkout, without OS changes.",
+      "runtime_required": false,
+      "sha256": "aec893621c3992d8ead171e2f8adeadd15168175a37b4764f26e8118e8099db4"
+    },
+    {
+      "path": "kanji_translator/japanese_clauses.py",
+      "role": "application",
+      "reason_retained": "Bounded Japanese relation proposals and evidence-linked English presentation.",
+      "runtime_required": true,
+      "sha256": "67e8470e1e636585b24415168b6f12d546b26e2172f2bc7c0d002b6d46fa580f"
+    },
+    {
+      "path": "kanji_translator/jev_context.py",
+      "role": "application",
+      "reason_retained": "Opt-in Jev decisions over cited candidates, with strict validation and local replay.",
+      "runtime_required": true,
+      "sha256": "557bff20f9f175927c827cda6835dd3c8d863681b0ae6b1c65c6018ed9c53062"
+    },
+    {
+      "path": "kanji_translator/meaning_selection.py",
+      "role": "application",
+      "reason_retained": "Separate source English fragments, lexical candidates and selected meanings.",
+      "runtime_required": true,
+      "sha256": "f06191628b7d17ace3c98c887ccf201d3ae764fbc2b7aafd28a2cd29086ad330"
+    },
+    {
+      "path": "kanji_translator/readers/__init__.py",
+      "role": "application",
+      "reason_retained": "Native HTML and local OCR readers.",
+      "runtime_required": true,
+      "sha256": "a82fe36a43da4079b004eaa33a7d4211807f36e763720d1c2ff9187afc426b3b"
+    },
+    {
+      "path": "kanji_translator/readers/html/__init__.py",
+      "role": "application",
+      "reason_retained": "Internal canonical parser components.",
+      "runtime_required": true,
+      "sha256": "9b76c51fef13a2894279a6ad7a5efa47d1729f6675aa7ef16a0e9d2d77134521"
+    },
+    {
+      "path": "kanji_translator/readers/html/nihonto_club.py",
+      "role": "application",
+      "reason_retained": "Pure saved-DOM Club parsing; acquisition remains with scrapers.",
+      "runtime_required": true,
+      "sha256": "971aeb12b4d68efe394f5edb5388beb23f7749b96d011ec0f44dbecf745531e5"
+    },
+    {
+      "path": "kanji_translator/readers/ocr/__init__.py",
+      "role": "application",
+      "reason_retained": "The maintained literal Japanese OCR engine.",
+      "runtime_required": true,
+      "sha256": "13cce76db70934c0bdfa0cf8b260b625b7a0700f21865b587bd0b5215f0910d3"
+    },
+    {
+      "path": "kanji_translator/readers/ocr/ndlocr_lite.py",
+      "role": "application",
+      "reason_retained": "NDLOCR-Lite page recognition; literal text and regions remain proposals.",
+      "runtime_required": true,
+      "sha256": "89b3935b83f3ee8a09a83830921f4b31c013eb5fe0b4e54f27fd28d453f3afa5"
+    },
+    {
+      "path": "kanji_translator/readers/ocr/retained.py",
+      "role": "application",
+      "reason_retained": "Read a hash-bound library OCR snapshot without OCR calls or line joining.",
+      "runtime_required": true,
+      "sha256": "90dfef73c6287c4eec589f64546647f22e47fc9dbac80e6ef6ab4fbe55a99ee2"
+    },
+    {
+      "path": "kanji_translator/reading_candidates.py",
+      "role": "application",
+      "reason_retained": "Optional literal-aligned reading evidence; no inferred historical-name readings.",
+      "runtime_required": true,
+      "sha256": "db09f6478a95a6ee2f731d49b45ae1ceda4a1212bded9a9894326a47ab0c2f7a"
+    },
+    {
+      "path": "kanji_translator/region_enrichment.py",
+      "role": "application",
+      "reason_retained": "Cache the single literal lexical stage; semantic interpretation follows it.",
+      "runtime_required": true,
+      "sha256": "69357552f1bf224d9bf3990eff9b6699fb7a4c54bce1e460b3da543850e0cdf3"
+    },
+    {
+      "path": "kanji_translator/request_contracts.py",
+      "role": "application",
+      "reason_retained": "Finite public request validation and deterministic serialization.",
+      "runtime_required": true,
+      "sha256": "88ad6cd852aaa0ed5c8646b1f6fc7b549b2ba0942ce6e1f788c86117cc7c53f6"
+    },
+    {
+      "path": "kanji_translator/research_corpus.py",
+      "role": "application",
+      "reason_retained": "Private, immutable scan observations and explicit human mapping reviews.",
+      "runtime_required": true,
+      "sha256": "edbce470d514202e510a78642155e0e7118f9a213206d16b61eec777bdffdb14"
+    },
+    {
+      "path": "kanji_translator/resource_limits.py",
+      "role": "application",
+      "reason_retained": "Admission and continuous reserve checks for one owned CUDA process group.",
+      "runtime_required": true,
+      "sha256": "7a30a9949c11bb759c41848b44ba4382be5294c7fb525b5a084a941ebb02349c"
+    },
+    {
+      "path": "kanji_translator/resources/bert_base_manifest.json",
+      "role": "runtime data",
+      "reason_retained": "Pinned Japanese BERT encoder file identities and hashes.",
+      "runtime_required": true,
+      "sha256": "e4a9be7711586ed89f264048ff73c3385e18bb1f4defea29373818c53cc2887a"
+    },
+    {
+      "path": "kanji_translator/resources/bert_head.json.gz",
+      "role": "runtime data",
+      "reason_retained": "Trained contextual role classifier parameters; no source prose.",
+      "runtime_required": true,
+      "sha256": "698add578aa01e9ac860b7591aa91a280e516c17f6393d620077ad05251b63f6"
+    },
+    {
+      "path": "kanji_translator/resources/bert_head_manifest.json",
+      "role": "runtime data",
+      "reason_retained": "Classifier checksum, encoder revision and training provenance.",
+      "runtime_required": true,
+      "sha256": "6658748de00b565f6af50a7ef84b2c84b66a6447adc48cf3dff68c12045832c4"
+    },
+    {
+      "path": "kanji_translator/resources/data_licenses.txt",
+      "role": "runtime data",
+      "reason_retained": "Required attribution for bundled derived facts.",
+      "runtime_required": true,
+      "sha256": "de6db412cc925b9feca330e70f8906901e66924178f7f6c7f034e3ecb1589f61"
+    },
+    {
+      "path": "kanji_translator/resources/semantic_roles.json",
+      "role": "runtime data",
+      "reason_retained": "Cited private-reference school, tradition and complete-name role facts.",
+      "runtime_required": true,
+      "sha256": "e60897418a427a3fa8e91db7e818ac909fdade527c129eaad6304c06493a043e"
+    },
+    {
+      "path": "kanji_translator/resources/sword_library.json.gz",
+      "role": "runtime data",
+      "reason_retained": "Source-supported term/name facts used by literal span matching.",
+      "runtime_required": true,
+      "sha256": "7ca81c5e354004a212444c323f0696174122569e5cce438f2cf1e41f9bb581b1"
+    },
+    {
+      "path": "kanji_translator/resources/sword_library_manifest.json",
+      "role": "runtime data",
+      "reason_retained": "Checks bundled library hashes, counts and source licensing.",
+      "runtime_required": true,
+      "sha256": "9d8245b1cc2a9749fb2330140c209d1bd7bc38b5ae25eba64e9ce542d2ac77da"
+    },
+    {
+      "path": "kanji_translator/result_cache.py",
+      "role": "application",
+      "reason_retained": "Content-addressed optional derived cache; every routing dependency is explicit.",
+      "runtime_required": true,
+      "sha256": "6c11553e32676440b3fb37f674f68e35fc64143599c87d6d4e7a235877173b7a"
+    },
+    {
+      "path": "kanji_translator/reviewed_readings.py",
+      "role": "application",
+      "reason_retained": "Explicit human review staging and exact source-bound reuse.",
+      "runtime_required": true,
+      "sha256": "0f731c15f87efec2e2d88d1b940995c381866f6b2e3dafaf173a5a8c15552214"
+    },
+    {
+      "path": "kanji_translator/scan_folder.py",
+      "role": "application",
+      "reason_retained": "Local pages -> regions -> OCR -> core Japanese -> sword facts -> review files.",
+      "runtime_required": true,
+      "sha256": "a2a324a13421b55506fa1beceb08d40c9fb0d87e28438c0c18886109671968f1"
+    },
+    {
+      "path": "kanji_translator/semantic_groups.py",
+      "role": "application",
+      "reason_retained": "Literal, source-supported span matching and contextual semantic selection.",
+      "runtime_required": true,
+      "sha256": "be5e83c9c2b11add2aeacec57b45ec80f6a33192a4b64fc3edeceeea60d9fd2c"
+    },
+    {
+      "path": "kanji_translator/semantic_roles.py",
+      "role": "application",
+      "reason_retained": "Single owner of cited school, tradition and complete-name role assertions.",
+      "runtime_required": true,
+      "sha256": "b6a943360bcdae01df18c0afbba248c317db2d7d5a7f8c0669e7fc9e173574a7"
+    },
+    {
+      "path": "kanji_translator/source_evidence.py",
+      "role": "application",
+      "reason_retained": "Read-only reviewed evidence reuse. Explicit human reviews remain separate from model proposals.",
+      "runtime_required": true,
+      "sha256": "1b497aa455c27c71f51e68f1be77181187a107606d7e008c11911fd4dc2ea5f5"
+    },
+    {
+      "path": "kanji_translator/sword_library.py",
+      "role": "application",
+      "reason_retained": "Portable derived sword facts. Source prose and private records are absent.",
+      "runtime_required": true,
+      "sha256": "ddddaa3d35a8599d4abba7ecd33098d887efc6deb1663ca09ec8ccf3074c4a0f"
+    },
+    {
+      "path": "kanji_translator/text_normalization.py",
+      "role": "application",
+      "reason_retained": "Single text representation and literal-offset owner.",
+      "runtime_required": true,
+      "sha256": "f9cbffb7827889a2510841a4b1fcdc382c8dd79013145d3590f3f5e7b43e38da"
+    },
+    {
+      "path": "llms.txt",
+      "role": "installation and entry points",
+      "reason_retained": "Repository-only instructions for researcher agents.",
+      "runtime_required": false,
+      "sha256": "61f0631fbb2950735bd1d8f70296db430078f8501a736b890ebac110253781c8"
+    },
+    {
+      "path": "pyproject.toml",
+      "role": "installation and entry points",
+      "reason_retained": "Package metadata, pinned dependencies and executable entry points.",
+      "runtime_required": false,
+      "sha256": "26db752daec77f8c1347810c14674b259a9a1f843d7d0e643ddb402fe69b2108"
+    },
+    {
+      "path": "setup.sh",
+      "role": "installation and entry points",
+      "reason_retained": "One-command external-environment installation.",
+      "runtime_required": false,
+      "sha256": "cff6a3789c11af9e5998ea3970a3690c8d06a3401de501ac7b24fef64078baab"
+    },
+    {
+      "path": "tests/check_release.py",
+      "role": "verification",
+      "reason_retained": "Verifies check release behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "458c3460f40eeb975afb93810d07ad91ec8d8b118fff8e953b3733b42701f1fc"
+    },
+    {
+      "path": "tests/test_bert_context.py",
+      "role": "verification",
+      "reason_retained": "Verifies bert context behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "75652d71168fa5304ca25686c7c27ac3142f7f6c423bb0eb0a6f1fba7582ebc1"
+    },
+    {
+      "path": "tests/test_bilingual_alignments.py",
+      "role": "verification",
+      "reason_retained": "Verifies bilingual alignments behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "89a05e4d6c022f94ee9f145a55866b879cc0b29c2fc40005342ef5c9cca4ea9c"
+    },
+    {
+      "path": "tests/test_dictionary_sources.py",
+      "role": "verification",
+      "reason_retained": "Verifies dictionary sources behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "6a2d905b134efba7aecd5d0391fb2eba802c2944987a32aecf901b6a559196d5"
+    },
+    {
+      "path": "tests/test_document_parser.py",
+      "role": "verification",
+      "reason_retained": "Verifies document parser behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "b4785f7eb023a16578340d118cfb07aef354f154aa6901c29eb7324be18f854b"
+    },
+    {
+      "path": "tests/test_frontier_semantics.py",
+      "role": "verification",
+      "reason_retained": "Verifies frontier semantics behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "74c0993864880194865d81e467f53897ecb7358656522d3be6ba960c1251dcf3"
+    },
+    {
+      "path": "tests/test_image_regions.py",
+      "role": "verification",
+      "reason_retained": "Verifies image regions behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "5f4f930d01624e3e12f46d856d59e88e0931bdf1a67155eff5209172c20f2d11"
+    },
+    {
+      "path": "tests/test_install_ocr.py",
+      "role": "verification",
+      "reason_retained": "Verifies install ocr behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "9be5b83be64f0e7fb217625512f945bfe3370c1ee2f1503156f2d35136bd0bb4"
+    },
+    {
+      "path": "tests/test_jev_context.py",
+      "role": "verification",
+      "reason_retained": "Verifies jev context behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "b534f4ab7e53a972aa0f91d48d85bdebaeed0e1650fc6507e7536691c171c5f6"
+    },
+    {
+      "path": "tests/test_meaning_selection.py",
+      "role": "verification",
+      "reason_retained": "Verifies meaning selection behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "450b8e0d23c56c0b571c6a95ff0239d418b9a8c9594a2469b50c83d35f388350"
+    },
+    {
+      "path": "tests/test_native_semantics.py",
+      "role": "verification",
+      "reason_retained": "Verifies native semantics behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "037adec5d74762c158e57ae01e7614b4ef78f95d3728cddc6610644b1dc4a707"
+    },
+    {
+      "path": "tests/test_ndlocr_lite.py",
+      "role": "verification",
+      "reason_retained": "Verifies ndlocr lite behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "eb5b715542b6e2ea01c0d556563177a2b6c7e1dae17acf384645926adcfdcb9f"
+    },
+    {
+      "path": "tests/test_research_corpus.py",
+      "role": "verification",
+      "reason_retained": "Verifies research corpus behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "320315cb28060d5bb15b6ab4a4a1b1ddf39b8eccfa98e15efa6e2f4a2f2b52ee"
+    },
+    {
+      "path": "tests/test_resource_limits.py",
+      "role": "verification",
+      "reason_retained": "Verifies resource limits behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "7ec2f5ae6387ce4702ec80582bb65422fd223daded2c692d211625648d5a3e8a"
+    },
+    {
+      "path": "tests/test_retained_ocr.py",
+      "role": "verification",
+      "reason_retained": "Verifies retained ocr behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "1b9c2c59170580c856aa3cff6c9c79f56f4b3a6cc25876912c2759844967a40e"
+    },
+    {
+      "path": "tests/test_reviewed_readings.py",
+      "role": "verification",
+      "reason_retained": "Verifies reviewed readings behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "48041c2ecd42a74b9c815a87e4691778641fa3209f18a1aaf73319975768b5ee"
+    },
+    {
+      "path": "tests/test_scan_folder.py",
+      "role": "verification",
+      "reason_retained": "Verifies scan folder behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "1880beebc499f0e3339254e7e55e9158eeb8d9b3253b6ec67e4c0da7e96627b6"
+    },
+    {
+      "path": "tests/test_semantic_evaluation.py",
+      "role": "verification",
+      "reason_retained": "Verifies semantic evaluation behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "2b2f24bd52c7d348710ead3f0db5b9302f714b8b6efadd26af36086fe2adf168"
+    },
+    {
+      "path": "tests/test_semantic_groups.py",
+      "role": "verification",
+      "reason_retained": "Verifies semantic groups behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "d57ff8dfb44b90877d2d35da99134b5ae30674e14f0b5c0bd2dd582965e781f3"
+    },
+    {
+      "path": "tests/test_source_evidence.py",
+      "role": "verification",
+      "reason_retained": "Verifies source evidence behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "ec6bf51dfac879dfeecffba57bd7df8c4257d75fc8a8e830a993996a573dbfcf"
+    },
+    {
+      "path": "tests/test_sword_library.py",
+      "role": "verification",
+      "reason_retained": "Verifies sword library behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "76d121e2f43e7ac20e0af14c9bbbd069ae7819df548ebdb814580c1934b4557c"
+    },
+    {
+      "path": "tests/test_text_parsing.py",
+      "role": "verification",
+      "reason_retained": "Verifies text parsing behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "9194e76b513954c99e1910e5a9421dd4b0b20ea92c9a0a8d017f6f87a398bd3a"
+    },
+    {
+      "path": "tools/audit_repository.py",
+      "role": "maintenance",
+      "reason_retained": "Rebuilds the complete file inventory and checks syntax without changing source data.",
+      "runtime_required": false,
+      "sha256": "86890065d32dfa1e63b1ad76623ec00fdbda011c3753c7e1b85a31d7454d28ef"
+    }
+  ],
+  "policy": "Every file has a runtime, installation, verification, evidence, legal or researcher role. Supporting evidence is essential to reproducibility, not loaded for every scan.",
+  "self_hash_policy": "Inventory and generated guide are listed without recursive self hashes."
+}

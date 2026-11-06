@@ -1,0 +1,7532 @@
+{
+  "schema": "library-mapping-audit-v1",
+  "bundle_sha256": "7ca81c5e354004a212444c323f0696174122569e5cce438f2cf1e41f9bb581b1",
+  "rule": "Distinct all-kanji literal fields in terms, names and forms; no alias-table inflation.",
+  "qualification": "Every stored pair is screened; screening does not verify source alignment or semantic accuracy.",
+  "lengths": [
+    {
+      "length": 1,
+      "spellings": 680,
+      "with_direct_english": 31,
+      "stored_pairs": 34,
+      "lexical_candidates": 34,
+      "quarantined_pairs": 0,
+      "same_record_reading_and_english": 24,
+      "verified_pair_count": null
+    },
+    {
+      "length": 2,
+      "spellings": 9845,
+      "with_direct_english": 253,
+      "stored_pairs": 266,
+      "lexical_candidates": 264,
+      "quarantined_pairs": 2,
+      "same_record_reading_and_english": 73,
+      "verified_pair_count": null
+    },
+    {
+      "length": 3,
+      "spellings": 4228,
+      "with_direct_english": 57,
+      "stored_pairs": 63,
+      "lexical_candidates": 63,
+      "quarantined_pairs": 0,
+      "same_record_reading_and_english": 27,
+      "verified_pair_count": null
+    },
+    {
+      "length": 4,
+      "spellings": 3380,
+      "with_direct_english": 67,
+      "stored_pairs": 74,
+      "lexical_candidates": 74,
+      "quarantined_pairs": 0,
+      "same_record_reading_and_english": 5,
+      "verified_pair_count": null
+    },
+    {
+      "length": 5,
+      "spellings": 1507,
+      "with_direct_english": 10,
+      "stored_pairs": 10,
+      "lexical_candidates": 10,
+      "quarantined_pairs": 0,
+      "same_record_reading_and_english": 0,
+      "verified_pair_count": null
+    },
+    {
+      "length": "6–12",
+      "spellings": 1985,
+      "with_direct_english": 11,
+      "stored_pairs": 12,
+      "lexical_candidates": 12,
+      "quarantined_pairs": 0,
+      "same_record_reading_and_english": 0,
+      "verified_pair_count": null
+    }
+  ],
+  "source_counts": {
+    "dealer:aoi_auction": {
+      "forms": 2608
+    },
+    "dealer:choshuya": {
+      "forms": 110
+    },
+    "dealer:eirakudo": {
+      "forms": 385
+    },
+    "primary_reference": {
+      "forms": 2079,
+      "lexical_candidate": 89,
+      "quarantined_candidate": 2
+    },
+    "supporting_reference-encyclopedia": {
+      "forms": 1701,
+      "lexical_candidate": 77
+    },
+    "dealer:aoi_shop": {
+      "forms": 1146
+    },
+    "dealer:dealer_jp_aoi_art": {
+      "forms": 1036
+    },
+    "dealer:dealer_jp_eirakudo": {
+      "forms": 268
+    },
+    "dealer:iida_koendo": {
+      "forms": 274
+    },
+    "dealer:seikodo": {
+      "forms": 5
+    },
+    "dealer:seiyudo_jp": {
+      "forms": 7781
+    },
+    "dealer:touken_komachi": {
+      "forms": 38
+    },
+    "dealer:world_seiyudo": {
+      "forms": 204
+    },
+    "dealer:yahoo": {
+      "forms": 216
+    },
+    "supporting_reference": {
+      "forms": 8602,
+      "lexical_candidate": 60
+    },
+    "supporting_reference-saved-books": {
+      "forms": 7589,
+      "lexical_candidate": 226
+    },
+    "club": {
+      "forms": 12368,
+      "lexical_candidate": 1
+    },
+    "primary_reference-register": {
+      "forms": 376,
+      "lexical_candidate": 8
+    },
+    "nwatch": {
+      "forms": 5168,
+      "lexical_candidate": 6
+    }
+  },
+  "pairs": [
+    {
+      "literal": "一則",
+      "english": "f Kazunori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "一貫齋",
+      "english": "f Ikkansai",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "一輪",
+      "english": "f Ichirin",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "一遍",
+      "english": "f Ippen",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "一重鎺",
+      "english": "One piece habaki",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "hitoe-habaki"
+        }
+      ]
+    },
+    {
+      "literal": "一雄",
+      "english": "f Kazuo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "一鯉齋",
+      "english": "f Ichirisai",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "丁子足",
+      "english": "clove-shaped temper legs",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "choji ashi"
+        }
+      ]
+    },
+    {
+      "literal": "三代",
+      "english": "Third generation",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "sandai"
+        }
+      ]
+    },
+    {
+      "literal": "三代兼定",
+      "english": "rd generation Kanesada",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "三原正家",
+      "english": "st generation Mihara Masaie",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "三善長道",
+      "english": "st generation Miyoshi Nagamichi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "三本杉",
+      "english": "pointed temper pattern resembling three cedar trees",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Sanbon-sugi"
+        }
+      ]
+    },
+    {
+      "literal": "三池",
+      "english": "in Miike",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "三角正春",
+      "english": "data about Misumi Masaharu",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "三雲",
+      "english": "tsukagashira excavated in Mikumo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "上三代",
+      "english": "Test cuts kami-sandai",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "上田",
+      "english": "Ueda fief",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "下原康重",
+      "english": "st generation Shitahara Yasushige",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "下館",
+      "english": "active years in Shimodate",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "中",
+      "english": "root character",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "中心",
+      "english": "sword tang",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "nakago"
+        }
+      ]
+    },
+    {
+      "literal": "中敷",
+      "english": "in Nakajiki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "中杢目肌",
+      "english": "medium burl-pattern grain",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Chu-mokume hada"
+        }
+      ]
+    },
+    {
+      "literal": "中直刃",
+      "english": "Medium width suguha",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "chū-suguha"
+        }
+      ]
+    },
+    {
+      "literal": "中直刃",
+      "english": "medium-width straight temper pattern",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Chu-suguha"
+        }
+      ]
+    },
+    {
+      "literal": "中靑江家次",
+      "english": "Chu-Aoe letsugu",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "丸耳",
+      "english": "Round tsuba rim",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "maru-mimi"
+        }
+      ]
+    },
+    {
+      "literal": "久次",
+      "english": "f Hisatsugu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "久留米",
+      "english": "in Kurume",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "二代",
+      "english": "Second generation",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "nidai"
+        }
+      ]
+    },
+    {
+      "literal": "二代祐包",
+      "english": "bers Sukakane Il",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "二重鎺",
+      "english": "Two-piece habaki",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "nijū-habaki"
+        }
+      ]
+    },
+    {
+      "literal": "五助",
+      "english": "ff Gosuke",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "五返舎半九",
+      "english": "ff Gohensha Hanku",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "仁兵衞",
+      "english": "f Nibei",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "仕込杖",
+      "english": "cane swords in shikomizue",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "仙台國包",
+      "english": "nd generation Sendai Kunikane",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "仙台國包",
+      "english": "st generation Sendai Kunikane",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "代作",
+      "english": "authorized substitute production",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "daisaku"
+        }
+      ]
+    },
+    {
+      "literal": "代銘",
+      "english": "authorized substitute signature",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "daimei"
+        }
+      ]
+    },
+    {
+      "literal": "以南蠻鐵",
+      "english": "example nanban-tetsu o motte",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "伊兵衞秀次",
+      "english": "we know Ihei Hidetsugu",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "伊豆守正房",
+      "english": "some latergenerationsused thename Masafusa",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "伏見",
+      "english": "based in Fushimi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "伏見治助",
+      "english": "rice trader Fushimi Jisuke",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "伴大納言繪詞",
+      "english": "picture scroll Bandainagon Ekotoba",
+      "length": 6,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "似我蜂",
+      "english": "red-banded sand wasp sugabachi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "來國俊",
+      "english": "smiths included Rai Kunitoshi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "俗名",
+      "english": "Common first name",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "zokumyō"
+        }
+      ]
+    },
+    {
+      "literal": "信一",
+      "english": "ff Nobukazu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "信久",
+      "english": "f Nobuhisa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "信克",
+      "english": "f Nobukatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "信國",
+      "english": "first-generation Nobukuni",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "信國",
+      "english": "second smith named Nobukuni",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "信國",
+      "english": "seen on certain Nobukuni",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "信家",
+      "english": "iron tsuba signed Nobuie",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "偽銘",
+      "english": "false sword signature",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "gimei"
+        }
+      ]
+    },
+    {
+      "literal": "備前橫山",
+      "english": "THEBIZENYOKOYAMA",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        },
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "傳七重常",
+      "english": "former student Denshichi Shigetsune",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "傳三郞友貞",
+      "english": "nd gen",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "元茂",
+      "english": "two younger brothers Motoshige",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "先",
+      "english": "Tip",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "saki"
+        }
+      ]
+    },
+    {
+      "literal": "光保",
+      "english": "craftsman name Yanagawa Mitsuyasu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "光倍",
+      "english": "f Mitsumasu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "光嗣",
+      "english": "f Mitsutsugu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "光平",
+      "english": "f Mitsuhira",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "光時",
+      "english": "f Mitsutoki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "光晴",
+      "english": "f Mitsuharu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "光賴",
+      "english": "f Mitsuyori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "克則",
+      "english": "f Katsunori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "全彫",
+      "english": "Round marubori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "再刃",
+      "english": "Rehardened edge",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "saiha"
+        }
+      ]
+    },
+    {
+      "literal": "出羽",
+      "english": "northern Dewa region",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "刀",
+      "english": "edge-up curved sword",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "katana"
+        }
+      ]
+    },
+    {
+      "literal": "刀箪笥",
+      "english": "Sword drawer",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "katana-dansu"
+        }
+      ]
+    },
+    {
+      "literal": "刀鍛冶",
+      "english": "Swordsmith",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "katana-kaji"
+        }
+      ]
+    },
+    {
+      "literal": "刃文",
+      "english": "temper boundary pattern",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "hamon"
+        }
+      ]
+    },
+    {
+      "literal": "刄文",
+      "english": "temper boundary pattern",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "hamon"
+        }
+      ]
+    },
+    {
+      "literal": "初代",
+      "english": "First generation",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "shodai"
+        }
+      ]
+    },
+    {
+      "literal": "利宗",
+      "english": "f Toshimune",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "利貞",
+      "english": "f Toshisada",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "勘六",
+      "english": "f Kanroku",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "勘左衞門",
+      "english": "f Kanzaemon",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "勝實",
+      "english": "f Katsuzane",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "北岑",
+      "english": "f Hokushin",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "北嶺",
+      "english": "f Hokurei",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "北齋",
+      "english": "f Hokusai",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "半兵衞",
+      "english": "f Hanbei",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "南紀重國",
+      "english": "nd generation Nanki Shigekuni",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "南紀重國",
+      "english": "st generation Nanki Shigekuni",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "南紀重國",
+      "english": "th generation Nanki Shigekuni",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "印",
+      "english": "Seal",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "印銘",
+      "english": "in-mei",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "友綱",
+      "english": "Yamat Tomotsuna",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "古一文字",
+      "english": "Ko-lchimonji",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "古今銘盡",
+      "english": "older Kokon Mei Zukushi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "古備前正恆",
+      "english": "rare in Ko-Bizen Masatsune",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "古刀",
+      "english": "swords through 1595",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Koto"
+        }
+      ]
+    },
+    {
+      "literal": "吉則",
+      "english": "f Yoshinori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "吉平",
+      "english": "f Yoshihira",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "吉廣",
+      "english": "Tsutsui craftsmen like Yoshihiro",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "名乗",
+      "english": "Formal first name",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "nanori"
+        }
+      ]
+    },
+    {
+      "literal": "吾妻鏡",
+      "english": "oder Azuma Kagami",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "味墨",
+      "english": "f Miboku",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "命明",
+      "english": "ff Nagaaki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "唐草",
+      "english": "Arabesque",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "karakusa"
+        }
+      ]
+    },
+    {
+      "literal": "善長",
+      "english": "f Yoshinaga",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "嘉左衞門",
+      "english": "f Kazaemon",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "四代忠吉",
+      "english": "th generation Tadayoshi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "因幡忠國",
+      "english": "st generation Inaba Tadakuni",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "国宝",
+      "english": "National treasure",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kokuhō"
+        }
+      ]
+    },
+    {
+      "literal": "國吉",
+      "english": "gives Kuniyoshi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "國吉",
+      "english": "grandsons Kuniyoshi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "土佐守",
+      "english": "unknown Tosa no Kami",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "土屋安親",
+      "english": "th gen",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "土肥義周",
+      "english": "scabbard maker Dohi Yoshichika",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "在銘",
+      "english": "original signature retained",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "zaimei"
+        }
+      ]
+    },
+    {
+      "literal": "地肌",
+      "english": "forged surface grain",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "jihada"
+        }
+      ]
+    },
+    {
+      "literal": "地金",
+      "english": "blade steel",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "jigane"
+        }
+      ]
+    },
+    {
+      "literal": "地鉄",
+      "english": "blade steel",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "jigane"
+        }
+      ]
+    },
+    {
+      "literal": "地鐵",
+      "english": "blade steel",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "jigane"
+        }
+      ]
+    },
+    {
+      "literal": "埋忠重義",
+      "english": "f Umetada Shigeyoshi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "埴輪",
+      "english": "Ancient terracotta figure",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "haniwa"
+        }
+      ]
+    },
+    {
+      "literal": "基起",
+      "english": "ff Motooki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "堀井秀明",
+      "english": "famous master Horii Hideaki",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "塗物師",
+      "english": "Lacquer artist",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "nurimono-shi"
+        }
+      ]
+    },
+    {
+      "literal": "壽光",
+      "english": "sword hilts Toshimitsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "壽命",
+      "english": "f Jumei",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "壽景",
+      "english": "f Toshikage",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "多光",
+      "english": "f Masamitsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "夜半亭呉崖",
+      "english": "haiku poet Yahan Teigogai",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "大丸",
+      "english": "Large roundish kaeri",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ō-maru"
+        }
+      ]
+    },
+    {
+      "literal": "大坂",
+      "english": "SWORDSMITHSOFOSAKA",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        },
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "大慶直胤",
+      "english": "THETAIKEINAOTANE",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        },
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "大慶直胤",
+      "english": "famous smith Taikei Naotane",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "大杢目肌",
+      "english": "large burl-pattern grain",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "O-mokume hada"
+        }
+      ]
+    },
+    {
+      "literal": "太刀",
+      "english": "suspended curved sword",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "tachi"
+        }
+      ]
+    },
+    {
+      "literal": "奈良利壽",
+      "english": "great master Nara Toshinaga",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "奈良利壽",
+      "english": "modelled on Nara Toshinaga",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "姿",
+      "english": "overall sword shape",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "sugata"
+        }
+      ]
+    },
+    {
+      "literal": "字",
+      "english": "Character",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ji"
+        }
+      ]
+    },
+    {
+      "literal": "孝興",
+      "english": "f Takaoki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "安倫",
+      "english": "nd generation Yasutomo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "安光",
+      "english": "ff Yasumitsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "安則",
+      "english": "f Yasunori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "安南",
+      "english": "former Indochinese empire Annam",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "安昌",
+      "english": "ff Yasumasa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "安藝廣隆",
+      "english": "st generation Aki Hirotaka",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "安達梅溪",
+      "english": "f Adachi Umetani",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "完度",
+      "english": "f Munetaku",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "宗利",
+      "english": "f Munetoshi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "宗是",
+      "english": "f Munekore",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "宗滿",
+      "english": "f Munemitsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "宗秀",
+      "english": "f Munehide",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "宗英",
+      "english": "f Munehide",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "実名",
+      "english": "Formal first name",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "jitsumei"
+        }
+      ]
+    },
+    {
+      "literal": "宣次",
+      "english": "f Nobutsugu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "宮下",
+      "english": "Miyashita am",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "宮口壽廣",
+      "english": "Shigetsugu's students Miyaguchi Toshihiro",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "家助",
+      "english": "lesuke",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "家彫",
+      "english": "any works in iebori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "寸法",
+      "english": "Measurement",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "sunpō"
+        }
+      ]
+    },
+    {
+      "literal": "小丸",
+      "english": "Small roundish kaeri",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ko-maru"
+        }
+      ]
+    },
+    {
+      "literal": "小丸",
+      "english": "small rounded tip return",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "ko-maru"
+        }
+      ]
+    },
+    {
+      "literal": "小切羽",
+      "english": "Small seppa",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ko-seppa"
+        }
+      ]
+    },
+    {
+      "literal": "小切羽",
+      "english": "differentiate between small ko-seppa",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "小左衞門",
+      "english": "later Kozaemon",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "小杢目",
+      "english": "fine burl grain",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "ko-mokume"
+        }
+      ]
+    },
+    {
+      "literal": "小杢目肌",
+      "english": "small burl-pattern grain",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Ko-mokume hada"
+        }
+      ]
+    },
+    {
+      "literal": "小板目",
+      "english": "fine wood grain",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "ko-itame"
+        }
+      ]
+    },
+    {
+      "literal": "小沸",
+      "english": "Tiny/fine nie",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ko-nie"
+        }
+      ]
+    },
+    {
+      "literal": "小沸",
+      "english": "small crystalline particles",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "ko-nie"
+        }
+      ]
+    },
+    {
+      "literal": "小糠肌",
+      "english": "rice-bran-like Hizen grain",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Konuka-hada"
+        }
+      ]
+    },
+    {
+      "literal": "小袴",
+      "english": "matching kobakama",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "尚香",
+      "english": "f Naoka",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "就一",
+      "english": "f Narikazu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "尾張透",
+      "english": "local schools like Owari-sukashi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "山形",
+      "english": "Mountain-shaped yamagata",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "山形",
+      "english": "hitsu-ana in suhama-gata yamagata",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "山田淺右衞門正安",
+      "english": "certain Yamada Asaemon Masayasu",
+      "length": 8,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "川原林",
+      "english": "ter Minayama Naoichi Kawarabayashi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "左",
+      "english": "S Sa",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "左",
+      "english": "smith Sa",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "左近將監助光",
+      "english": "members Sakon Shogen Sukemitsu",
+      "length": 6,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "常易",
+      "english": "f Tsuneyasu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "帽子",
+      "english": "tip temper pattern",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "boshi"
+        }
+      ]
+    },
+    {
+      "literal": "平戶國重",
+      "english": "Hizen’s Hirado Kunishige",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "年",
+      "english": "Year",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "nen"
+        }
+      ]
+    },
+    {
+      "literal": "年紀",
+      "english": "Date signature",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "nenki"
+        }
+      ]
+    },
+    {
+      "literal": "広直刃",
+      "english": "wide straight temper pattern",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Hiro-suguha"
+        }
+      ]
+    },
+    {
+      "literal": "序克",
+      "english": "first Kikuchi generation Tsunekatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "序房",
+      "english": "aforementioned Tsunefusa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "弘直",
+      "english": "Regarding Hironao",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "弥作",
+      "english": "f Yasaku",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "弥八",
+      "english": "ff Yahachi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "弥兵衞",
+      "english": "ff Yabei",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "弥左衞門",
+      "english": "ff Yazaemon",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "彫物",
+      "english": "blade carving",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "horimono"
+        }
+      ]
+    },
+    {
+      "literal": "後代",
+      "english": "later generations",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "後代冬廣",
+      "english": "Later Fuyuhiro",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "後代國包",
+      "english": "Later Kunikane",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "後鳥羽院",
+      "english": "Goban Kaji Go-Toba-in",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "nwatch",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "後鳥羽院",
+      "english": "Gotoba In",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "club",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "御物",
+      "english": "Imperial treasure",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "gyobutsu"
+        }
+      ]
+    },
+    {
+      "literal": "御鮒形御太刀",
+      "english": "funagata on-tachi",
+      "length": 6,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "御鮒形御太刀",
+      "english": "und funagata on-tachi",
+      "length": 6,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "德勝",
+      "english": "Mito (Swordsmiths) Norikatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "nwatch",
+          "kind": "names",
+          "reading": null
+        },
+        {
+          "source": "nwatch",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "德島藩",
+      "english": "newly founded Tokushima fief",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "德川家綱",
+      "english": "f Tokugawa Ietsuna",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "德鄰",
+      "english": "Mito (Swordsmiths) Tokurin",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "nwatch",
+          "kind": "names",
+          "reading": null
+        },
+        {
+          "source": "nwatch",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "慶篤",
+      "english": "Mito (Swordsmiths) Yoshiatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "nwatch",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "摩利支天",
+      "english": "oder Marishiten",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政丘",
+      "english": "f Masaoka",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政之",
+      "english": "f Masayuki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政克",
+      "english": "f Masakatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政友",
+      "english": "alias Masatomo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政德",
+      "english": "f Masanori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政照",
+      "english": "f Masateru",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政知",
+      "english": "f Masatomo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "政興",
+      "english": "alias Masaoki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "文",
+      "english": "Pattern",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "mon"
+        }
+      ]
+    },
+    {
+      "literal": "文山",
+      "english": "f Bunsan",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "新刀",
+      "english": "swords dated 1596-1781",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Shinto"
+        }
+      ]
+    },
+    {
+      "literal": "新刄銘盡",
+      "english": "publications Arami Mei Zukushi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "方周",
+      "english": "f Katachika",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "日本刀剣保存會",
+      "english": "NTHK",
+      "length": 7,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "日本書紀",
+      "english": "history books Nihon Shoki",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "日本美術刀剣保存恊會",
+      "english": "NBTHK",
+      "length": 10,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        },
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "昆壽",
+      "english": "f Konju",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "昆寬",
+      "english": "f Konkan",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "昌親",
+      "english": "sons Masachika",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "春寬",
+      "english": "trained many students Haruhiro",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "春英",
+      "english": "ff Haruhide",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "昭喜",
+      "english": "former variant",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "會津兼友",
+      "english": "st generation Aizu Kanetomo",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "月",
+      "english": "right radical",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "月形",
+      "english": "sword hilt blank’s tsukigata",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "月形",
+      "english": "tsukigagta",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        },
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "有重",
+      "english": "know among others Arishige",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "有馬賴咸",
+      "english": "names Arima Yorishige",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "木太刀",
+      "english": "NBTHK kidachi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "朱塗",
+      "english": "Red lacquer",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "shu-nuri"
+        }
+      ]
+    },
+    {
+      "literal": "村正",
+      "english": "in Ise provine Muramasa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "束帶",
+      "english": "complex ceremonial attire sokutai",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "杢目肌",
+      "english": "burl grain pattern",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "mokume-hada"
+        }
+      ]
+    },
+    {
+      "literal": "松島利貞",
+      "english": "among others Matsushima Toshisada",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "松平大學頭賴貞",
+      "english": "f Yorisada",
+      "length": 7,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "松平秀雲君山",
+      "english": "f",
+      "length": 6,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "松皮肌",
+      "english": "pine-bark-like grain with prominent chikei",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Matsukawa-hada"
+        }
+      ]
+    },
+    {
+      "literal": "板目肌",
+      "english": "wood grain pattern",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "itame-hada"
+        }
+      ]
+    },
+    {
+      "literal": "板目肌",
+      "english": "wood-grain pattern distinguished from mokume and masame",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Itame-hada"
+        }
+      ]
+    },
+    {
+      "literal": "板腰當",
+      "english": "example flat ita- koshiate",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "林蘭雅",
+      "english": "f Hayashi Ranga",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "林蘭雅",
+      "english": "painter friend Hayashi Ranga",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "柄",
+      "english": "sword hilt",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "tsuka"
+        }
+      ]
+    },
+    {
+      "literal": "柄巻",
+      "english": "Hilt wrapping",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "tsukamaki"
+        }
+      ]
+    },
+    {
+      "literal": "柄巻師",
+      "english": "Handle binders",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "tsukamaki-shi"
+        }
+      ]
+    },
+    {
+      "literal": "柳川",
+      "english": "Yanagawa schools",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "柴田是眞",
+      "english": "ff Shibata Zeshin",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "柾目肌",
+      "english": "straight grain pattern",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "masame-hada"
+        },
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Masame-hada"
+        }
+      ]
+    },
+    {
+      "literal": "栗尻",
+      "english": "rounded tang end",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "kurijiri"
+        }
+      ]
+    },
+    {
+      "literal": "桂林子",
+      "english": "f Keirinshi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "桐",
+      "english": "Paulownia",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kiri"
+        }
+      ]
+    },
+    {
+      "literal": "桐紋",
+      "english": "Paulownia crest",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kiri-mon"
+        }
+      ]
+    },
+    {
+      "literal": "梵字",
+      "english": "sacred Sanskrit carving",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "bonji"
+        }
+      ]
+    },
+    {
+      "literal": "棗形",
+      "english": "natsume-gagta",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "榮治",
+      "english": "f Eiji",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "横手",
+      "english": "tip boundary line",
+      "length": 2,
+      "state": "quarantined_candidate",
+      "eligible": false,
+      "verified": false,
+      "reason": "name_or_historical_context",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "yokote"
+        }
+      ]
+    },
+    {
+      "literal": "橫刀",
+      "english": "cm nor shorter tachi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "橫刀",
+      "english": "mentioned characters",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "橫手",
+      "english": "tip boundary line",
+      "length": 2,
+      "state": "quarantined_candidate",
+      "eligible": false,
+      "verified": false,
+      "reason": "name_or_historical_context",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "yokote"
+        }
+      ]
+    },
+    {
+      "literal": "次吉",
+      "english": "ff Jikichi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正",
+      "english": "right radical",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正則",
+      "english": "in disagreement about Masanori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正奧",
+      "english": "f Masaoku",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正恆",
+      "english": "f Masatsune",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正矢",
+      "english": "f Masatada",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正秀",
+      "english": "f Masahide",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正興",
+      "english": "f Masaoki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正興",
+      "english": "student Masaoki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正道",
+      "english": "f Masamichi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正邦",
+      "english": "alias Masakuni",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "正重",
+      "english": "smiths Masashige",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "武鑑",
+      "english": "find in bukan records",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "氏雲",
+      "english": "Owari smith Ujikumo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "水户",
+      "english": "SWORDSMITHSOFMITO",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        },
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "永政",
+      "english": "f Nagamasa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "永武",
+      "english": "f Nagatake",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "永盛齋",
+      "english": "f Eiseisai",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "永義",
+      "english": "f Nagayoshi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "沸",
+      "english": "visible crystalline particles",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "nie"
+        }
+      ]
+    },
+    {
+      "literal": "治助",
+      "english": "first name Jisuke",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "津山",
+      "english": "in Tsuyama",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "洲濱形",
+      "english": "b c suhama-gata",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "派",
+      "english": "general connotation than ha",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "海軍短剣",
+      "english": "Japanese WWII naval dirk",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kaigun-tanken"
+        }
+      ]
+    },
+    {
+      "literal": "深川",
+      "english": "notorious entertainment district Fukagawa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "清六正長",
+      "english": "war Seiroku Masanaga",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "清水甚吾",
+      "english": "Higo master Shimizu Jingo",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "清綱",
+      "english": "smiths Kiyotsuna",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "清隨",
+      "english": "f Kiyoyuki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "源吾",
+      "english": "f Kasanken Gengo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "溪玉",
+      "english": "f Keigyoku",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "澤永珍",
+      "english": "Hizen’s Sawa Eichin",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "濱物",
+      "english": "particularly full niku hamamono",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "濱部",
+      "english": "THEHAMABE",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "火遠理命",
+      "english": "demigod Hoori no mikoto",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "無地肌",
+      "english": "apparently grainless fine grain",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Muji-hada"
+        }
+      ]
+    },
+    {
+      "literal": "無地肌",
+      "english": "mentioned in entry muji-hada",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "無銘",
+      "english": "Unsigned",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "mumei"
+        }
+      ]
+    },
+    {
+      "literal": "無銘",
+      "english": "unsigned blade",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "mumei"
+        }
+      ]
+    },
+    {
+      "literal": "玄甫",
+      "english": "f Genpu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "玳瑁",
+      "english": "Tortoise shell applications on saya",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "taimai"
+        }
+      ]
+    },
+    {
+      "literal": "琉球刀",
+      "english": "Ryukyuan sword",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "Ryūkyū-tō"
+        }
+      ]
+    },
+    {
+      "literal": "琉璃",
+      "english": "Lapis lazuli",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ruri"
+        }
+      ]
+    },
+    {
+      "literal": "琉璃",
+      "english": "cord ruri",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "甚吾",
+      "english": "f Jingo",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "田邊城",
+      "english": "Tanabe Castle",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "甲子",
+      "english": "CORRESPONDING YEARS kinoe-ne",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "白檀",
+      "english": "Sandalwood",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "byakudan"
+        }
+      ]
+    },
+    {
+      "literal": "皆焼",
+      "english": "scattered full temper pattern",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "hitatsura"
+        }
+      ]
+    },
+    {
+      "literal": "皆燒",
+      "english": "scattered full temper pattern",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "hitatsura"
+        }
+      ]
+    },
+    {
+      "literal": "盛岡",
+      "english": "still active in Morioka",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "盛常",
+      "english": "f Moritsune",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "盛次",
+      "english": "f Moritsugu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "目釘穴",
+      "english": "tang retaining hole",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "mekugi ana"
+        }
+      ]
+    },
+    {
+      "literal": "直刃",
+      "english": "straight temper pattern",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "suguha"
+        }
+      ]
+    },
+    {
+      "literal": "直刄",
+      "english": "straight temper pattern",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "suguha"
+        }
+      ]
+    },
+    {
+      "literal": "直常",
+      "english": "f Naotsune",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "直重",
+      "english": "f Naoshige",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "直隨",
+      "english": "Hamano artists like Naoyuki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "知識兼矩",
+      "english": "local craftsman Chishiki Kanenori",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "矩陳",
+      "english": "ff Norinobu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "短刀",
+      "english": "blade under thirty centimetres",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "tanto"
+        }
+      ]
+    },
+    {
+      "literal": "短歌",
+      "english": "practised among others tanka",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "磨上茎",
+      "english": "Shortened tang",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "suriage-nakago"
+        }
+      ]
+    },
+    {
+      "literal": "祐定",
+      "english": "Sue-Bizen smiths like Sukesada",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "神宮",
+      "english": "Greater Shinto shrine",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "jingū"
+        }
+      ]
+    },
+    {
+      "literal": "秀氏",
+      "english": "f Hideuji",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "秋元昭友",
+      "english": "students Akimoto Akitomo",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "稲川良克",
+      "english": "aonori Yoshikatsus",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "竹",
+      "english": "Bamboo (voiced dake)",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "take"
+        }
+      ]
+    },
+    {
+      "literal": "篆書",
+      "english": "Seal script",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "tensho"
+        }
+      ]
+    },
+    {
+      "literal": "篤弘",
+      "english": "f Tokuhiro",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "米子",
+      "english": "in Yonago",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "粟田口國綱",
+      "english": "smiths like Awataguchi Kunitsuna",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "糸卷太刀",
+      "english": "d itomaki no tachi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "細直刃",
+      "english": "Narrow suguha",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "hoso-suguha"
+        }
+      ]
+    },
+    {
+      "literal": "細直刃",
+      "english": "narrow straight temper pattern",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Hoso-suguha"
+        }
+      ]
+    },
+    {
+      "literal": "続飯",
+      "english": "Rice glue",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "sokui"
+        }
+      ]
+    },
+    {
+      "literal": "網代",
+      "english": "Bamboo wickerwork",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ajiro"
+        }
+      ]
+    },
+    {
+      "literal": "綾杉肌",
+      "english": "wave-like curved grain pattern",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Ayasugi-hada"
+        }
+      ]
+    },
+    {
+      "literal": "縁",
+      "english": "Hilt collar",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "fuchi"
+        }
+      ]
+    },
+    {
+      "literal": "縮緬肌",
+      "english": "crepe-like prominent mokume grain associated with Aoe",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "Chirimen-hada"
+        }
+      ]
+    },
+    {
+      "literal": "繼平",
+      "english": "st generation Yasuhira",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "美政",
+      "english": "f Yoshimasa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "美盛",
+      "english": "f Yoshimori",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "美隨",
+      "english": "characters",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "義介",
+      "english": "f Yoshisuke",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "義實",
+      "english": "f Yoshisane",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "義敬",
+      "english": "f Yoshiyuki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "義景",
+      "english": "f Yoshikage",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "肌",
+      "english": "blade surface grain",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "hada"
+        }
+      ]
+    },
+    {
+      "literal": "肌立",
+      "english": "Standing-out jihada",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "hadatatsu"
+        }
+      ]
+    },
+    {
+      "literal": "肥前忠吉",
+      "english": "THEHIZENTADAYOSHI",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        },
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "肥前忠吉",
+      "english": "st generation Hizen Tadayoshi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "肥前忠國",
+      "english": "st generation Hizen Tadakuni",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "肥前行廣",
+      "english": "st generation Hizen Yukihiro",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "胎仙",
+      "english": "ff Taisen",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "脇差",
+      "english": "intermediate length sword",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "wakizashi"
+        }
+      ]
+    },
+    {
+      "literal": "脇指",
+      "english": "intermediate length sword",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "wakizashi"
+        }
+      ]
+    },
+    {
+      "literal": "與八",
+      "english": "f Yohachi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "良克",
+      "english": "f Yoshikatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "良定",
+      "english": "f Yoshisada",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "良政",
+      "english": "ff Yoshimasa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "良次",
+      "english": "f Yoshitsugu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "良高",
+      "english": "f Yoshitaka",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "色",
+      "english": "Color",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "iro"
+        }
+      ]
+    },
+    {
+      "literal": "芳武",
+      "english": "f Yoshitake",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "英昌",
+      "english": "tudent Terumasa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "茎",
+      "english": "sword tang",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "nakago"
+        }
+      ]
+    },
+    {
+      "literal": "草書",
+      "english": "Cursive script",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "sōsho"
+        }
+      ]
+    },
+    {
+      "literal": "菊",
+      "english": "Chrysanthemum",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kiku"
+        }
+      ]
+    },
+    {
+      "literal": "菊岡光行",
+      "english": "famous Naomitsu-students Kikuoka Mitsuyuki",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "菊紋",
+      "english": "Chrysanthemum crest",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kiku-mon"
+        }
+      ]
+    },
+    {
+      "literal": "葵",
+      "english": "Hollyhock",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "aoi"
+        }
+      ]
+    },
+    {
+      "literal": "薩摩藩",
+      "english": "Satsuma fief",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "藤島友重",
+      "english": "Norishige's students Fujishima Tomoshige",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "藩",
+      "english": "Fief",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "han"
+        }
+      ]
+    },
+    {
+      "literal": "行信",
+      "english": "smiths Yukinobu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "行書",
+      "english": "Semicursive script",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "gyōsho"
+        }
+      ]
+    },
+    {
+      "literal": "西津輕",
+      "english": "in Nishitsugaru",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "觀音舎",
+      "english": "f Kannonsha",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "角耳",
+      "english": "Angular tsuba rim",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kaku-mimi"
+        }
+      ]
+    },
+    {
+      "literal": "角耳",
+      "english": "b c d kaku-mimi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "謹製",
+      "english": "Respectfully/carefully made",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kinsei"
+        }
+      ]
+    },
+    {
+      "literal": "谷田部通壽",
+      "english": "later mentioned Yatabe Michitoshi",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "豐光",
+      "english": "f Toyomitsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "豐春",
+      "english": "f Toyoharu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "豐重",
+      "english": "ff Toyoshige",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "象牙",
+      "english": "Ivory",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "zōge"
+        }
+      ]
+    },
+    {
+      "literal": "貞勝",
+      "english": "f Sadakatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "赤則",
+      "english": "f Sekisoku",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "赤坂千手院",
+      "english": "Akasaka Senjuinschool",
+      "length": 5,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "足利義政",
+      "english": "f Ashikaga Yoshimasa",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "足利義教",
+      "english": "f Ashikaga Yoshinori",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "足利義滿",
+      "english": "f Ashikaga Yoshimitsu",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "足利義輝",
+      "english": "f Ashikaga Yoshiteru",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "造法刀",
+      "english": "Forging methods",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "zōtō-hō"
+        }
+      ]
+    },
+    {
+      "literal": "連歌",
+      "english": "renga poetry",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "重久",
+      "english": "f Shigehisa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "重克",
+      "english": "f Shigekatsu",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "重幸",
+      "english": "ff Shigeyuki",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "重恆",
+      "english": "ff Shigetsune",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "重義",
+      "english": "d in Yamashiro Shigeyoshi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "重要文化",
+      "english": "Important Cultural Object",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "jūyō-bunkazai"
+        }
+      ]
+    },
+    {
+      "literal": "金",
+      "english": "Gold",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kin"
+        }
+      ]
+    },
+    {
+      "literal": "金家",
+      "english": "famous tsuba artist Kaneie",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "金打出霰鮫鞘打刀拵",
+      "english": "erm kin-uchidashi arare-saya uchigatana-koshirae",
+      "length": 9,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "金澤",
+      "english": "craftsmen working in Kanazawa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "金澤",
+      "english": "in Kanazawa",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "金筋",
+      "english": "bright linear crystalline activity",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "kinsuji"
+        }
+      ]
+    },
+    {
+      "literal": "金霰鮫靑漆打刀拵",
+      "english": "Two kin-arare-same seishitsu uchigatana-koshirae",
+      "length": 8,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "銃剣",
+      "english": "Bayonet",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "jūken"
+        }
+      ]
+    },
+    {
+      "literal": "銅",
+      "english": "Copper",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "dō"
+        }
+      ]
+    },
+    {
+      "literal": "銑鉄",
+      "english": "Pig iron",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "sentetsu"
+        }
+      ]
+    },
+    {
+      "literal": "銘",
+      "english": "Signature",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "mei"
+        }
+      ]
+    },
+    {
+      "literal": "銘",
+      "english": "sword signature",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "mei"
+        }
+      ]
+    },
+    {
+      "literal": "銘文",
+      "english": "Signature",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "meibun"
+        }
+      ]
+    },
+    {
+      "literal": "鋤下彫",
+      "english": "be subdivided into sukisagebori",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "錆",
+      "english": "Rust",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "sabi"
+        }
+      ]
+    },
+    {
+      "literal": "鎺",
+      "english": "blade retaining collar",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "habaki"
+        }
+      ]
+    },
+    {
+      "literal": "鑑定家",
+      "english": "Appraiser",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kantei-ka"
+        }
+      ]
+    },
+    {
+      "literal": "鑢",
+      "english": "File",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "yasuri"
+        }
+      ]
+    },
+    {
+      "literal": "鑢目",
+      "english": "tang file marks",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "yasurime"
+        }
+      ]
+    },
+    {
+      "literal": "長柄",
+      "english": "Long hilt",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "naga-tsuka"
+        }
+      ]
+    },
+    {
+      "literal": "長船則光",
+      "english": "st generation Osafune Norimitsu",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "長谷部二代國重",
+      "english": "Hasebe Kunishige ll",
+      "length": 7,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference-register",
+          "kind": "names",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "長道",
+      "english": "later Nagamichi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "開眼子",
+      "english": "f Kaigenshi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "間鐔",
+      "english": "mainly seen on Hazama-tsuba",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "關川良忠",
+      "english": "Morioka artist Sekigawa Yoshitada",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "關衆利",
+      "english": "then lord Seki Atsutoshi",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "阿波守",
+      "english": "SWORDSMITHS Awa no Kami",
+      "length": 3,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "陰透",
+      "english": "in-sukashi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "陸奧",
+      "english": "northern Mutsu region",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "隨利",
+      "english": "nanako artist Yukitoshi",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "隷書",
+      "english": "Archaic square style script",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "reisho"
+        }
+      ]
+    },
+    {
+      "literal": "鞘",
+      "english": "Scabbard",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "saya"
+        }
+      ]
+    },
+    {
+      "literal": "鞘",
+      "english": "sword scabbard",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "primary_reference",
+          "kind": "terms",
+          "reading": "saya"
+        }
+      ]
+    },
+    {
+      "literal": "鞘師",
+      "english": "Scabbard maker",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "saya-shi"
+        }
+      ]
+    },
+    {
+      "literal": "響",
+      "english": "never",
+      "length": 1,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "高井信吉",
+      "english": "st generation Takai Nobuyoshi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "高田統行",
+      "english": "st generation Takada Muneyuki",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-saved-books",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "黄金",
+      "english": "Gold",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "ōgon"
+        }
+      ]
+    },
+    {
+      "literal": "黑作大刀",
+      "english": "plain kurozukuri no tachi",
+      "length": 4,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference",
+          "kind": "forms",
+          "reading": null
+        }
+      ]
+    },
+    {
+      "literal": "黒檀",
+      "english": "Ebony",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kokutan"
+        }
+      ]
+    },
+    {
+      "literal": "黒漆",
+      "english": "Black lacquer",
+      "length": 2,
+      "state": "lexical_candidate",
+      "eligible": true,
+      "verified": false,
+      "reason": "source_alignment_and_sense_require_review",
+      "sources": [
+        {
+          "source": "supporting_reference-encyclopedia",
+          "kind": "terms",
+          "reading": "kokushitsu"
+        }
+      ]
+    }
+  ],
+  "verified_english_accuracy": null
+}

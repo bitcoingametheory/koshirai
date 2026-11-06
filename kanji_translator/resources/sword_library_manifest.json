@@ -1,0 +1,661 @@
+{
+  "character_form_dispositions": {
+    "excluded_outside_attested_character_closure": 54231,
+    "exported": 4631,
+    "input": 58862,
+    "omitted_reading": 12
+  },
+  "character_scope": {
+    "attested_and_variant_closure_characters": 3292,
+    "glyph_exported": 9416,
+    "glyph_input": 39509,
+    "variant_exported": 2173,
+    "variant_input": 3911
+  },
+  "concept_dispositions": {
+    "aliases_exported": 721,
+    "aliases_input": 1083,
+    "aliases_omitted_non_lookup_text": 362,
+    "omitted_label_en": 224
+  },
+  "counts": {
+    "aliases": 721,
+    "bibliography": 22,
+    "character_forms": 4631,
+    "characters": 15453,
+    "concept_links": 125,
+    "concepts": 402,
+    "forms": 33538,
+    "glyphs": 9416,
+    "names": 17914,
+    "spellings": 3627,
+    "terms": 3348,
+    "variants": 2173
+  },
+  "coverage": [
+    {
+      "exported": 12370,
+      "input": 12376,
+      "kind": "smith_source_record",
+      "rejected_unknown_glyph": 6,
+      "source": "club"
+    },
+    {
+      "exported": 32995,
+      "input": 32995,
+      "kind": "dealer_literal",
+      "source": "dealer:aoi_auction"
+    },
+    {
+      "exported": 4787,
+      "input": 4787,
+      "kind": "dealer_literal",
+      "source": "dealer:aoi_shop"
+    },
+    {
+      "exported": 706,
+      "input": 706,
+      "kind": "dealer_literal",
+      "source": "dealer:choshuya"
+    },
+    {
+      "exported": 24615,
+      "input": 24615,
+      "kind": "dealer_literal",
+      "source": "dealer:dealer_jp_aoi_art"
+    },
+    {
+      "exported": 3,
+      "input": 3,
+      "kind": "dealer_statement",
+      "source": "dealer:dealer_jp_aoi_art"
+    },
+    {
+      "exported": 17660,
+      "input": 17660,
+      "kind": "dealer_literal",
+      "source": "dealer:dealer_jp_eirakudo"
+    },
+    {
+      "exported": 22777,
+      "input": 22777,
+      "kind": "dealer_literal",
+      "source": "dealer:eirakudo"
+    },
+    {
+      "exported": 3063,
+      "input": 3063,
+      "kind": "dealer_literal",
+      "source": "dealer:iida_koendo"
+    },
+    {
+      "exported": 30,
+      "input": 30,
+      "kind": "dealer_literal",
+      "source": "dealer:seikodo"
+    },
+    {
+      "exported": 247360,
+      "input": 247360,
+      "kind": "dealer_literal",
+      "source": "dealer:seiyudo_jp"
+    },
+    {
+      "exported": 32,
+      "input": 32,
+      "kind": "dealer_statement",
+      "source": "dealer:seiyudo_jp"
+    },
+    {
+      "exported": 1849,
+      "input": 1849,
+      "kind": "dealer_literal",
+      "source": "dealer:touken_komachi"
+    },
+    {
+      "exported": 577,
+      "input": 577,
+      "kind": "dealer_literal",
+      "source": "dealer:world_seiyudo"
+    },
+    {
+      "exported": 658,
+      "input": 658,
+      "kind": "dealer_literal",
+      "source": "dealer:yahoo"
+    },
+    {
+      "exported": 2,
+      "input": 2,
+      "kind": "dealer_statement",
+      "source": "dealer:yahoo"
+    },
+    {
+      "exported": 3532,
+      "input": 3532,
+      "kind": "printed_bilingual_pair",
+      "source": "primary_reference"
+    },
+    {
+      "exported": 376,
+      "input": 376,
+      "kind": "smith_source_record",
+      "source": "primary_reference-register"
+    },
+    {
+      "exported": 5168,
+      "input": 5173,
+      "kind": "smith_source_record",
+      "rejected_unknown_glyph": 4,
+      "rejected_unusable_lookup_form": 1,
+      "source": "nwatch"
+    },
+    {
+      "exported": 1938,
+      "input": 1938,
+      "kind": "definition",
+      "source": "supporting_reference"
+    },
+    {
+      "exported": 1,
+      "input": 1,
+      "kind": "heading_only",
+      "source": "supporting_reference"
+    },
+    {
+      "exported": 4701,
+      "input": 4701,
+      "kind": "pdf_bilingual_pair",
+      "source": "supporting_reference"
+    },
+    {
+      "exported": 6427,
+      "input": 6427,
+      "kind": "pdf_literal_not_translation",
+      "source": "supporting_reference"
+    },
+    {
+      "exported": 513,
+      "input": 513,
+      "kind": "redirect",
+      "source": "supporting_reference"
+    },
+    {
+      "exported": 9839,
+      "input": 9839,
+      "kind": "extracted_bilingual_pair",
+      "source": "supporting_reference-saved-books"
+    }
+  ],
+  "data_licenses": {
+    "ivd": "Unicode-3.0",
+    "kanjidic2": "CC-BY-SA-4.0",
+    "mj": "CC-BY-SA-2.1-JP",
+    "unihan": "Unicode-3.0"
+  },
+  "decoded_sha256": "60aba38527844f20e08323cb2ab151d37452c746de8f7b342c7f93a64d2f7b1d",
+  "english_policy": "Only bounded lexical gloss facts are public, never full definitions or source prose. Rejected fields remain in the private master. All mappings remain source candidates, not verified translations.",
+  "excluded_fields": [
+    "source prose",
+    "definitions",
+    "captions",
+    "raw context",
+    "original source records",
+    "private paths",
+    "private identifiers",
+    "contact information"
+  ],
+  "glossary_bridges": {
+    "policy": "Cited editorial lexical summaries from explicit spelling/headword joins or image-reviewed bilingual labels. Edition-specific source chains and provisional review remain visible.",
+    "records": 85
+  },
+  "mapping_fields": {
+    "entries:dealer:aoi_auction:english": {
+      "absent": 352
+    },
+    "entries:dealer:aoi_auction:kanji": {
+      "exported": 352
+    },
+    "entries:dealer:aoi_auction:romaji": {
+      "absent": 352
+    },
+    "entries:dealer:choshuya:english": {
+      "absent": 76
+    },
+    "entries:dealer:choshuya:kanji": {
+      "exported": 76
+    },
+    "entries:dealer:choshuya:romaji": {
+      "absent": 76
+    },
+    "entries:dealer:eirakudo:english": {
+      "absent": 254
+    },
+    "entries:dealer:eirakudo:kanji": {
+      "exported": 254
+    },
+    "entries:dealer:eirakudo:romaji": {
+      "absent": 254
+    },
+    "entries:primary_reference:english": {
+      "absent": 100
+    },
+    "entries:primary_reference:kanji": {
+      "exported": 100
+    },
+    "entries:primary_reference:romaji": {
+      "exported": 14,
+      "retained_private_unsupported_or_prose": 86
+    },
+    "entries:supporting_reference-encyclopedia:english": {
+      "absent": 532,
+      "exported": 110,
+      "retained_private_unsupported_or_prose": 1841
+    },
+    "entries:supporting_reference-encyclopedia:kanji": {
+      "absent": 18,
+      "exported": 2465
+    },
+    "entries:supporting_reference-encyclopedia:romaji": {
+      "exported": 2445,
+      "retained_private_unsupported_or_prose": 38
+    },
+    "witnesses:club:smith_source_record:english": {
+      "exported": 1,
+      "retained_private_unsupported_or_prose": 12375
+    },
+    "witnesses:club:smith_source_record:kanji": {
+      "exported": 12370,
+      "retained_private_unsupported_or_prose": 6
+    },
+    "witnesses:club:smith_source_record:romaji": {
+      "exported": 12374,
+      "retained_private_unsupported_or_prose": 2
+    },
+    "witnesses:dealer:aoi_auction:dealer_literal:english": {
+      "absent": 32995
+    },
+    "witnesses:dealer:aoi_auction:dealer_literal:kanji": {
+      "exported": 32995
+    },
+    "witnesses:dealer:aoi_auction:dealer_literal:romaji": {
+      "absent": 32995
+    },
+    "witnesses:dealer:aoi_shop:dealer_literal:english": {
+      "absent": 4787
+    },
+    "witnesses:dealer:aoi_shop:dealer_literal:kanji": {
+      "exported": 4787
+    },
+    "witnesses:dealer:aoi_shop:dealer_literal:romaji": {
+      "absent": 4787
+    },
+    "witnesses:dealer:choshuya:dealer_literal:english": {
+      "absent": 706
+    },
+    "witnesses:dealer:choshuya:dealer_literal:kanji": {
+      "exported": 706
+    },
+    "witnesses:dealer:choshuya:dealer_literal:romaji": {
+      "absent": 706
+    },
+    "witnesses:dealer:dealer_jp_aoi_art:dealer_literal:english": {
+      "absent": 24615
+    },
+    "witnesses:dealer:dealer_jp_aoi_art:dealer_literal:kanji": {
+      "exported": 24615
+    },
+    "witnesses:dealer:dealer_jp_aoi_art:dealer_literal:romaji": {
+      "absent": 24615
+    },
+    "witnesses:dealer:dealer_jp_aoi_art:dealer_statement:english": {
+      "retained_private_unsupported_or_prose": 3
+    },
+    "witnesses:dealer:dealer_jp_aoi_art:dealer_statement:kanji": {
+      "exported": 3
+    },
+    "witnesses:dealer:dealer_jp_aoi_art:dealer_statement:romaji": {
+      "retained_private_unsupported_or_prose": 3
+    },
+    "witnesses:dealer:dealer_jp_eirakudo:dealer_literal:english": {
+      "absent": 17660
+    },
+    "witnesses:dealer:dealer_jp_eirakudo:dealer_literal:kanji": {
+      "exported": 17660
+    },
+    "witnesses:dealer:dealer_jp_eirakudo:dealer_literal:romaji": {
+      "absent": 17660
+    },
+    "witnesses:dealer:eirakudo:dealer_literal:english": {
+      "absent": 22777
+    },
+    "witnesses:dealer:eirakudo:dealer_literal:kanji": {
+      "exported": 22777
+    },
+    "witnesses:dealer:eirakudo:dealer_literal:romaji": {
+      "absent": 22777
+    },
+    "witnesses:dealer:iida_koendo:dealer_literal:english": {
+      "absent": 3063
+    },
+    "witnesses:dealer:iida_koendo:dealer_literal:kanji": {
+      "exported": 3063
+    },
+    "witnesses:dealer:iida_koendo:dealer_literal:romaji": {
+      "absent": 3063
+    },
+    "witnesses:dealer:seikodo:dealer_literal:english": {
+      "absent": 30
+    },
+    "witnesses:dealer:seikodo:dealer_literal:kanji": {
+      "exported": 30
+    },
+    "witnesses:dealer:seikodo:dealer_literal:romaji": {
+      "absent": 30
+    },
+    "witnesses:dealer:seiyudo_jp:dealer_literal:english": {
+      "absent": 247360
+    },
+    "witnesses:dealer:seiyudo_jp:dealer_literal:kanji": {
+      "exported": 247360
+    },
+    "witnesses:dealer:seiyudo_jp:dealer_literal:romaji": {
+      "absent": 247360
+    },
+    "witnesses:dealer:seiyudo_jp:dealer_statement:english": {
+      "retained_private_unsupported_or_prose": 32
+    },
+    "witnesses:dealer:seiyudo_jp:dealer_statement:kanji": {
+      "exported": 32
+    },
+    "witnesses:dealer:seiyudo_jp:dealer_statement:romaji": {
+      "retained_private_unsupported_or_prose": 32
+    },
+    "witnesses:dealer:touken_komachi:dealer_literal:english": {
+      "absent": 1849
+    },
+    "witnesses:dealer:touken_komachi:dealer_literal:kanji": {
+      "exported": 1849
+    },
+    "witnesses:dealer:touken_komachi:dealer_literal:romaji": {
+      "absent": 1849
+    },
+    "witnesses:dealer:world_seiyudo:dealer_literal:english": {
+      "absent": 577
+    },
+    "witnesses:dealer:world_seiyudo:dealer_literal:kanji": {
+      "exported": 577
+    },
+    "witnesses:dealer:world_seiyudo:dealer_literal:romaji": {
+      "absent": 577
+    },
+    "witnesses:dealer:yahoo:dealer_literal:english": {
+      "absent": 658
+    },
+    "witnesses:dealer:yahoo:dealer_literal:kanji": {
+      "exported": 658
+    },
+    "witnesses:dealer:yahoo:dealer_literal:romaji": {
+      "absent": 658
+    },
+    "witnesses:dealer:yahoo:dealer_statement:english": {
+      "retained_private_unsupported_or_prose": 2
+    },
+    "witnesses:dealer:yahoo:dealer_statement:kanji": {
+      "exported": 2
+    },
+    "witnesses:dealer:yahoo:dealer_statement:romaji": {
+      "retained_private_unsupported_or_prose": 2
+    },
+    "witnesses:nwatch:smith_source_record:english": {
+      "exported": 6,
+      "retained_private_unsupported_or_prose": 5167
+    },
+    "witnesses:nwatch:smith_source_record:kanji": {
+      "exported": 5168,
+      "retained_private_unsupported_or_prose": 5
+    },
+    "witnesses:nwatch:smith_source_record:romaji": {
+      "exported": 5166,
+      "retained_private_unsupported_or_prose": 7
+    },
+    "witnesses:primary_reference-register:smith_source_record:english": {
+      "absent": 7,
+      "exported": 8,
+      "retained_private_unsupported_or_prose": 361
+    },
+    "witnesses:primary_reference-register:smith_source_record:kanji": {
+      "exported": 376
+    },
+    "witnesses:primary_reference-register:smith_source_record:romaji": {
+      "absent": 7,
+      "exported": 351,
+      "retained_private_unsupported_or_prose": 18
+    },
+    "witnesses:primary_reference:printed_bilingual_pair:english": {
+      "exported": 29,
+      "retained_private_unsupported_or_prose": 3503
+    },
+    "witnesses:primary_reference:printed_bilingual_pair:kanji": {
+      "exported": 3532
+    },
+    "witnesses:primary_reference:printed_bilingual_pair:romaji": {
+      "exported": 2492,
+      "retained_private_unsupported_or_prose": 1040
+    },
+    "witnesses:supporting_reference-saved-books:extracted_bilingual_pair:english": {
+      "absent": 6,
+      "exported": 230,
+      "retained_private_unsupported_or_prose": 9603
+    },
+    "witnesses:supporting_reference-saved-books:extracted_bilingual_pair:kanji": {
+      "exported": 9839
+    },
+    "witnesses:supporting_reference-saved-books:extracted_bilingual_pair:romaji": {
+      "absent": 6,
+      "exported": 4912,
+      "retained_private_unsupported_or_prose": 4921
+    },
+    "witnesses:supporting_reference:definition:english": {
+      "exported": 5,
+      "retained_private_unsupported_or_prose": 1933
+    },
+    "witnesses:supporting_reference:definition:kanji": {
+      "exported": 1938
+    },
+    "witnesses:supporting_reference:definition:romaji": {
+      "exported": 1907,
+      "retained_private_unsupported_or_prose": 31
+    },
+    "witnesses:supporting_reference:heading_only:english": {
+      "retained_private_unsupported_or_prose": 1
+    },
+    "witnesses:supporting_reference:heading_only:kanji": {
+      "exported": 1
+    },
+    "witnesses:supporting_reference:heading_only:romaji": {
+      "exported": 1
+    },
+    "witnesses:supporting_reference:pdf_bilingual_pair:english": {
+      "absent": 4,
+      "exported": 70,
+      "retained_private_unsupported_or_prose": 4627
+    },
+    "witnesses:supporting_reference:pdf_bilingual_pair:kanji": {
+      "exported": 4701
+    },
+    "witnesses:supporting_reference:pdf_bilingual_pair:romaji": {
+      "absent": 4,
+      "exported": 1995,
+      "retained_private_unsupported_or_prose": 2702
+    },
+    "witnesses:supporting_reference:pdf_literal_not_translation:english": {
+      "absent": 6427
+    },
+    "witnesses:supporting_reference:pdf_literal_not_translation:kanji": {
+      "exported": 6427
+    },
+    "witnesses:supporting_reference:pdf_literal_not_translation:romaji": {
+      "absent": 6427
+    },
+    "witnesses:supporting_reference:redirect:english": {
+      "exported": 2,
+      "retained_private_unsupported_or_prose": 511
+    },
+    "witnesses:supporting_reference:redirect:kanji": {
+      "exported": 513
+    },
+    "witnesses:supporting_reference:redirect:romaji": {
+      "exported": 508,
+      "retained_private_unsupported_or_prose": 5
+    }
+  },
+  "optional_record_fields": {
+    "terms": [
+      "alignment",
+      "bridge",
+      "citations",
+      "independence",
+      "meaning_origin"
+    ]
+  },
+  "policy": "Every retained witness is accounted for. Bounded forms remain unresolved source candidates. Readings are extracted candidates, not verified pronunciation. Unicode relations do not establish person identity. Source prose and private evidence are omitted.",
+  "reading_dispositions": {
+    "absent": 363521,
+    "rejected_non_romanization_or_prose": 8763,
+    "retained": 29695
+  },
+  "reading_filter": "Bounded Japanese romanization-shaped tokens only; conservative omissions are not pronunciation judgments. Concept descriptions and non-lookup aliases are omitted.",
+  "record_fields": {
+    "aliases": [
+      "alias_id",
+      "concept_id",
+      "form",
+      "language",
+      "source_id",
+      "status"
+    ],
+    "bibliography": [
+      "source",
+      "title"
+    ],
+    "character_forms": [
+      "identity_accepted",
+      "implemented_ucs",
+      "mj_id",
+      "reading",
+      "source",
+      "ucs"
+    ],
+    "characters": [
+      "codepoint",
+      "property",
+      "source",
+      "value"
+    ],
+    "concept_links": [
+      "concept_id",
+      "entry_id",
+      "first_page",
+      "last_page",
+      "match_basis",
+      "source",
+      "status",
+      "term"
+    ],
+    "concepts": [
+      "category",
+      "concept_id",
+      "label_en",
+      "label_ja",
+      "parent_concept_ids_json",
+      "status"
+    ],
+    "forms": [
+      "category",
+      "citations",
+      "english",
+      "identity_accepted",
+      "literal",
+      "occurrences",
+      "printed_romaji",
+      "resolution",
+      "review_state",
+      "source",
+      "source_kind"
+    ],
+    "glyphs": [
+      "collection",
+      "glyph",
+      "sequence",
+      "source"
+    ],
+    "names": [
+      "candidate_id",
+      "category",
+      "citations",
+      "english",
+      "identity_accepted",
+      "literal",
+      "occurrences",
+      "printed_romaji",
+      "resolution",
+      "review_state",
+      "source",
+      "source_kind"
+    ],
+    "spellings": [
+      "entry_id",
+      "literal",
+      "source"
+    ],
+    "terms": [
+      "alignment",
+      "bridge",
+      "citations",
+      "concept_ids",
+      "english",
+      "entry_id",
+      "independence",
+      "literal",
+      "meaning_origin",
+      "printed_romaji",
+      "review_state",
+      "role",
+      "source"
+    ],
+    "variants": [
+      "identity_accepted",
+      "literal",
+      "relation",
+      "source",
+      "target"
+    ]
+  },
+  "schema": "sword-derived-v2",
+  "sha256": "7ca81c5e354004a212444c323f0696174122569e5cce438f2cf1e41f9bb581b1",
+  "term_rejections": {
+    "unusable_lookup_form": 2
+  },
+  "term_sources": {
+    "dealer:aoi_auction": 352,
+    "dealer:choshuya": 76,
+    "dealer:eirakudo": 254,
+    "primary_reference": 185,
+    "supporting_reference-encyclopedia": 2481
+  },
+  "unicode_dispositions": {
+    "excluded_non_japanese_reading_or_structure_property": 1316699,
+    "excluded_outside_attested_character_closure": 266599,
+    "exported": 15453
+  },
+  "bilingual_alignments": {
+    "records": 18,
+    "review_state": "AI_source_image_reviewed_provisional_not_expert",
+    "policy": "Exact printed Japanese forms linked to English labels and short editorial glosses by page-image review; edition-specific hashes and locators retained. One work supplies both editions.",
+    "alignment_batches_sha256": [
+      "86be23eae2df882f1ac7997db9cc3fc0d3c85bfa459746db5c3f5a571a91e4e4",
+      "9aeccd018554f17a10129fade7e3f57884409bfd66012f770c0a3085a4d564b9"
+    ]
+  }
+}

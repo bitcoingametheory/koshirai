@@ -1,0 +1,1 @@
+{"base_revision":"ccddee593a9e03a589ae1feedcd4d1eb06d6ba02","best_validation_epoch":30,"encoder_frozen":true,"feature_width":2304,"seed":106,"sha256":"698add578aa01e9ac860b7591aa91a280e516c17f6393d620077ad05251b63f6","torch":"2.15.0+cu132","training_dataset_sha256":"8503f49d31f668e94646e376a67abac531e98fee884207c4a9e12e2aa7905ec6","version":"japanese-bert-span-context-v1"}

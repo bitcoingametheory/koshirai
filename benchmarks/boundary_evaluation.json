@@ -1,0 +1,5124 @@
+{
+  "schema": "paired-boundary-regression-v1",
+  "pages": 50,
+  "source_and_ocr_identical": true,
+  "reference_sha256": "cc3f3795b32200ae57ebb7f3033a204a59c60504f2d3dcd8df6244eadec2bedf",
+  "domain_categories": [
+    "technical_sword_term",
+    "swordsmith_artisan",
+    "sword_school",
+    "sword_tradition",
+    "measurement_dimension"
+  ],
+  "baseline": {
+    "general": {
+      "reference_mentions": 325,
+      "correct_complete_groups": 0,
+      "false_positives": 0,
+      "missed_mentions": 325,
+      "false_specific_person_assignments": 0,
+      "precision": null,
+      "recall": 0.0,
+      "english_reference": {
+        "correct": 0,
+        "scored": 0
+      },
+      "rejections": []
+    },
+    "exact": {
+      "reference_mentions": 325,
+      "correct_complete_groups": 141,
+      "false_positives": 206,
+      "missed_mentions": 184,
+      "false_specific_person_assignments": 0,
+      "precision": 0.40634005763688763,
+      "recall": 0.4338461538461538,
+      "english_reference": {
+        "correct": 0,
+        "scored": 0
+      },
+      "rejections": [
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2218,
+            800,
+            2258,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "亂刄",
+          "category": "technical_sword_term",
+          "geometry": [
+            2168,
+            800,
+            2208,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2168,
+            800,
+            2208,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "彫物",
+          "category": "technical_sword_term",
+          "geometry": [
+            2115,
+            800,
+            2156,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2115,
+            800,
+            2156,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2115,
+            800,
+            2156,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2268,
+            798,
+            2308,
+            2101
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "万太夫",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2268,
+            798,
+            2308,
+            2101
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2268,
+            798,
+            2308,
+            2101
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "一竿子",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "一竿子",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "一竿子",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2712,
+            812,
+            2752,
+            2112
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2712,
+            812,
+            2752,
+            2112
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "太刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2662,
+            813,
+            2698,
+            1686
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "小丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2662,
+            813,
+            2698,
+            1686
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "雲生",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2967,
+            705,
+            3010,
+            975
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "一派",
+          "category": "sword_school",
+          "geometry": [
+            2915,
+            811,
+            2952,
+            2108
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            3000,
+            2026,
+            3040,
+            2204
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "舞草",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            3017,
+            723,
+            3070,
+            1513
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "舞草",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "安房",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "一寸",
+          "category": "measurement_dimension",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "大原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2966,
+            729,
+            3008,
+            994
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "永延",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2970,
+            1280,
+            3006,
+            1522
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "大原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2911,
+            829,
+            2949,
+            2130
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "永延",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2911,
+            829,
+            2949,
+            2130
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "一派",
+          "category": "sword_school",
+          "geometry": [
+            2911,
+            829,
+            2949,
+            2130
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2919,
+            806,
+            2956,
+            2109
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "守助",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0252",
+          "literal": "横山祐平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2903,
+            770,
+            2944,
+            2053
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0252",
+          "literal": "祐定",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2903,
+            770,
+            2944,
+            2053
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0252",
+          "literal": "祐永",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2903,
+            770,
+            2944,
+            2053
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2950,
+            691,
+            2999,
+            2153
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2898,
+            775,
+            2940,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "亂刄",
+          "category": "technical_sword_term",
+          "geometry": [
+            2898,
+            775,
+            2940,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "廣次",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2950,
+            691,
+            2999,
+            2153
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "永正",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2950,
+            691,
+            2999,
+            2153
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2450,
+            808,
+            2496,
+            2115
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2407,
+            811,
+            2448,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2407,
+            811,
+            2448,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2285,
+            811,
+            2332,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2234,
+            812,
+            2283,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "繁榮",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2407,
+            811,
+            2448,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "三分",
+          "category": "measurement_dimension",
+          "geometry": [
+            2450,
+            808,
+            2496,
+            2115
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "尚行",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2977,
+            713,
+            3025,
+            2237
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "行平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2926,
+            808,
+            2961,
+            1474
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2875,
+            806,
+            2910,
+            1169
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "尚行",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2875,
+            806,
+            2910,
+            1169
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0124",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2987,
+            2022,
+            3023,
+            2199
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0124",
+          "literal": "國俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2919,
+            821,
+            2956,
+            1622
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0189",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2313,
+            704,
+            2366,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0189",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2313,
+            715,
+            2366,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0189",
+          "literal": "重道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2313,
+            715,
+            2366,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0093",
+          "literal": "國住",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2532,
+            810,
+            2566,
+            1274
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2623,
+            1959,
+            2660,
+            2178
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2491,
+            798,
+            2540,
+            1637
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2594,
+            690,
+            2637,
+            1000
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "後鳥羽院",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2544,
+            801,
+            2597,
+            2098
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "長原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2544,
+            801,
+            2597,
+            2098
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0054",
+          "literal": "守吉",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2560,
+            782,
+            2597,
+            1259
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0054",
+          "literal": "吉道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2560,
+            782,
+            2597,
+            1259
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0036",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2996,
+            1990,
+            3034,
+            2209
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0198",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            1999,
+            2537,
+            2180
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0198",
+          "literal": "秀次",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2404,
+            795,
+            2443,
+            1330
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0006",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2197,
+            450,
+            2580,
+            499
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2997,
+            1992,
+            3037,
+            2170
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2934,
+            789,
+            2972,
+            2095
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2882,
+            796,
+            2921,
+            2096
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "常慶",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2934,
+            789,
+            2972,
+            2095
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "藤四郞",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2934,
+            789,
+            2972,
+            2095
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "明治",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2783,
+            802,
+            2819,
+            1598
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2099,
+            1992,
+            2137,
+            2170
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2040,
+            790,
+            2076,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "小杢目",
+          "category": "technical_sword_term",
+          "geometry": [
+            1989,
+            793,
+            2025,
+            1410
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2092,
+            690,
+            2137,
+            1483
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2040,
+            790,
+            2076,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            1938,
+            789,
+            1974,
+            1322
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            1938,
+            789,
+            1974,
+            1322
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "清光",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            1938,
+            789,
+            1974,
+            1322
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0091",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2391,
+            1995,
+            2429,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0083",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2275,
+            1921,
+            2312,
+            2181
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0083",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2251,
+            699,
+            2295,
+            965
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0079",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2950,
+            1991,
+            2988,
+            2209
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2991,
+            1920,
+            3028,
+            2139
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2921,
+            762,
+            2962,
+            1940
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "鎭政",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2921,
+            762,
+            2962,
+            1940
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            758,
+            2906,
+            1121
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "鎭忠",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            758,
+            2906,
+            1121
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0205",
+          "literal": "應永備前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2491,
+            813,
+            2541,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "新々刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2987,
+            1898,
+            3023,
+            2155
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2924,
+            780,
+            2962,
+            2080
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "代作",
+          "category": "technical_sword_term",
+          "geometry": [
+            2924,
+            780,
+            2962,
+            2080
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "長運齋",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2924,
+            780,
+            2962,
+            2080
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "是一",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2874,
+            781,
+            2910,
+            1989
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "長運齋",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "是俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "長運齋",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "綱俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2920,
+            815,
+            2960,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2920,
+            815,
+            2960,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永重",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            813,
+            2908,
+            1483
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2920,
+            815,
+            2960,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永重",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            812,
+            2908,
+            1481
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永茂",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            812,
+            2908,
+            1481
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "新々刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2982,
+            1949,
+            3019,
+            2169
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2965,
+            687,
+            3012,
+            1490
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2974,
+            1241,
+            3012,
+            1480
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2810,
+            790,
+            2847,
+            1514
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "正次",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2810,
+            790,
+            2847,
+            1514
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0222",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2743,
+            769,
+            2774,
+            1636
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2618,
+            1958,
+            2656,
+            2217
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "助長",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2607,
+            736,
+            2649,
+            1005
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "永家",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2556,
+            839,
+            2592,
+            1661
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2983,
+            1968,
+            3020,
+            2190
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2988,
+            706,
+            3031,
+            1135
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "越前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "重高",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2923,
+            781,
+            2961,
+            2082
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "姿",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "板目",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2983,
+            1225,
+            3026,
+            2166
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2983,
+            1229,
+            3020,
+            1468
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2976,
+            678,
+            3021,
+            1473
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "長旨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2722,
+            779,
+            2757,
+            1656
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "長旨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2722,
+            779,
+            2757,
+            1656
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2631,
+            1955,
+            2672,
+            2175
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "右京亮勝光",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "國住",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2456,
+            796,
+            2496,
+            1191
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "立派",
+          "category": "sword_school",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0041",
+          "literal": "兼道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2401,
+            768,
+            2441,
+            1300
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0041",
+          "literal": "兼道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2401,
+            768,
+            2441,
+            1300
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2964,
+            1976,
+            3001,
+            2194
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2901,
+            824,
+            2937,
+            1444
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2954,
+            712,
+            2998,
+            1502
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2901,
+            824,
+            2937,
+            1444
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "則宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2901,
+            824,
+            2937,
+            1444
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0247",
+          "literal": "祐利",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2556,
+            688,
+            2601,
+            1004
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0247",
+          "literal": "祐永",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2502,
+            791,
+            2537,
+            1355
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0178",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2661,
+            1923,
+            2700,
+            2184
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0178",
+          "literal": "中心",
+          "category": "technical_sword_term",
+          "geometry": [
+            2595,
+            802,
+            2634,
+            1673
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2957,
+            712,
+            2999,
+            983
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2973,
+            1934,
+            3010,
+            2195
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2314,
+            2146,
+            2342,
+            2262
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2852,
+            816,
+            2950,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2852,
+            817,
+            2897,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2852,
+            817,
+            2897,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2748,
+            816,
+            2795,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "太刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2702,
+            817,
+            2743,
+            2114
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2651,
+            817,
+            2695,
+            2119
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "摺上",
+          "category": "technical_sword_term",
+          "geometry": [
+            2651,
+            817,
+            2695,
+            2119
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2651,
+            817,
+            2695,
+            2119
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "摺上",
+          "category": "technical_sword_term",
+          "geometry": [
+            2599,
+            816,
+            2695,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2599,
+            816,
+            2642,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2599,
+            816,
+            2642,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2092,
+            813,
+            2137,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2046,
+            818,
+            2088,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2046,
+            818,
+            2088,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            1999,
+            815,
+            2042,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            1999,
+            815,
+            2042,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            1954,
+            817,
+            1990,
+            2023
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "正宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2802,
+            817,
+            2847,
+            2115
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "康永",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2702,
+            817,
+            2743,
+            2114
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "國長",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "正中",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2092,
+            813,
+            2137,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "相州傳",
+          "category": "sword_tradition",
+          "geometry": [
+            2748,
+            816,
+            2795,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "高平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2687,
+            778,
+            2728,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "辻村",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2687,
+            778,
+            2728,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2586,
+            776,
+            2621,
+            1139
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "景平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2586,
+            776,
+            2621,
+            1139
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0038",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2944,
+            780,
+            2991,
+            1969
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0105",
+          "literal": "國俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2066,
+            801,
+            2123,
+            2109
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0105",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2066,
+            801,
+            2123,
+            2109
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2192,
+            1989,
+            2231,
+            2167
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "杢目肌",
+          "category": "technical_sword_term",
+          "geometry": [
+            2034,
+            788,
+            2071,
+            1817
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2034,
+            788,
+            2071,
+            1817
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "亂刄",
+          "category": "technical_sword_term",
+          "geometry": [
+            2034,
+            788,
+            2071,
+            1817
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "越前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2192,
+            1237,
+            2230,
+            1475
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "國信",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2132,
+            786,
+            2168,
+            2093
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2132,
+            786,
+            2168,
+            2093
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "越前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2083,
+            785,
+            2120,
+            2091
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2002,
+            785,
+            2039,
+            1295
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "國清",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2002,
+            785,
+            2039,
+            1295
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0176",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2992,
+            1988,
+            3029,
+            2167
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0176",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2987,
+            1240,
+            3024,
+            1477
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0176",
+          "literal": "正弘",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2827,
+            783,
+            2859,
+            1215
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0155",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2996,
+            1244,
+            3033,
+            1483
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0155",
+          "literal": "康繼",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2838,
+            792,
+            2874,
+            1496
+          ]
+        }
+      ]
+    },
+    "contextual": {
+      "reference_mentions": 325,
+      "correct_complete_groups": 56,
+      "false_positives": 16,
+      "missed_mentions": 269,
+      "false_specific_person_assignments": 0,
+      "precision": 0.7777777777777778,
+      "recall": 0.1723076923076923,
+      "english_reference": {
+        "correct": 0,
+        "scored": 0
+      },
+      "rejections": [
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "雲生",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2967,
+            705,
+            3010,
+            975
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "大原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2966,
+            729,
+            3008,
+            994
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "相州",
+          "category": "sword_tradition",
+          "geometry": [
+            2950,
+            674,
+            2994,
+            945
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0124",
+          "literal": "來",
+          "category": "sword_school",
+          "geometry": [
+            2973,
+            718,
+            3013,
+            946
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2594,
+            690,
+            2637,
+            1000
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0085",
+          "literal": "相州",
+          "category": "sword_tradition",
+          "geometry": [
+            2708,
+            691,
+            2755,
+            1040
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0198",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            1999,
+            2537,
+            2180
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0006",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2197,
+            450,
+            2580,
+            499
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2997,
+            1992,
+            3037,
+            2170
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0091",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2391,
+            1995,
+            2429,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0083",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2251,
+            699,
+            2295,
+            965
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永茂",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            812,
+            2908,
+            1481
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "長船",
+          "category": "sword_school",
+          "geometry": [
+            2607,
+            736,
+            2649,
+            1005
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0247",
+          "literal": "祐利",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2556,
+            688,
+            2601,
+            1004
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "長船",
+          "category": "sword_school",
+          "geometry": [
+            2957,
+            712,
+            2999,
+            983
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0105",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2066,
+            801,
+            2123,
+            2109
+          ]
+        }
+      ]
+    }
+  },
+  "candidate": {
+    "general": {
+      "reference_mentions": 325,
+      "correct_complete_groups": 0,
+      "false_positives": 0,
+      "missed_mentions": 325,
+      "false_specific_person_assignments": 0,
+      "precision": null,
+      "recall": 0.0,
+      "english_reference": {
+        "correct": 0,
+        "scored": 0
+      },
+      "rejections": []
+    },
+    "exact": {
+      "reference_mentions": 325,
+      "correct_complete_groups": 141,
+      "false_positives": 206,
+      "missed_mentions": 184,
+      "false_specific_person_assignments": 0,
+      "precision": 0.40634005763688763,
+      "recall": 0.4338461538461538,
+      "english_reference": {
+        "correct": 0,
+        "scored": 0
+      },
+      "rejections": [
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2218,
+            800,
+            2258,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "亂刄",
+          "category": "technical_sword_term",
+          "geometry": [
+            2168,
+            800,
+            2208,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2168,
+            800,
+            2208,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "彫物",
+          "category": "technical_sword_term",
+          "geometry": [
+            2115,
+            800,
+            2156,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2115,
+            800,
+            2156,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2115,
+            800,
+            2156,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2268,
+            798,
+            2308,
+            2101
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "万太夫",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2268,
+            798,
+            2308,
+            2101
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2268,
+            798,
+            2308,
+            2101
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "一竿子",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "一竿子",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "一竿子",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0071",
+          "literal": "忠綱",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2015,
+            805,
+            2058,
+            2099
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2712,
+            812,
+            2752,
+            2112
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2712,
+            812,
+            2752,
+            2112
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "太刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2662,
+            813,
+            2698,
+            1686
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "小丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2662,
+            813,
+            2698,
+            1686
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "雲生",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2967,
+            705,
+            3010,
+            975
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "一派",
+          "category": "sword_school",
+          "geometry": [
+            2915,
+            811,
+            2952,
+            2108
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            3000,
+            2026,
+            3040,
+            2204
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "舞草",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            3017,
+            723,
+            3070,
+            1513
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "舞草",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "安房",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "一寸",
+          "category": "measurement_dimension",
+          "geometry": [
+            2961,
+            822,
+            3004,
+            1519
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "大原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2966,
+            729,
+            3008,
+            994
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "永延",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2970,
+            1280,
+            3006,
+            1522
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "大原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2911,
+            829,
+            2949,
+            2130
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "永延",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2911,
+            829,
+            2949,
+            2130
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "一派",
+          "category": "sword_school",
+          "geometry": [
+            2911,
+            829,
+            2949,
+            2130
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2919,
+            806,
+            2956,
+            2109
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "守助",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0244",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2818,
+            810,
+            2857,
+            1715
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0252",
+          "literal": "横山祐平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2903,
+            770,
+            2944,
+            2053
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0252",
+          "literal": "祐定",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2903,
+            770,
+            2944,
+            2053
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0252",
+          "literal": "祐永",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2903,
+            770,
+            2944,
+            2053
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2950,
+            691,
+            2999,
+            2153
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2898,
+            775,
+            2940,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "亂刄",
+          "category": "technical_sword_term",
+          "geometry": [
+            2898,
+            775,
+            2940,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "廣次",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2950,
+            691,
+            2999,
+            2153
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "永正",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2950,
+            691,
+            2999,
+            2153
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2450,
+            808,
+            2496,
+            2115
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2407,
+            811,
+            2448,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2407,
+            811,
+            2448,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2285,
+            811,
+            2332,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2234,
+            812,
+            2283,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "繁榮",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2407,
+            811,
+            2448,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0059",
+          "literal": "三分",
+          "category": "measurement_dimension",
+          "geometry": [
+            2450,
+            808,
+            2496,
+            2115
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "尚行",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2977,
+            713,
+            3025,
+            2237
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "行平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2926,
+            808,
+            2961,
+            1474
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2875,
+            806,
+            2910,
+            1169
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0099",
+          "literal": "尚行",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2875,
+            806,
+            2910,
+            1169
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0124",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2987,
+            2022,
+            3023,
+            2199
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0124",
+          "literal": "國俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2919,
+            821,
+            2956,
+            1622
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0189",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2313,
+            704,
+            2366,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0189",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2313,
+            715,
+            2366,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0189",
+          "literal": "重道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2313,
+            715,
+            2366,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0093",
+          "literal": "國住",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2532,
+            810,
+            2566,
+            1274
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2623,
+            1959,
+            2660,
+            2178
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2491,
+            798,
+            2540,
+            1637
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2594,
+            690,
+            2637,
+            1000
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "後鳥羽院",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2544,
+            801,
+            2597,
+            2098
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "長原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2544,
+            801,
+            2597,
+            2098
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0054",
+          "literal": "守吉",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2560,
+            782,
+            2597,
+            1259
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0054",
+          "literal": "吉道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2560,
+            782,
+            2597,
+            1259
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0036",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2996,
+            1990,
+            3034,
+            2209
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0198",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            1999,
+            2537,
+            2180
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0198",
+          "literal": "秀次",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2404,
+            795,
+            2443,
+            1330
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0006",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2197,
+            450,
+            2580,
+            499
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2997,
+            1992,
+            3037,
+            2170
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2934,
+            789,
+            2972,
+            2095
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2882,
+            796,
+            2921,
+            2096
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "常慶",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2934,
+            789,
+            2972,
+            2095
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "藤四郞",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2934,
+            789,
+            2972,
+            2095
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "明治",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2783,
+            802,
+            2819,
+            1598
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2099,
+            1992,
+            2137,
+            2170
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2040,
+            790,
+            2076,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "小杢目",
+          "category": "technical_sword_term",
+          "geometry": [
+            1989,
+            793,
+            2025,
+            1410
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2092,
+            690,
+            2137,
+            1483
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2040,
+            790,
+            2076,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            1938,
+            789,
+            1974,
+            1322
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            1938,
+            789,
+            1974,
+            1322
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0208",
+          "literal": "清光",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            1938,
+            789,
+            1974,
+            1322
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0091",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2391,
+            1995,
+            2429,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0083",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2275,
+            1921,
+            2312,
+            2181
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0083",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2251,
+            699,
+            2295,
+            965
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0079",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2950,
+            1991,
+            2988,
+            2209
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2991,
+            1920,
+            3028,
+            2139
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2921,
+            762,
+            2962,
+            1940
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "鎭政",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2921,
+            762,
+            2962,
+            1940
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            758,
+            2906,
+            1121
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0225",
+          "literal": "鎭忠",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            758,
+            2906,
+            1121
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0205",
+          "literal": "應永備前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2491,
+            813,
+            2541,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "新々刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2987,
+            1898,
+            3023,
+            2155
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2924,
+            780,
+            2962,
+            2080
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "代作",
+          "category": "technical_sword_term",
+          "geometry": [
+            2924,
+            780,
+            2962,
+            2080
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "長運齋",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2924,
+            780,
+            2962,
+            2080
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "是一",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2874,
+            781,
+            2910,
+            1989
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "長運齋",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "是俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "長運齋",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "綱俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2822,
+            781,
+            2857,
+            1378
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2920,
+            815,
+            2960,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2920,
+            815,
+            2960,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永重",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            813,
+            2908,
+            1483
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2920,
+            815,
+            2960,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永重",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            812,
+            2908,
+            1481
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永茂",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            812,
+            2908,
+            1481
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "新々刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2982,
+            1949,
+            3019,
+            2169
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2965,
+            687,
+            3012,
+            1490
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2974,
+            1241,
+            3012,
+            1480
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2810,
+            790,
+            2847,
+            1514
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0166",
+          "literal": "正次",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2810,
+            790,
+            2847,
+            1514
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0222",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2743,
+            769,
+            2774,
+            1636
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2618,
+            1958,
+            2656,
+            2217
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "助長",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2607,
+            736,
+            2649,
+            1005
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "永家",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2556,
+            839,
+            2592,
+            1661
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2983,
+            1968,
+            3020,
+            2190
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2988,
+            706,
+            3031,
+            1135
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "越前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "播磨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0220",
+          "literal": "重高",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2829,
+            813,
+            2867,
+            1304
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2923,
+            781,
+            2961,
+            2082
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "姿",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "板目",
+          "category": "technical_sword_term",
+          "geometry": [
+            2775,
+            784,
+            2812,
+            2097
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2983,
+            1225,
+            3026,
+            2166
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2983,
+            1229,
+            3020,
+            1468
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2976,
+            678,
+            3021,
+            1473
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "長旨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2722,
+            779,
+            2757,
+            1656
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0090",
+          "literal": "長旨",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2722,
+            779,
+            2757,
+            1656
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2631,
+            1955,
+            2672,
+            2175
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "右京亮勝光",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "國住",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2456,
+            796,
+            2496,
+            1191
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0081",
+          "literal": "立派",
+          "category": "sword_school",
+          "geometry": [
+            2555,
+            794,
+            2606,
+            2094
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0041",
+          "literal": "兼道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2401,
+            768,
+            2441,
+            1300
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0041",
+          "literal": "兼道",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2401,
+            768,
+            2441,
+            1300
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2964,
+            1976,
+            3001,
+            2194
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2901,
+            824,
+            2937,
+            1444
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2954,
+            712,
+            2998,
+            1502
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2901,
+            824,
+            2937,
+            1444
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0085",
+          "literal": "則宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2901,
+            824,
+            2937,
+            1444
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0247",
+          "literal": "祐利",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2556,
+            688,
+            2601,
+            1004
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0247",
+          "literal": "祐永",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2502,
+            791,
+            2537,
+            1355
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0178",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2661,
+            1923,
+            2700,
+            2184
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0178",
+          "literal": "中心",
+          "category": "technical_sword_term",
+          "geometry": [
+            2595,
+            802,
+            2634,
+            1673
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2957,
+            712,
+            2999,
+            983
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2973,
+            1934,
+            3010,
+            2195
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2314,
+            2146,
+            2342,
+            2262
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2852,
+            816,
+            2950,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2852,
+            817,
+            2897,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2852,
+            817,
+            2897,
+            2116
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2748,
+            816,
+            2795,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "太刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2702,
+            817,
+            2743,
+            2114
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2651,
+            817,
+            2695,
+            2119
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "摺上",
+          "category": "technical_sword_term",
+          "geometry": [
+            2651,
+            817,
+            2695,
+            2119
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2651,
+            817,
+            2695,
+            2119
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "摺上",
+          "category": "technical_sword_term",
+          "geometry": [
+            2599,
+            816,
+            2695,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2599,
+            816,
+            2642,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "丁子",
+          "category": "technical_sword_term",
+          "geometry": [
+            2599,
+            816,
+            2642,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            2092,
+            813,
+            2137,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            2046,
+            818,
+            2088,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2046,
+            818,
+            2088,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "銘",
+          "category": "technical_sword_term",
+          "geometry": [
+            1999,
+            815,
+            2042,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            1999,
+            815,
+            2042,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "兼光",
+          "category": "technical_sword_term",
+          "geometry": [
+            1954,
+            817,
+            1990,
+            2023
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "正宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2802,
+            817,
+            2847,
+            2115
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "康永",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2702,
+            817,
+            2743,
+            2114
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "國長",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2497,
+            816,
+            2541,
+            1796
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "正中",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2092,
+            813,
+            2137,
+            2120
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "相州傳",
+          "category": "sword_tradition",
+          "geometry": [
+            2748,
+            816,
+            2795,
+            2118
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "高平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2687,
+            778,
+            2728,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "辻村",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2687,
+            778,
+            2728,
+            2076
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2586,
+            776,
+            2621,
+            1139
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0044",
+          "literal": "景平",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2586,
+            776,
+            2621,
+            1139
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0038",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2944,
+            780,
+            2991,
+            1969
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0105",
+          "literal": "國俊",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2066,
+            801,
+            2123,
+            2109
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0105",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2066,
+            801,
+            2123,
+            2109
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2192,
+            1989,
+            2231,
+            2167
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "杢目肌",
+          "category": "technical_sword_term",
+          "geometry": [
+            2034,
+            788,
+            2071,
+            1817
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2034,
+            788,
+            2071,
+            1817
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "亂刄",
+          "category": "technical_sword_term",
+          "geometry": [
+            2034,
+            788,
+            2071,
+            1817
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "越前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2192,
+            1237,
+            2230,
+            1475
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "國信",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2132,
+            786,
+            2168,
+            2093
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "助宗",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2132,
+            786,
+            2168,
+            2093
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "越前",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2083,
+            785,
+            2120,
+            2091
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "藤原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2002,
+            785,
+            2039,
+            1295
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0131",
+          "literal": "國清",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2002,
+            785,
+            2039,
+            1295
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0176",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2992,
+            1988,
+            3029,
+            2167
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0176",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2987,
+            1240,
+            3024,
+            1477
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0176",
+          "literal": "正弘",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2827,
+            783,
+            2859,
+            1215
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0155",
+          "literal": "武藏",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2996,
+            1244,
+            3033,
+            1483
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0155",
+          "literal": "康繼",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2838,
+            792,
+            2874,
+            1496
+          ]
+        }
+      ]
+    },
+    "contextual": {
+      "reference_mentions": 325,
+      "correct_complete_groups": 61,
+      "false_positives": 20,
+      "missed_mentions": 264,
+      "false_specific_person_assignments": 0,
+      "precision": 0.7530864197530864,
+      "recall": 0.18769230769230769,
+      "english_reference": {
+        "correct": 0,
+        "scored": 0
+      },
+      "rejections": [
+        {
+          "page_id": "ndl-1116200-0101",
+          "literal": "雲生",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2967,
+            705,
+            3010,
+            975
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0213",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            3000,
+            2026,
+            3040,
+            2204
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0076",
+          "literal": "大原",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2966,
+            729,
+            3008,
+            994
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0193",
+          "literal": "相州",
+          "category": "sword_tradition",
+          "geometry": [
+            2950,
+            674,
+            2994,
+            945
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0124",
+          "literal": "來",
+          "category": "sword_school",
+          "geometry": [
+            2973,
+            718,
+            3013,
+            946
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0111",
+          "literal": "一文字",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2594,
+            690,
+            2637,
+            1000
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0085",
+          "literal": "相州",
+          "category": "sword_tradition",
+          "geometry": [
+            2708,
+            691,
+            2755,
+            1040
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0198",
+          "literal": "古刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2497,
+            1999,
+            2537,
+            2180
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0006",
+          "literal": "刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2197,
+            450,
+            2580,
+            499
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0092",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2997,
+            1992,
+            3037,
+            2170
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0091",
+          "literal": "新刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2391,
+            1995,
+            2429,
+            2174
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0083",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2251,
+            699,
+            2295,
+            965
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0083",
+          "literal": "代作",
+          "category": "technical_sword_term",
+          "geometry": [
+            2924,
+            780,
+            2962,
+            2080
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0100",
+          "literal": "永茂",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2871,
+            812,
+            2908,
+            1481
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0015",
+          "literal": "長船",
+          "category": "sword_school",
+          "geometry": [
+            2607,
+            736,
+            2649,
+            1005
+          ]
+        },
+        {
+          "page_id": "ndl-1116191-0247",
+          "literal": "祐利",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2556,
+            688,
+            2601,
+            1004
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "太刀",
+          "category": "technical_sword_term",
+          "geometry": [
+            2702,
+            817,
+            2743,
+            2114
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "刄文",
+          "category": "technical_sword_term",
+          "geometry": [
+            2599,
+            816,
+            2642,
+            2122
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0051",
+          "literal": "長船",
+          "category": "sword_school",
+          "geometry": [
+            2957,
+            712,
+            2999,
+            983
+          ]
+        },
+        {
+          "page_id": "ndl-1116200-0105",
+          "literal": "當麻",
+          "category": "swordsmith_artisan",
+          "geometry": [
+            2066,
+            801,
+            2123,
+            2109
+          ]
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Exposed development/regression pages; provisional AI references.",
+    "Exact complete literal, category and geometry are scored separately from translation.",
+    "No English accuracy is inferred when English reference count is zero."
+  ],
+  "prediction_sha256": {
+    "baseline": "1f4183b60f8314109694d9f12333bcd40fe5ebd2064663628077d322d3632b3b",
+    "candidate": "9457d14af9ddba9ae32ab0b5030fa3821a058ec08219f116aa533a0b20ac1ffd"
+  },
+  "failed_first_pass": {
+    "reference_mentions": 325,
+    "correct_complete_groups": 62,
+    "false_positives": 25,
+    "missed_mentions": 263,
+    "false_specific_person_assignments": 0,
+    "precision": 0.7126436781609196,
+    "recall": 0.19076923076923077,
+    "english_reference": {
+      "correct": 0,
+      "scored": 0
+    },
+    "repair": "Retain conservative nontechnical delimiters; a noun followed by a particle does not establish an inflected word boundary."
+  },
+  "pilot": {
+    "scope": "Purposively retrieved exact occurrences in retained Japanese OCR; same-work bilingual mapping regression",
+    "targets": 37,
+    "nested_controls": 2,
+    "baseline_selected_english": 1,
+    "mappings_only_selected_english": 1,
+    "final_selected_english": 37,
+    "nested_controls_selected": 0,
+    "mapped_spellings": 10,
+    "character_changes": 0,
+    "fresh_ocr_calls": 0,
+    "paid_model_calls": 0,
+    "review_state": "AI_source_image_reviewed_provisional_not_expert",
+    "independent_expert_translation_accuracy": null,
+    "split_status": "Exposed development/regression; earlier holdout inspected in the pilot",
+    "private_reference_sha256": "df6d76076f8bc04b666b0031c1c85ba3bba5ca7c872636e0ff74a31667f224ef"
+  },
+  "retained_ocr": {
+    "pages": 13,
+    "native_lines": 860,
+    "raw_text_geometry_engine_preserved": true,
+    "corrected_and_ordered_text_separate": true,
+    "fresh_ocr_calls": 0
+  },
+  "runtime": {
+    "regression_fresh_ocr_calls": 0,
+    "paid_model_calls": 0,
+    "model_training": false
+  },
+  "acceptance": {
+    "pilot_minimum_complete_glosses": 30,
+    "frozen50_minimum_precision": 0.75,
+    "frozen50_correct_groups_must_exceed": 56,
+    "passed": true
+  },
+  "validation": {
+    "passed": true,
+    "fresh_installed_scans": 5,
+    "regions": 336,
+    "scan_ocr_calls": 8,
+    "first_import": {
+      "added": 336,
+      "existing": 0,
+      "automatic_promotion": false,
+      "sharing_performed": false
+    },
+    "repeat_import": {
+      "added": 0,
+      "existing": 336,
+      "automatic_promotion": false,
+      "sharing_performed": false
+    },
+    "source_hashes_verified": true,
+    "retained_ocr_with_general_lexical_baseline": true,
+    "saved_page_raw_preserved": true,
+    "tests": {
+      "passed": 89,
+      "skipped": 11,
+      "skipped_scope": "Optional pinned BERT integration; runtime dependencies not installed for this run"
+    },
+    "smoke10": {
+      "complete": 10,
+      "scored": 0,
+      "purpose": "Workflow smoke on distinct public frames; no accuracy denominator",
+      "fresh_ocr_calls": 0
+    }
+  },
+  "baseline_count_reconciliation": "The five-category sum includes two unmatched sword_tradition proposals; omitting that category incorrectly reports 14 instead of 16 baseline rejections."
+}
