@@ -97,7 +97,7 @@ reproducibility, rights or unique-evidence purpose. Human steering replaces old
 methods and backlog. Verify successor/callers, then delete superseded executable
 routes, models, configuration, tests and duplicate instructions. Do not keep a failed
 method as an optional legacy mode. Preserve necessary historical evidence compactly;
-do not rely on Git history when publishing a one-commit repository.
+keep published history intact and scan all reachable commits before publication.
 
 Run appropriate behavior/install/publication checks and one file-purpose inventory.
 Use the installed Python environment. Stop auditing after acceptance succeeds.

@@ -13,11 +13,11 @@ the entire checkout and staged content must each remain below 500,000,000 bytes.
 
 For a pull request, run the tests above, `git diff --check`, and inspect
 `git diff --cached` before pushing your branch. The maintainer runs
-`python3 -B tests/check_release.py` after preparing the replacement root commit: that
-release-only guard requires the canonical origin, main branch, matching index
-and one root commit, so it is not a contributor-fork command. It checks physical
-files, names, size and selected privacy patterns, including staged and committed
-content. Review every diff manually and use a dedicated secret scanner where
+`python3 -B tests/check_release.py` before pushing. It checks physical files,
+the index and every reachable commit for allowed paths, size and selected privacy
+patterns. Deleted historical content is included. After merging, the maintainer
+also runs it with `--published` to check the canonical origin and clean main branch.
+Review every diff manually and use a dedicated secret scanner where
 available. Pattern checks cannot prove absence of every secret or identify all PII.
 No code, setup or test should silently run cloud inference or change global packages.
 
@@ -66,12 +66,12 @@ for unchanged records. A new local NDL book can be tested through `scan` without
 adding it to the bundle or changing accepted source cohorts. Report pages
 attempted, failed and unresolved separately from any source-reviewed accuracy
 measurement. The maintainer reviews the diff and release checks before merging;
-public release history is maintained as one root commit.
+reviewed changes are squash-merged into the existing public history.
 
 Fork the repository, create a branch from the current `main`, commit only the
 reviewed parser/test/documentation changes, and open the pull request against
-`bitcoingametheory/koshirai:main`. Do not force-push the upstream branch. Because
-release history is replaced, base each new contribution on the current release.
+`bitcoingametheory/koshirai:main`. Do not force-push the upstream branch.
+Base each new contribution on current `main` and preserve published history.
 
 Contributors do not need the private master. For a data correction, include a
 small table in the pull-request description with `literal`, `printed_romaji`

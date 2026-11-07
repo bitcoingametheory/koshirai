@@ -125,6 +125,7 @@ Runtime files support scanning and lookup; the other categories support installa
 | [tests/test_meaning_selection.py](../tests/test_meaning_selection.py) | verification | Verifies meaning selection behavior and its current source/evidence contract. |
 | [tests/test_native_semantics.py](../tests/test_native_semantics.py) | verification | Verifies native semantics behavior and its current source/evidence contract. |
 | [tests/test_ndlocr_lite.py](../tests/test_ndlocr_lite.py) | verification | Verifies ndlocr lite behavior and its current source/evidence contract. |
+| [tests/test_release_history.py](../tests/test_release_history.py) | verification | Verifies release history behavior and its current source/evidence contract. |
 | [tests/test_research_corpus.py](../tests/test_research_corpus.py) | verification | Verifies research corpus behavior and its current source/evidence contract. |
 | [tests/test_resource_limits.py](../tests/test_resource_limits.py) | verification | Verifies resource limits behavior and its current source/evidence contract. |
 | [tests/test_retained_ocr.py](../tests/test_retained_ocr.py) | verification | Verifies retained ocr behavior and its current source/evidence contract. |
