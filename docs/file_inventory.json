@@ -377,7 +377,7 @@
       "role": "researcher documentation",
       "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
       "runtime_required": false,
-      "sha256": "fe5db33794c6bd9eb72b193e6fa1a98636de1e05ca22ea0e623fe01af205521a"
+      "sha256": "e736603b30e2b4a803229eeecc18f193506ec3ce391eae46f5274792154caaaf"
     },
     {
       "path": "docs/source_coverage.md",
@@ -734,7 +734,7 @@
       "role": "installation and entry points",
       "reason_retained": "Repository-only instructions for researcher agents.",
       "runtime_required": false,
-      "sha256": "61f0631fbb2950735bd1d8f70296db430078f8501a736b890ebac110253781c8"
+      "sha256": "8b02e48d247ab4840b0dd20e39a891e45250d15879937f877de623d9c03b0101"
     },
     {
       "path": "pyproject.toml",
@@ -755,7 +755,7 @@
       "role": "verification",
       "reason_retained": "Verifies check release behavior and its current source/evidence contract.",
       "runtime_required": false,
-      "sha256": "458c3460f40eeb975afb93810d07ad91ec8d8b118fff8e953b3733b42701f1fc"
+      "sha256": "de9821c10c909709207968f327b29aeb8dbb50a582b54036f85b182d6f440725"
     },
     {
       "path": "tests/test_bert_context.py",
@@ -833,6 +833,13 @@
       "reason_retained": "Verifies ndlocr lite behavior and its current source/evidence contract.",
       "runtime_required": false,
       "sha256": "eb5b715542b6e2ea01c0d556563177a2b6c7e1dae17acf384645926adcfdcb9f"
+    },
+    {
+      "path": "tests/test_release_history.py",
+      "role": "verification",
+      "reason_retained": "Verifies release history behavior and its current source/evidence contract.",
+      "runtime_required": false,
+      "sha256": "3b290029a77b9fc185ca78d71b691a3f1226d57b74f3c3261019499e462f1e61"
     },
     {
       "path": "tests/test_research_corpus.py",

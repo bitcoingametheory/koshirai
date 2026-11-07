@@ -1,4 +1,4 @@
-"""Check the physical checkout and staged blobs without disclosing matched content."""
+"""Check the checkout, index and reachable history without disclosing matched content."""
 from pathlib import Path
 import gzip,hashlib,json,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]
@@ -48,6 +48,35 @@ def scan(rel,data,failures):
     if rel.suffix!='.jpg' and any(hashlib.sha256(word).hexdigest() in PRIVATE_LABEL_HASHES
             for word in set(re.findall(rb'[a-z]+',data.lower()))):
         failures.add('private source identity: '+str(rel))
+def check_git_content(git,failures):
+    """Scan each path/blob once, including deleted historical files and staged content."""
+    seen={}
+    def blob(mode,oid,name):
+        rel=Path(os.fsdecode(name))
+        if mode not in (b'100644',b'100755') or not allowed(rel):
+            failures.add('unapproved committed path: '+str(rel));return 0
+        key=(name,oid)
+        if key not in seen:
+            data=git('cat-file','blob',oid.decode())
+            scan(rel,data,failures);seen[key]=len(data)
+        return seen[key]
+    commits=git('rev-list','HEAD').splitlines()
+    for commit in commits:
+        total=0
+        for record in git('ls-tree','-r','-z',commit.decode()).split(b'\0'):
+            if not record:continue
+            metadata,name=record.split(b'\t',1);mode,kind,oid=metadata.split()
+            total+=blob(mode,oid,name)
+        if total>LIMIT:failures.add('committed public files exceed 500MB')
+    total=0
+    for record in git('ls-files','--stage','-z').split(b'\0'):
+        if not record:continue
+        metadata,name=record.split(b'\t',1);mode,oid,stage=metadata.split()
+        if stage!=b'0':failures.add('unmerged index: '+os.fsdecode(name));continue
+        total+=blob(mode,oid,name)
+    if total>LIMIT:failures.add('staged public files exceed 500MB')
+    return len(commits)
+
 def check(published=False):
     failures=set();size=0;files=0
     for path in ROOT.rglob('*'):
@@ -58,20 +87,15 @@ def check(published=False):
         if not allowed(rel):failures.add('unapproved artifact: '+str(rel))
         scan(rel,path.read_bytes(),failures)
     if size>LIMIT:failures.add('public files exceed 500MB')
+    def git(*args):return subprocess.check_output(['git','-C',str(ROOT),*args])
+    commits=check_git_content(git,failures)
     if published:
-        def git(*args):return subprocess.check_output(['git','-C',str(ROOT),*args]).strip()
-        if git('rev-list','--count','HEAD')!=b'1':failures.add('main must have one reachable root commit')
         if git('status','--porcelain'):failures.add('published tree is not clean')
-        if git('branch','--show-current')!=b'main':failures.add('expected main branch')
-        if git('remote','get-url','origin')!=b'https://github.com/bitcoingametheory/koshirai.git':failures.add('unexpected publication target')
-        for record in git('ls-tree','-r','-z','HEAD').split(b'\0'):
-            if not record:continue
-            metadata,name=record.split(b'\t',1);mode,kind,oid=metadata.split();rel=Path(os.fsdecode(name))
-            if kind!=b'blob' or not allowed(rel):failures.add('unapproved committed path: '+str(rel));continue
-            scan(rel,git('cat-file','blob',oid.decode()),failures)
+        if git('branch','--show-current').strip()!=b'main':failures.add('expected main branch')
+        if git('remote','get-url','origin').strip()!=b'https://github.com/bitcoingametheory/koshirai.git':failures.add('unexpected publication target')
     audit=subprocess.run([sys.executable,'-B',str(ROOT/'tools/audit_repository.py'),'--check'],capture_output=True,text=True)
     if audit.returncode:failures.add('file inventory or local-link check failed')
-    return {'passed':not failures,'files':files,'public_bytes':size,'published_checks':published,'failures':sorted(failures)}
+    return {'passed':not failures,'files':files,'public_bytes':size,'commits_checked':commits,'published_checks':published,'failures':sorted(failures)}
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--published',action='store_true');args=parser.parse_args()
