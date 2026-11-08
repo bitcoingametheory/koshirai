@@ -349,7 +349,7 @@
       "role": "researcher documentation",
       "reason_retained": "Documents installation, evidence interpretation, contribution, source coverage, licenses or this audit.",
       "runtime_required": false,
-      "sha256": "0f5b90e6758e15dd692a6a6fe47f8518ae672c549e9093955b1db9210dc8dee1"
+      "sha256": "14c6e8b0a58a5ea636b5a37ce555c60d18a6007f6fb3c793af71f7002e6b95ed"
     },
     {
       "path": "docs/notices/third_party_data.md",
@@ -531,7 +531,7 @@
       "role": "application",
       "reason_retained": "Bounded Japanese relation proposals and evidence-linked English presentation.",
       "runtime_required": true,
-      "sha256": "67e8470e1e636585b24415168b6f12d546b26e2172f2bc7c0d002b6d46fa580f"
+      "sha256": "31e6d0ac27a236395786d43298bb47d557cc03a612553d8035af870a1b3ff538"
     },
     {
       "path": "kanji_translator/jev_context.py",
@@ -825,7 +825,7 @@
       "role": "verification",
       "reason_retained": "Verifies native semantics behavior and its current source/evidence contract.",
       "runtime_required": false,
-      "sha256": "037adec5d74762c158e57ae01e7614b4ef78f95d3728cddc6610644b1dc4a707"
+      "sha256": "68230b16893f7efe04d688d0fd487962beb257ba307385c946e4a21b3201b22a"
     },
     {
       "path": "tests/test_ndlocr_lite.py",

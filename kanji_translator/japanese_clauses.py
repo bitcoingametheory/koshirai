@@ -7,13 +7,16 @@ Unrecognized scope, quotations and complex negation remain visible for review.
 import re
 from .request_contracts import canonical, digest
 
-VERSION = 'native-japanese-relations-v1'
+VERSION = 'native-japanese-relations-v2'
 TECHNICAL = {'technical_sword_term','measurement_dimension'}
 NAMES = {'swordsmith_artisan','historical_person','family_clan'}
 MODAL = re.compile(r'(?:と(?:も)?(?:伝[えへ]られ|言われ|云われ|され|いわれ)|(?:かもしれ|かも知れ)|であろう|であらう|と思[わは]れ|と(?:み|見)られ)')
 COMPLEX = re.compile(r'(?:ないこと[もは]ない|なくはない|とは限ら|に限ら|わけでは|訳では|なければ|ならば|たら|ても|とすれば|かどうか|見ないわけ|ぬわけ)')
 MIX = re.compile(r'(?:交[じり]|混[じり])(?:らない|らず|らぬ|る|り|って|じる)?|交る|混る')
-OBSERVED = re.compile(r'(?:見られ(?:ない|ず|ぬ|る)|認め(?:られ)?(?:ない|ず|ぬ|る)|(?:現|表)[れは](?:ない|ず|ぬ|る)|(?:つ|付)(?:かない|かず|かぬ|く|き|いて)|(?:有|あ)(?:る|り)|(?:無|な)(?:い|く)|なし)')
+OBSERVED = re.compile(r'(?:見られ(?:ない|ず|ぬ|る)|認め(?:られ)?(?:ない|ず|ぬ|る)|(?:現|表)[れは](?:ない|ず|ぬ|る)|(?:つ|付)(?:かない|かず|かぬ|く|き|いて)|づき|(?:有|あ)(?:る|り)|(?:無|な)(?:い|く)|なし)')
+# Retain the adverb and the attested voiced continuative in the cue span.
+# This recognizes presence only; it does not translate intensity or rewrite OCR.
+OBSERVED_LEAD = re.compile(r'(?:が|は|も)?\s*(?:よく\s*)?')
 NEGATIVE = re.compile(r'(?:ない|ず|ぬ|なし|無い|無く|なく)$')
 
 
@@ -90,7 +93,7 @@ def analyze(text, mentions):
         for i,a in enumerate(members):
             category=a['selection']['category'];after=text[a['end']:end]
             if category in TECHNICAL:
-                obs=re.match(r'(?:が|は|も)?\s*',after)
+                obs=OBSERVED_LEAD.match(after)
                 predicate=OBSERVED.match(after,obs.end())
                 if predicate:
                     stop=a['end']+predicate.end();tail=text[stop:end]

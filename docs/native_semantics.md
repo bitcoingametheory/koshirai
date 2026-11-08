@@ -22,6 +22,10 @@ modality, supporting term citations and a clause ID. Conditional constructions,
 quotations and unsupported negation scopes abstain. Remaining wording stays visible.
 This is a bounded grammar, not complete Japanese semantic parsing.
 
+Presence proposals also recognize `よく` before a supported predicate and the
+voiced continuative `づき`. Their original characters remain in the cue span.
+English reports presence only; the qualifier's degree is not translated.
+
 `results.jsonl` exposes these records in `japanese_interpretations`.
 `interpretations.jsonl` makes the same units convenient to inspect after a folder
 scan. English remains null when an argument lacks a supported gloss or reading.

@@ -19,6 +19,10 @@ def claims(text):
     ('小沸が見られない。','observed','negative'),
     ('小沸が見られる。','observed','positive'),
     ('小沸がない。','observed','negative'),
+    ('小沸よくつき、帽子は小丸。','observed','positive'),
+    ('小沸がよくつく。','observed','positive'),
+    ('小沸がよくつかない。','observed','negative'),
+    ('小沸づき、帽子は小丸。','observed','positive'),
     ('板目肌より柾目肌が多い。','more_frequent_than','positive'),
     ('雲次は雲生の子。','child_of','positive'),
     ('雲次は雲生の弟子ではない。','student_of','negative'),
@@ -37,6 +41,8 @@ def test_literal_relations_and_polarity(text,kind,polarity):
     '「小沸がない」と書く。','板目肌。柾目肌が交じる。',
     '板目肌に\n柾目肌が交じる。','小沸が見られるものではない。',
     '板目肌に柾目肌が交じることはない。','小沸が見られるとは言えない。',
+    '小沸がよくついていない。','小沸よくつくとは限らない。',
+    '小沸づきとは言えない。','小沸づきならば。','小沸よく\nつく。',
 ])
 def test_unsupported_scope_abstains(text):
     assert not claims(text)
@@ -47,6 +53,16 @@ def test_reported_and_possible_claims_are_not_plain_assertions():
     assert a['polarity']=='negative' and a['modality']=='reported'
     assert a['modality_evidence']['literal']=='とされ'
     assert claims('小沸が見られるかもしれない。')[0]['modality']=='possible'
+
+
+def test_presence_cues_preserve_qualifier_and_voiced_characters():
+    for text, cue in [('小沸よくつく。', 'よくつく'), ('小沸づき。', 'づき')]:
+        result=parse({'text':text,'lexical_config':{'enabled':False}})
+        assert result['raw_ndl_transcript']==text
+        row=result['japanese_interpretations'][0]['claims'][0]
+        assert row['cue']['literal']==cue
+        assert row['english'].startswith('Present: ')
+        assert row['state']=='rule_proposal' and not row['identity_accepted']
 
 
 def test_index_tab_supports_three_character_head_without_name_invention():
