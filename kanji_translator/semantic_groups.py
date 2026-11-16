@@ -13,7 +13,8 @@ from .sword_library import bundle, lookup
 from .meaning_selection import english_quality
 from .semantic_roles import role_facts, role_records
 
-VERSION = 'literal-semantic-groups-v7-native-entries'
+VERSION = 'literal-semantic-groups-v8-bilingual-spans'
+ASCII_CASE = str.maketrans('ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')
 CATEGORIES = ('technical_sword_term', 'swordsmith_artisan', 'sword_school',
               'sword_tradition',
               'measurement_dimension', 'historical_person', 'family_clan',
@@ -45,7 +46,8 @@ def trie():
     forms = set()
     for kind in ('terms','spellings','names','forms'):
         forms.update(r['literal'] for r in data[kind] if r.get('literal'))
-    forms.update(r['form'] for r in data['aliases'] if r.get('language')=='ja')
+        forms.update(r['printed_romaji'] for r in data[kind] if r.get('printed_romaji'))
+    forms.update(r['form'] for r in data['aliases'])
     forms.update(r['label_ja'] for r in data['concepts'] if r.get('label_ja'))
     single_attested={r['literal'] for r in role_facts() if len(r['literal'])==1}
     single_attested.update(r['literal'] for r in data['terms'] if r.get('literal') and len(r['literal'])==1 and r.get('bridge') and r.get('role')=='technical_sword_term')
@@ -55,7 +57,9 @@ def trie():
         forms.update(record['literal']+s for s in suffixes)
     for form in forms:
         normalized, _ = forms_with_offsets(form)
-        if not (2<=len(normalized)<=48 or form in single_attested) or not JAPANESE.search(normalized) or re.search(r'\s',normalized):
+        normalized=normalized.translate(ASCII_CASE)
+        japanese=bool(JAPANESE.search(normalized))
+        if not (2<=len(normalized)<=48 or form in single_attested) or (japanese and re.search(r'\s',normalized)) or (not japanese and not re.fullmatch(r'[a-zāīūēō][a-zāīūēō \-\x27]{2,47}',normalized)):
             continue
         node=root
         for char in normalized: node=node.setdefault(char,{})
@@ -63,8 +67,10 @@ def trie():
     return root
 
 
+@lru_cache(maxsize=4096)
 def matched_spans(text):
     normalized, offsets = forms_with_offsets(text)
+    normalized=normalized.translate(ASCII_CASE)
     root=trie(); found=set()
     for start in range(len(normalized)):
         node=root
@@ -76,8 +82,9 @@ def matched_spans(text):
                 first=offsets[start]; last=offsets[end]
                 a=first['start'] if isinstance(first,dict) else first
                 b=last['end'] if isinstance(last,dict) else last+1
+                if not JAPANESE.search(text[a:b]) and ((a and text[a-1].isalnum()) or (b<len(text) and text[b].isalnum())):continue
                 if '\n' not in text[a:b]:found.add((a,b))
-    return found
+    return frozenset(found)
 
 
 def _candidate(category, reading=None, english=None, source=None, support=None, prior=1., name=None):
@@ -86,13 +93,17 @@ def _candidate(category, reading=None, english=None, source=None, support=None, 
             'prior':prior,'identity_accepted':False}
 
 
+@lru_cache(maxsize=8192)
+def _domain(text):
+    return lookup(text)
+
 def candidates(text, start, end, lexical_spans=()):
-    literal=text[start:end]; domain=lookup(literal); result=[]
-    normalized,_=forms_with_offsets(literal);node=trie()
+    literal=text[start:end]; domain={k:list(v) if isinstance(v,list) else v for k,v in _domain(literal).items()}; result=[]
+    normalized,_=forms_with_offsets(literal);normalized=normalized.translate(ASCII_CASE);node=trie()
     for char in normalized:node=node.get(char,{})
     for source_form in node.get('',[]):
         if source_form==literal:continue
-        variant=lookup(source_form)
+        variant=_domain(source_form)
         for kind in ('assertions','concepts','smith_name_candidates'):
             domain[kind].extend({**row,'lookup_derivative':{'printed':literal,'attested_form':source_form,'basis':'documented historical search-form mapping; literal preserved'}} for row in variant[kind])
     technical=bool(domain['concepts'])
@@ -456,3 +467,37 @@ def interpret(text, lexical=None, context=None, config=None):
     return {'version':VERSION,'state':'proposals','mentions':selected,'candidates':rows,
             'interpretation':analyze(text,selected),
             'entry_structure':structure,'model':model,'changes_characters':False,'automatic_promotion':False}
+
+
+def interpret_units(text, *, max_chars=2048):
+    """Bound sentence work and share meaning evidence without duplicating source prose.
+
+    Unit offsets address the input; mention/claim offsets address that unit.
+    Oversized unbroken units retain exact ranges for review, never silent clipping.
+    A scanned unit is not a translated or semantically accepted sentence.
+    """
+    if type(max_chars) is not int or not 64<=max_chars<=8192:raise ValueError('Invalid semantic unit bound')
+    units=[];meanings={};held=[];scanned=0
+    for part in re.finditer(r'[^\n。！？!?]+[。！？!?]?',text):
+        value=part[0]
+        if not value.strip():continue
+        if len(value)>max_chars:
+            held.append(dict(start=part.start(),end=part.end(),reason='unit_exceeds_semantic_bound'));continue
+        scanned+=1
+        if not matched_spans(value) and not MEASUREMENT.search(value):continue
+        parsed=interpret(value);mentions=[]
+        for mention in parsed['mentions']:
+            keys=[]
+            for candidate in [mention['selection'],*mention['alternatives']]:
+                evidence={k:v for k,v in candidate.items() if k not in ('score','selection_evidence')}
+                key=digest(canonical(evidence));meanings[key]=evidence;keys.append(key)
+            mentions.append(dict(start=mention['start'],end=mention['end'],meaning_key=keys[0],alternatives=keys[1:],
+                state=mention['review_state'],identity_accepted=False,uncertainty=mention.get('uncertainty',[])))
+        claims=[]
+        for claim in parsed['interpretation']['claims']:
+            claims.append({k:v for k,v in claim.items() if k!='evidence'}|dict(meaning_keys=[
+                m['meaning_key'] for arg in claim['arguments'] for m in mentions if (m['start'],m['end'])==(arg['start'],arg['end'])]))
+        if mentions or claims:
+            units.append(dict(start=part.start(),end=part.end(),text_sha256=digest(value.encode()),mentions=mentions,claims=claims))
+    return dict(version=VERSION,units=units,meanings=meanings,held_units=held,scanned_units=scanned,
+                state='source_linked_proposals',automatic_promotion=False)

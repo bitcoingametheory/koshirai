@@ -20,7 +20,7 @@
       "role": "installation and entry points",
       "reason_retained": "Researcher starting point and accurate capability statement.",
       "runtime_required": false,
-      "sha256": "61d72e166d7f5586191864c05d4b05d7e426cb9b5b0ac9eedff7d1cb045d11a1"
+      "sha256": "cefd0a687bd7a7127a85721beb3a0a55bff083451543f8c55420302d560e8ae3"
     },
     {
       "path": "benchmarks/README.md",
@@ -503,7 +503,7 @@
       "role": "application",
       "reason_retained": "Bounded native-pixel layout/crops; derived data only, no source-owner writes.",
       "runtime_required": true,
-      "sha256": "fece7ac5a247e74049bd412ab9a988b4dd5245b88afb78736b0bd0089d8aa192"
+      "sha256": "79e864fe1c08e4f6f7642fb2ace8ca20d601beae4e940d348f357a191cf11983"
     },
     {
       "path": "kanji_translator/install_bert.py",
@@ -571,16 +571,16 @@
     {
       "path": "kanji_translator/readers/ocr/__init__.py",
       "role": "application",
-      "reason_retained": "The maintained literal Japanese OCR engine.",
+      "reason_retained": "Region-selected literal OCR; engine output is a proposal, never a review.",
       "runtime_required": true,
-      "sha256": "13cce76db70934c0bdfa0cf8b260b625b7a0700f21865b587bd0b5215f0910d3"
+      "sha256": "9c436b569b530b76e5a8ef4da066cf53c9be47c0c529f8430937cc8d34c91d22"
     },
     {
       "path": "kanji_translator/readers/ocr/ndlocr_lite.py",
       "role": "application",
       "reason_retained": "NDLOCR-Lite page recognition; literal text and regions remain proposals.",
       "runtime_required": true,
-      "sha256": "89b3935b83f3ee8a09a83830921f4b31c013eb5fe0b4e54f27fd28d453f3afa5"
+      "sha256": "7dff78ba51feff9acb8d4b20c71b4a4d3706979556f9cab7a599c60ae594a9f1"
     },
     {
       "path": "kanji_translator/readers/ocr/retained.py",
@@ -608,7 +608,7 @@
       "role": "application",
       "reason_retained": "Finite public request validation and deterministic serialization.",
       "runtime_required": true,
-      "sha256": "88ad6cd852aaa0ed5c8646b1f6fc7b549b2ba0942ce6e1f788c86117cc7c53f6"
+      "sha256": "f928e0e5661dea66fe54f2007012230f1f0d520d2391adbfbb2829579786ee59"
     },
     {
       "path": "kanji_translator/research_corpus.py",
@@ -699,14 +699,14 @@
       "role": "application",
       "reason_retained": "Literal, source-supported span matching and contextual semantic selection.",
       "runtime_required": true,
-      "sha256": "be5e83c9c2b11add2aeacec57b45ec80f6a33192a4b64fc3edeceeea60d9fd2c"
+      "sha256": "b3d121c7f5a35823b1a0957bef49b173c4dbf93a9a707e9ddc9c4b5b86eaddb3"
     },
     {
       "path": "kanji_translator/semantic_roles.py",
       "role": "application",
       "reason_retained": "Single owner of cited school, tradition and complete-name role assertions.",
       "runtime_required": true,
-      "sha256": "b6a943360bcdae01df18c0afbba248c317db2d7d5a7f8c0669e7fc9e173574a7"
+      "sha256": "a12c2434d531f31014207ef0faaa3a712b809318e40813c58d90390b18c009a1"
     },
     {
       "path": "kanji_translator/source_evidence.py",
@@ -727,14 +727,14 @@
       "role": "application",
       "reason_retained": "Single text representation and literal-offset owner.",
       "runtime_required": true,
-      "sha256": "f9cbffb7827889a2510841a4b1fcdc382c8dd79013145d3590f3f5e7b43e38da"
+      "sha256": "c224b94d7668a0d3b117f2d43865c5d73b16b642a4d3d8ffb8485f9cff6f3f6c"
     },
     {
       "path": "llms.txt",
       "role": "installation and entry points",
       "reason_retained": "Repository-only instructions for researcher agents.",
       "runtime_required": false,
-      "sha256": "8b02e48d247ab4840b0dd20e39a891e45250d15879937f877de623d9c03b0101"
+      "sha256": "9fbdd3a00bab2f717f1e4db37fbdd2c386db85aad76a1615001650ebd98a05b3"
     },
     {
       "path": "pyproject.toml",
@@ -783,7 +783,7 @@
       "role": "verification",
       "reason_retained": "Verifies document parser behavior and its current source/evidence contract.",
       "runtime_required": false,
-      "sha256": "b4785f7eb023a16578340d118cfb07aef354f154aa6901c29eb7324be18f854b"
+      "sha256": "a2d6a730969c4a8820f8e7171025eef9f239be2568a7795f9db0a6c3143bed89"
     },
     {
       "path": "tests/test_frontier_semantics.py",
@@ -832,7 +832,7 @@
       "role": "verification",
       "reason_retained": "Verifies ndlocr lite behavior and its current source/evidence contract.",
       "runtime_required": false,
-      "sha256": "eb5b715542b6e2ea01c0d556563177a2b6c7e1dae17acf384645926adcfdcb9f"
+      "sha256": "e89928df6ad25d6437c7caac337e17aa7202f50629a13756dfc67de547a206ca"
     },
     {
       "path": "tests/test_release_history.py",
@@ -909,7 +909,7 @@
       "role": "verification",
       "reason_retained": "Verifies text parsing behavior and its current source/evidence contract.",
       "runtime_required": false,
-      "sha256": "9194e76b513954c99e1910e5a9421dd4b0b20ea92c9a0a8d017f6f87a398bd3a"
+      "sha256": "903e5ccce1890f417147e101163afe1c0e001856a508893c3a7d2d0bb9cd45ec"
     },
     {
       "path": "tools/audit_repository.py",

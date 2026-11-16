@@ -87,7 +87,7 @@ Runtime files support scanning and lookup; the other categories support installa
 | [kanji_translator/readers/__init__.py](../kanji_translator/readers/__init__.py) | application | Native HTML and local OCR readers. |
 | [kanji_translator/readers/html/__init__.py](../kanji_translator/readers/html/__init__.py) | application | Internal canonical parser components. |
 | [kanji_translator/readers/html/nihonto_club.py](../kanji_translator/readers/html/nihonto_club.py) | application | Pure saved-DOM Club parsing; acquisition remains with scrapers. |
-| [kanji_translator/readers/ocr/__init__.py](../kanji_translator/readers/ocr/__init__.py) | application | The maintained literal Japanese OCR engine. |
+| [kanji_translator/readers/ocr/__init__.py](../kanji_translator/readers/ocr/__init__.py) | application | Region-selected literal OCR; engine output is a proposal, never a review. |
 | [kanji_translator/readers/ocr/ndlocr_lite.py](../kanji_translator/readers/ocr/ndlocr_lite.py) | application | NDLOCR-Lite page recognition; literal text and regions remain proposals. |
 | [kanji_translator/readers/ocr/retained.py](../kanji_translator/readers/ocr/retained.py) | application | Read a hash-bound library OCR snapshot without OCR calls or line joining. |
 | [kanji_translator/reading_candidates.py](../kanji_translator/reading_candidates.py) | application | Optional literal-aligned reading evidence; no inferred historical-name readings. |

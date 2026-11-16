@@ -18,5 +18,5 @@ def validate_request(request):
         raise ValueError('Character rewriting, generative translation and legacy enhancement profiles are retired. Use native NDLOCR followed by semantic_config.profile=contextual; retain source-reviewed corrections separately.')
     if request.get('semantic_config',{}).get('profile','contextual') not in ('contextual','exact','bert','jev'):
         raise ValueError('Semantic profile must be contextual, exact, bert or jev')
-    if request.get('ocr_config',{}).get('backend','ndl')!='ndl':
-        raise ValueError('The current scan pipeline uses NDLOCR; the Tesseract route is retired')
+    from .readers.ocr import backend
+    backend(request.get('ocr_config',{}))

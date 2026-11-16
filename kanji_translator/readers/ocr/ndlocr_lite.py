@@ -39,9 +39,133 @@ def runtime(config):
 
 class NDLOCR:
     def __init__(self, config):
-        self.python, self.pin = runtime(config)
+        self.ocr = None;self.config=dict(config);self.cwd=None
+        if config.get('backend')=='koten':
+            import sys
+            from ...request_contracts import digest
+            self.cwd=Path(config['koten_package']).resolve();self.python=config.get('koten_python',sys.executable)
+            names=['model/rtmdet-s-1280x1280.onnx','model/parseq-ndl-32x384-tiny-10.onnx','config/ndl.yaml','config/NDLmoji.yaml']
+            names+=sorted(str(p.relative_to(self.cwd)) for p in self.cwd.rglob('*.py'))
+            self.pin=dict(engine='ndlkotenocr-lite',upstream='https://github.com/ndl-lab/ndlkotenocr-lite',
+                files={name:digest((self.cwd/name).read_bytes()) for name in names},device='cpu',adapter='koten-cli-v1',accuracy_review='unreviewed')
+            self.command=[self.python,'-B','-c',"import sys,runpy,onnxruntime as o; original=o.InferenceSession; options=o.SessionOptions(); options.intra_op_num_threads=1; options.inter_op_num_threads=1; o.InferenceSession=lambda *a,**k: original(*a,**dict(k,sess_options=options)); sys.argv=['ocr.py',*sys.argv[1:]]; runpy.run_path('ocr.py',run_name='__main__')"]
+        elif config.get('package'):
+            self._persistent_init(config['package'], config.get('device','cpu'))
+            self.pin = self.engine
+        else:
+            self.python, self.pin = runtime(config)
+            self.command=[self.python,'-B','-m','ocr']
+        self.engine=self.pin
+
+    def _persistent_init(self, package, device):
+        import sys, threading
+        from ...request_contracts import digest
+        file_hash = lambda p: digest(p.read_bytes())
+        from types import SimpleNamespace
+        import onnxruntime as ort
+        package = Path(package).resolve()
+        ort.set_default_logger_severity(3)
+        if device=='cuda':
+            ort.preload_dlls()
+        sys.path.append(str(package))
+        import ocr
+        self.ocr = ocr
+        models = [package/'model/deim-s-1024x1024.onnx']
+        for length in (30,50,100):
+            candidates = sorted((package/'model').glob(f'*{length}-tiny*onnx'))
+            if len(candidates)!=1:
+                raise ValueError('Expected one installed NDL recognition model: '+str(length))
+            models.append(candidates[0])
+        configs = [package/'config/ndl.yaml',package/'config/NDLmoji.yaml']
+        self.engine = dict(name='ndlocr-lite',version=ocr.__version__,device=device,
+            onnxruntime=ort.__version__,models={p.name:file_hash(p) for p in models+configs},
+            pixel_order='RGB',pdf_dpi=150,cpu_session_threads=1,concurrent_lines_per_model=1,accuracy_review='unreviewed',
+            confidence_scope='NDL line confidence is detector confidence, not verified character accuracy')
+        args = SimpleNamespace(det_weights=str(models[0]),det_classes=str(configs[0]),
+            det_score_threshold=.2,det_conf_threshold=.25,det_iou_threshold=.2,
+            device=device,rec_classes=str(configs[1]))
+        self.detector = ocr.get_detector(args)
+        self.recognizers = [ocr.get_recognizer(args,str(p)) for p in models[1:]]
+        # Avoid four independent default CPU pools spinning while CUDA handles
+        # inference. Reuse the upstream preprocessing/recognition unchanged.
+        options=ort.SessionOptions()
+        options.intra_op_num_threads=1
+        options.inter_op_num_threads=1
+        options.add_session_config_entry('session.intra_op.allow_spinning','0')
+        cuda_options=dict(gpu_mem_limit=2*1024*1024*1024,arena_extend_strategy='kSameAsRequested',
+                          cudnn_conv_use_max_workspace='0')
+        self.engine['cuda_provider_options']=cuda_options if device=='cuda' else None
+        providers=[('CUDAExecutionProvider',cuda_options),'CPUExecutionProvider'] if device=='cuda' else ['CPUExecutionProvider']
+        for model in [self.detector,*self.recognizers]:
+            model.session=ort.InferenceSession(model.model_path,options,providers=providers)
+        if device=='cuda' and any('CUDAExecutionProvider' not in m.session.get_providers()
+                                 for m in [self.detector,*self.recognizers]):
+            raise RuntimeError('Requested CUDA OCR is unavailable')
+        # Share one model set between image jobs. The detector mutates its
+        # image dimensions, so its entire detect call must be serialized.
+        detect=self.detector.detect
+        detector_gate=threading.Lock()
+        def bounded_detect(img):
+            with detector_gate:
+                return detect(img)
+        self.detector.detect=bounded_detect
+        for model in self.recognizers:
+            def bounded_read(img,read=model.read,gate=threading.Semaphore(1)):
+                with gate:
+                    return read(img)
+            model.read=bounded_read
+
+    def read(self, img, name):
+        import numpy as np
+        if self.ocr is None:
+            import io
+            pixels=io.BytesIO();img.convert('RGB').save(pixels,format='PNG')
+            lines=self.lines(pixels.getvalue(),img.size,self.config)
+            text='\n'.join(line['text'] for line in [*lines,*self.geometry_diagnostics])
+            for line in lines:
+                x,y,a,b=line['box'];line['boundingBox']=[[x,y],[a,y],[a,b],[x,b]]
+            return dict(kind='raw_text_page',status='ocr_text' if text else 'ocr_no_text_detected',text=text,lines=lines,
+                engine=self.pin,image_width=img.width,image_height=img.height,native_layout=self.native_layout,geometry_diagnostics=self.geometry_diagnostics)
+        if img.width*img.height>20_000_000:
+            parts=[];lines=[]
+            for top in range(0,img.height,1984):
+                for left in range(0,img.width,1984):
+                    box=[left,top,min(left+2048,img.width),min(top+2048,img.height)]
+                    with img.crop(box) as tile:part=self.read(tile,name+f'-{left}-{top}')
+                    parts.append(dict(bbox=box,text=part['text'],status=part['status']))
+                    lines.extend(dict(line,tile_bbox=box) for line in part['lines'])
+            text='\n'.join(p['text'] for p in parts if p['text'].strip())
+            return dict(kind='raw_text_page',status='ocr_text' if text else 'ocr_no_text_detected',text=text,
+                lines=lines,tiles=parts,engine=self.engine,image_width=img.width,image_height=img.height,
+                geometry='Line coordinates are tile-local; tile_bbox locates each tile in original pixels; 64-pixel overlap retained')
+        try:
+            result = self.ocr._run_ocr_on_image_array(self.detector,*self.recognizers,
+                name,np.asarray(img.convert('RGB')),'',False)
+        except Exception as error:
+            message=str(error).lower()
+            if any(marker in message for marker in ('failed to allocate memory','available memory of',
+                    'out of memory','cuda error','cuda failure','cudnn failure')):
+                from concurrent.futures import BrokenExecutor
+                raise BrokenExecutor('Local OCR runtime failed; stop and repair before retry: '+str(error)) from error
+            raise
+        text = result['text'].replace('\x00','\\u0000')
+        return dict(kind='raw_text_page',status='ocr_text' if text.strip() else 'ocr_no_text_detected',
+            text=text,lines=result['json_lines'],engine=self.engine,
+            image_width=result['img_width'],image_height=result['img_height'],
+            native_layout=decode_layout(result['page_xml']))
+
 
     def lines(self, pixels, dimensions, config):
+        if self.ocr is not None:
+            import io
+            from PIL import Image
+            with Image.open(io.BytesIO(pixels)) as image:
+                page = self.read(image, "page")
+            self.geometry_diagnostics=[]
+            self.native_layout=page.get("native_layout", {"blocks":[],"lines":{},"state":"not_available"})
+            lines=decode_lines({"contents":[page["lines"]]}, dimensions, diagnostics=self.geometry_diagnostics)
+            for line in lines:line.update(self.native_layout.get("lines",{}).get(str(line.get("native_id")),{}))
+            return lines
         timeout = config.get('timeout', 120)
         if not isinstance(timeout, (int, float)) or not 1 <= timeout <= 600:
             raise ValueError('NDLOCR timeout must be 1..600 seconds')
@@ -49,9 +173,9 @@ class NDLOCR:
             root = Path(folder); source = root / 'page.png'; source.write_bytes(pixels)
             (root / 'output').mkdir()  # Upstream returns success without OCR when absent.
             try:
-                subprocess.run([self.python, '-m', 'ocr', '--sourceimg', str(source),
+                subprocess.run([*self.command, '--sourceimg', str(source),
                                 '--output', str(root / 'output'), '--device', 'cpu'],
-                               check=True, capture_output=True, timeout=timeout)
+                               check=True, capture_output=True, timeout=timeout,cwd=self.cwd)
                 raw = json.loads((root / 'output' / 'page.json').read_text(encoding='utf-8'))
                 xml_path = root / 'output' / 'page.xml'
                 self.native_layout = decode_layout(xml_path.read_text(encoding='utf-8')) if xml_path.exists() else {'blocks':[], 'lines':{}, 'state':'layout_unavailable'}
@@ -86,17 +210,21 @@ def decode_lines(raw, dimensions, *, diagnostics=None):
                 len(p) != 2 or any(not isinstance(v, (int, float)) or not math.isfinite(v) for v in p)
                 for p in points
             ): raise ValueError('Invalid NDLOCR line')
+            tile=line.get('tile_bbox')
+            if tile:
+                if len(tile)!=4 or not all(type(v) is int for v in tile) or not (0<=tile[0]<tile[2]<=width and 0<=tile[1]<tile[3]<=height):raise ValueError('Invalid NDLOCR tile')
+                if not all(0<=x<=tile[2]-tile[0] and 0<=y<=tile[3]-tile[1] for x,y in points):raise ValueError('Line outside NDLOCR tile')
+                points=[[x+tile[0],y+tile[1]] for x,y in points]
             box = [math.floor(min(p[0] for p in points)), math.floor(min(p[1] for p in points)),
                    math.ceil(max(p[0] for p in points)), math.ceil(max(p[1] for p in points))]
-            box = [max(0, box[0]), max(0, box[1]), min(width, box[2]), min(height, box[3])]
-            if box[2] <= box[0] or box[3] <= box[1]:
+            if not (0 <= box[0] < box[2] <= width and 0 <= box[1] < box[3] <= height):
                 if diagnostics is None:raise ValueError('NDLOCR box is outside the image')
                 diagnostics.append({'text':text,'original_geometry':points,'state':'unresolved',
                                     'reason':'ndlocr_box_outside_image','geometry':None,
                                     'coverage_eligible':False,'crop_created':False})
                 continue
             lines.append({'box': box, 'text': text,'native_id':line.get('id',native_order),
-                          'native_order':native_order,'native_group':group_index,
+                          'native_order':native_order,'native_group':group_index,'tile_bbox':tile,
                           'orientation':'vertical' if line.get('isVertical') in (True,'true') else 'horizontal' if line.get('isVertical') in (False,'false') else 'unknown',
                           'class_index':line.get('class_index')})
     return lines

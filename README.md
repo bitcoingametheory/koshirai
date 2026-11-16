@@ -1,6 +1,6 @@
 # Koshirai
 
-Koshirai turns Japanese sword pages into four reviewable results:
+Koshirai turns sword reference pages into four reviewable results:
 
 1. Original OCR and general dictionary meanings.
 2. Complete expressions identified as terms or names.
@@ -34,6 +34,7 @@ same interpretation process directly.
 | Tool | Role |
 | --- | --- |
 | NDLOCR-Lite | Extracts literal characters and native page regions. |
+| English / historical Japanese OCR | Explicit English regions use Tesseract LSTM; inspected historical Japanese can use NDL Koten-Lite. Engine proposals require source review. |
 | Layout and entry parser | Orders columns, separates entries, reads explicit name/era/province fields, and proposes illustration links. |
 | Qwen stroke vision | Optional separate inspection of similar character shapes in bounded crops. It does not select meanings or identities. |
 | Dictionary and sword library | Supply ordinary meanings, complete sword terms, names, readings, categories and citations. |
@@ -50,13 +51,13 @@ identities. Ordinary scans make no frontier-model calls.
 
 ## Measured results
 
-These exposed development results use provisional AI references, not expert
+These published development snapshots use provisional AI references, not expert
 translation judgments. The same 50 Fujishiro pages and OCR are compared below
 using the original area-overlap counting rule.
 
 | Method | Correct groups | Rejections | Precision | Recall |
 | --- | ---: | ---: | ---: | ---: |
-| Current native entry selection | 114 | 29 | 79.7% | 35.1% |
+| Published native entry selection | 114 | 29 | 79.7% | 35.1% |
 | Previous default | 61 | 20 | 75.3% | 18.8% |
 | Earlier BERT snapshot | 51 | 11 | 82.3% | 15.7% |
 | Earlier Jev snapshot | 30 | 4 | 88.2% | 9.2% |
@@ -94,6 +95,17 @@ needs no key. Frontier experiments have [separate instructions](docs/native_sema
 Outputs include `raw_ndl.txt`, `text.txt`, `terms.jsonl`, `interpretations.jsonl`,
 `results.jsonl` and review files. Keep outputs outside the checkout. See the
 [researcher guide](docs/researcher_guide.md).
+
+The OCR configuration accepts `language=en` with external Tesseract/English data,
+or `backend=koten`, `language=ja`, `script=historical` and an external
+`koten_package` source directory. Install its documented dependencies outside Git.
+The [NDL Koten-Lite upstream](https://github.com/ndl-lab/ndlkotenocr-lite) supplies
+the separately licensed models/code; the adapter records their hashes. A source
+provider or filename cannot establish language, script or accuracy. Reuse saved
+extraction first. Invalid boxes remain unavailable; original text is preserved.
+Complete romaji and kanji forms share cited lookup candidates. `interpret_units`
+returns bounded source-offset proposals and shared meaning definitions, retaining
+oversized-unit holds and identity conflicts. It does not certify a translation.
 
 ## Improve the data
 

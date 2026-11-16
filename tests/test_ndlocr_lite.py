@@ -56,7 +56,7 @@ def test_ndl_creates_output_directory_before_successful_subprocess(monkeypatch):
     monkeypatch.setattr(ndl, 'runtime', lambda config: ('fixture-python', {}))
     calls = []
     def run(argv, **kwargs):
-        assert argv[:3] == ['fixture-python', '-m', 'ocr']
+        assert argv[:4] == ['fixture-python', '-B', '-m', 'ocr']
         output = Path(argv[argv.index('--output') + 1])
         assert output.is_dir()
         assert Path(argv[argv.index('--sourceimg') + 1]).read_bytes() == b'pixels'
@@ -77,6 +77,15 @@ def test_outside_line_is_explicit_unresolved_without_invented_box():
     assert diagnostics[0]['original_geometry']==outside['boundingBox']
     assert diagnostics[0]['geometry'] is None and not diagnostics[0]['coverage_eligible']
     with pytest.raises(ValueError,match='outside the image'):ndl.decode_lines(raw,[20,20])
+    # A partially overlapping box is still invalid; clipping would invent evidence.
+    outside['boundingBox']=[[-1,1],[5,1],[5,8],[-1,8]]
+    diagnostics=[]
+    assert len(ndl.decode_lines(raw,[20,20],diagnostics=diagnostics))==1
+    assert diagnostics[0]['original_geometry'][0]==[-1,1]
+    valid['tile_bbox']=[10,5,20,20]
+    assert ndl.decode_lines({'contents':[[valid]]},[30,30])[0]['box']==[11,6,15,13]
+    valid['boundingBox'][0][0]=11
+    with pytest.raises(ValueError,match='outside NDLOCR tile'):ndl.decode_lines({'contents':[[valid]]},[30,30])
 
 
 def test_page_preserves_unlocated_text_identity_and_cache(tmp_path,monkeypatch):
@@ -104,3 +113,29 @@ def test_page_preserves_unlocated_text_identity_and_cache(tmp_path,monkeypatch):
     assert first['native_payload']['region_inventory_state']=='requires_review'
     assert again['native_payload']['unlocated_ocr_regions']==first['native_payload']['unlocated_ocr_regions']
     assert len(calls)==1
+    page=ndl.NDLOCR({}).read(image,'page')
+    assert page['text']=='國光\n原文保持' and len(page['lines'])==1
+    assert page['geometry_diagnostics'][0]['geometry'] is None
+
+
+def test_english_route_is_explicit_and_preserves_tsv_words(tmp_path,monkeypatch):
+    from types import SimpleNamespace
+    from kanji_translator.readers import ocr
+    assert ocr.backend({})=='ndl' and ocr.backend({'language':'mixed'})=='ndl'
+    assert ocr.backend({'language':'en'})=='english'
+    with pytest.raises(ValueError):ocr.backend({'backend':'english','language':'ja'})
+    binary=tmp_path/'engine';binary.write_bytes(b'synthetic binary');(tmp_path/'eng.traineddata').write_bytes(b'synthetic model')
+    monkeypatch.setattr(ocr.shutil,'which',lambda _:str(binary))
+    tsv='level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n'
+    tsv+='5\t1\t1\t1\t1\t1\t1\t2\t10\t8\t92.5\tNorifusa\n'
+    tsv+='5\t1\t1\t1\t1\t2\t13\t2\t8\t8\t80\tutsuri\n'
+    tsv+='5\t1\t1\t1\t2\t1\t-1\t2\t10\t8\t20\tunlocated\n'
+    def execute(argv,**kwargs):
+        return SimpleNamespace(stdout='synthetic version\n' if '--version' in argv else tsv)
+    monkeypatch.setattr(ocr.subprocess,'run',execute)
+    engine=ocr.local_engine({'language':'en','tessdata':str(tmp_path)})
+    rows=engine.lines(b'pixels',(100,100),{})
+    assert rows[0]['text']=='Norifusa utsuri' and rows[0]['box']==[1,2,21,10]
+    assert rows[0]['words'][0]['confidence']==92.5
+    assert engine.geometry_diagnostics[0]['text']=='unlocated'
+    assert not engine.prediction(rows[0]['text'])['accuracy_qualified']

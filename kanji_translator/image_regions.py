@@ -1,13 +1,13 @@
 """Bounded native-pixel layout/crops; derived data only, no source-owner writes."""
 from pathlib import Path
 from .request_contracts import digest,canonical
-LAYOUT_VERSION='ndl-page-blocks-v5-header-retry'
+LAYOUT_VERSION='region-ocr-v6-unclipped-geometry'
 
 def regions_from_image(raw,request,*,pdf=False):
     import cv2,numpy as np
     config=request.get('image_config',{})
-    backend=request.get('ocr_config',{}).get('backend','ndl')
-    if backend!='ndl':raise ValueError('Only the current NDLOCR backend is supported')
+    from .readers.ocr import backend as select_backend, local_engine
+    backend=select_backend(request.get('ocr_config',{}))
     if pdf:
         import pymupdf
         with pymupdf.open(stream=raw,filetype='pdf') as doc:
@@ -78,10 +78,9 @@ def regions_from_image(raw,request,*,pdf=False):
     raw_page_lines=[];header_retries=[]
     page_pin=None;coverage_disposition={'method':'deterministic_contours','excluded':'area<3 or full-page frames; nonmaterial contour thresholds'}
     page_enabled=cv2.countNonZero(clean) and request.get('local_ocr',True) and config.get('page_ocr',True)
-    if page_enabled and backend=='ndl':
-        from .readers.ocr.ndlocr_lite import NDLOCR
+    if page_enabled:
         from .result_cache import read_cache,write_cache,DEPENDENCIES
-        engine=NDLOCR(request.get('ocr_config',{}));page_pin=engine.pin
+        engine=local_engine(request.get('ocr_config',{}));page_pin=engine.pin
         dep={k:None for k in DEPENDENCIES}
         dep.update(source_sha256=digest(raw),crop_sha256=digest(raw),locator='page:'+str(request.get('page',0)),adapter_version=page_pin,ocr_config=request.get('ocr_config',{}),stage='page_ocr',image_config=config,layout_version=LAYOUT_VERSION,coordinate_transform=transforms)
         root=Path(request['cache_dir'])
@@ -147,7 +146,7 @@ def regions_from_image(raw,request,*,pdf=False):
             if cv2.countNonZero(unexplained[y0:y1,x0:x1])>=8:
                 boxes.append(box);page_predictions.append({**engine.prediction(''),'reason':'material_ink_without_page_ocr'})
                 covered[y0:y1,x0:x1]=255
-        coverage_disposition={'method':'ndl_lines_plus_unexplained_contours','material_ink_pixels':cv2.countNonZero(clean),'covered_material_ink_pixels':cv2.countNonZero(cv2.bitwise_and(clean,covered)),'excluded':'area<3 or full-page frame components; residual groups<8 ink pixels'}
+        coverage_disposition={'method':backend+'_lines_plus_unexplained_contours','material_ink_pixels':cv2.countNonZero(clean),'covered_material_ink_pixels':cv2.countNonZero(cv2.bitwise_and(clean,covered)),'excluded':'area<3 or full-page frame components; residual groups<8 ink pixels'}
     limit=config.get('max_regions',512)
     if not isinstance(limit,int) or not 1<=limit<=2048:raise ValueError('max_regions must be 1..2048')
     if len(boxes)>limit:raise ValueError('Detected regions exceed bound; refine layout configuration')

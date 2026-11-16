@@ -14,7 +14,7 @@ It must not perform semantic reasoning, translation, term selection, or identity
         ↓
 [2. Regions, titles, chapters and oshigata links]
         ↓
-[3. Reading order and raw kanji from NDLOCR]
+[3. Reading order and literal text from region-selected OCR]
         ↓
 [4. Group characters with the sword/name library]
         ↓
@@ -39,6 +39,8 @@ unmapped whole. Bilingual facts retain distinct edition/page hashes and provisio
 image review. Two editions of one work do not supply independent votes.
 The library_ocr input reads an explicit hash-bound saved export without new OCR.
 It preserves raw lines, polygons, engine and corrected/ordered fields separately.
+Complete romanized forms use word boundaries. interpret_units keeps source offsets,
+shared cited meanings, oversized-unit holds and unaccepted identity proposals.
 See docs/researcher_guide.md for its input contract.
 
 Keep Japanese as the authoritative parsing language. entry_structure.py owns explicit
@@ -58,7 +60,10 @@ clans, places/provinces, eras/dates, ordinary language and unresolved spans dist
 Retain measurement quantities/units and supported dimension links. Cite the actual
 source for each assertion; repeated dealer records are not independent evidence.
 
-NDLOCR owns literal recognition; layout logic owns order and relations; the span
+The existing OCR owner routes explicit English to Tesseract, printed Japanese to
+NDLOCR-Lite, and inspected historical Japanese to externally pinned Koten-Lite.
+Saved extraction comes first; provider names do not choose scripts. Invalid boxes
+remain unresolved. Layout logic owns order and relations; the span
 matcher proposes supported groupings; source evidence ranks supported
 category/reading/meaning candidates. Unvalidated vision and translation adapters
 are retired; explicit source-reviewed character corrections remain separate.

@@ -5,7 +5,10 @@ from kanji_translator.context_constraints import compare
 class Core(unittest.TestCase):
  def test_unicode_literal_and_offsets(self):
   text="𠮷国葛\U000e0100e\u0301";value=forms(text);search,offsets=forms_with_offsets(text)
-  self.assertEqual(value['raw_text'],text);self.assertEqual(search,normalized(text));self.assertEqual(len(search),len(offsets));self.assertEqual(offsets[-1],4)
+  self.assertEqual(value['raw_text'],text);self.assertEqual(search,normalized(text));self.assertEqual(len(search),len(offsets));self.assertEqual(offsets[-1],{'start':4,'end':6})
+  for literal,expected in [('\u09c7\u09be','\u09cb'),('\u1100\u1161\u11a8','각'),('か\u3099','が')]:
+   search,offsets=forms_with_offsets(literal)
+   self.assertEqual(search,expected);self.assertEqual(offsets,[{'start':0,'end':len(literal)}])
  def test_native_bypasses_ocr_and_region_failure_is_local(self):
   def forbidden(*args):raise AssertionError('native OCR')
   result=parse({'kind':'regions','regions':[{'region_id':'ok','text':'𠮷備國'},{'region_id':'bad','text':'□'}]},ocr_adapter=forbidden)

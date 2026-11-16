@@ -28,3 +28,24 @@ class Pipeline(unittest.TestCase):
    result=parse({'kind':'pdf','path':str(p),'sha256':digest(p.read_bytes()),'cache_dir':tmp,'local_ocr':False,'use_master_lexicon':False})
    self.assertEqual(result['regions'][0]['origin'],'native_pdf');self.assertGreater(result['unresolved_regions'],0)
    self.assertTrue(result['native_payload']['coordinate_transform']['native_masks']);self.assertGreater(result['native_payload']['regions_detected'],0)
+ def test_romanized_forms_preserve_source_offsets_and_boundaries(self):
+  from kanji_translator.semantic_groups import interpret
+  text='Norifusa: UTSURI and kinsuji; xNorifusax and kinsujix are not names.'
+  rows=interpret(text)['mentions'];found={r['literal']:r for r in rows}
+  self.assertTrue({'Norifusa','UTSURI','kinsuji'}<=set(found))
+  self.assertEqual(sum(r['literal']=='Norifusa' for r in rows),1)
+  for r in rows:self.assertEqual(text[r['start']:r['end']],r['literal'])
+  self.assertEqual(found['Norifusa']['selection']['category'],'swordsmith_artisan')
+  self.assertFalse(found['Norifusa']['identity_accepted'])
+ def test_bounded_semantics_retains_exact_source_units_and_negation(self):
+  from kanji_translator.semantic_groups import interpret_units
+  text='金筋が見られない。\nNorifusa: utsuri.\n'+'a'*70
+  parsed=interpret_units(text,max_chars=64)
+  self.assertEqual(parsed['held_units'][0]['end'],len(text))
+  self.assertTrue(parsed['meanings'])
+  for unit in parsed['units']:
+   literal=text[unit['start']:unit['end']]
+   self.assertEqual(digest(literal.encode()),unit['text_sha256'])
+   for m in unit['mentions']:self.assertIn(m['meaning_key'],parsed['meanings'])
+  self.assertEqual(parsed['units'][0]['claims'][0]['polarity'],'negative')
+  self.assertFalse(parsed['automatic_promotion'])
