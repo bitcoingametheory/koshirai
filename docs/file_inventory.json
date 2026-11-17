@@ -454,7 +454,7 @@
       "role": "application",
       "reason_retained": "One typed lexical adapter for native text and recognized literal spans.",
       "runtime_required": true,
-      "sha256": "5b48f965f5141c7109309015814ace3ba67653c3e28aec294e5aee0f4c8cae87"
+      "sha256": "83583213dba35827e416e98121932f9158dc5236eb341d19c6d1d86aad0d0426"
     },
     {
       "path": "kanji_translator/dictionary_sources.py",

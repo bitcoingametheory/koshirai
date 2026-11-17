@@ -66,6 +66,7 @@ def variants(db,text):
  return result
 
 class LexicalReader:
+ authority='local_dictionary'
  def __init__(self,path=MASTER):
   self.db=sqlite3.connect(Path(path).resolve().as_uri()+'?mode=ro',uri=True)
  def close(self):self.db.close()
@@ -226,8 +227,8 @@ def candidates(request):
  unknown=bool(re.search(r'[?*□〓�\[\]]',text))
  rows=[];seen=set();excluded=request.get('exclude_chain_ids',[]);book=request.get('source_work_id')
  explicit='witnesses' in request or request.get('use_master_lexicon') is False
- ident={} if explicit else identity(path)
- library={'state':'explicit_witnesses'} if explicit else {'state':'unavailable' if ident.get('state')=='unavailable' else 'available',
+ ident={} if explicit else {'state':'not_queried','authority':LexicalReader.authority} if unknown else identity(path)
+ library={'state':'explicit_witnesses'} if explicit else {'state':ident.get('state','available'),
                                                         'path':str(path),'authority':ident.get('authority','local_dictionary')}
  dictionary={'candidates':[]};domain={}
  if not unknown:
