@@ -1,81 +1,112 @@
 # Koshirai
 
-Koshirai turns sword reference pages into four reviewable results:
+Koshirai turns Japanese sword pages into traceable text, terms, names and cited
+meanings. It keeps the original lettering separate from lookup variants, English
+interpretation and historical identity. A plausible smith name is not proof of a reading.
 
-1. Original OCR and general dictionary meanings.
-2. Complete expressions identified as terms or names.
-3. Supported sword readings and English meanings, with source citations.
-4. Alternative matches and unresolved cases.
+The public package provides OCR adapters, layout and entry parsing, cited meaning
+selection, and review/import contracts. Full-book visual review, complete English
+translation and PostgreSQL storage are deployment responsibilities; the `scan`
+command does not automatically perform them. Private books, scans and passages
+stay outside public releases. Public examples retain their rights and attribution.
 
-Japanese characters, offsets and source evidence stay authoritative. English
-summaries follow supported term and relationship selection. General dictionary
-lookup remains a lexical comparison; the application does not translate whole pages.
-
-The sword library derives bounded facts from legally purchased private references.
-Public releases use pseudonymous citations and exclude private books, scans and
-passages. Required attribution and public-domain benchmark samples remain.
-
-## Pipeline and tools
+## One end-to-end process
 
 ```mermaid
 flowchart TD
-    A[1. Scan or saved OCR] --> B[2. Raw Japanese and source geometry]
-    B --> C[3. Reading order and entry fields]
-    C --> D[4. Complete terms, names and general lexical meanings]
-    D --> E[5. Supported Japanese relationships and uncertainty]
-    E --> F[6. Cited English summaries, alternatives and review]
+    A["L0: original file, source identity and edition"] --> B["Reuse valid saved OCR or native text"]
+    B -->|OCR needed| C["Inspect regions, language and visible script"]
+    C --> D["Native-resolution crops and suitable reader"]
+    D --> E["Compare literal candidates against original pixels"]
+    B -->|usable text| E
+    E -->|unresolved reading or layout| C
+    E --> F["L1: selected literal text, geometry and separate alternatives"]
+    F --> G["L2: cited terms, names, meanings and proposed relationships"]
+    G --> H["Search and fetch the exact source, page and region"]
+    H -->|pixels prove a missed passage| C
 ```
 
-A complete spelling in a sword page can retrieve a documented meaning from the
-reference library. Eighteen bilingual mappings now link grain and temper-pattern
-terms to separate Japanese and English page citations. Saved OCR can enter the
-same interpretation process directly.
+**L0 is the evidence; L1 says what is written; L2 says what that writing supports.**
+Keep the work's composition, surviving copy, reprint and visible script separate.
+A modern book can contain a historical facsimile next to a modern caption. Route
+those regions separately. A publication year or provider name cannot choose OCR.
 
-| Tool | Role |
-| --- | --- |
-| NDLOCR-Lite | Extracts literal characters and native page regions. |
-| English / historical Japanese OCR | Explicit English regions use Tesseract LSTM; inspected historical Japanese can use NDL Koten-Lite. Engine proposals require source review. |
-| Layout and entry parser | Orders columns, separates entries, reads explicit name/era/province fields, and proposes illustration links. |
-| Qwen stroke vision | Optional separate inspection of similar character shapes in bounded crops. It does not select meanings or identities. |
-| Dictionary and sword library | Supply ordinary meanings, complete sword terms, names, readings, categories and citations. |
-| Source-priority selector | Default local selection using source evidence, Japanese boundaries and entry context. |
-| Native clause parser | Proposes bounded relationships with original argument/predicate spans, negation and uncertainty. Produces English only where supported. |
-| BERT classifier | Optional local classification of a supported expression's role, such as smith, school or place. |
-| Jev decision model | Optional hosted role/meaning selection from bounded candidates. |
-| Astra/Sol experiment | Separate opt-in comparison runner with identical Japanese inputs and closed candidates. Live comparison is pending; no superiority is established. |
-| Review and corpus tools | Retain corrections and alternatives; import observations without duplication. |
+Crop from the original resolution and retain the source hash, page, coordinates,
+reading order, reader/version and routing reason. Regions include headings,
+vertical columns, ruby, marginalia, genealogy, tables, signatures, seals and captions.
+Detector boxes and image-caption links remain proposals until reviewed. Invalid
+geometry stays unresolved. Never silently replace original glyphs with modern forms.
 
-BERT means *Bidirectional Encoder Representations from Transformers*. Its scores
-are uncalibrated. Model proposals and name matches do not establish historical
-identities. Ordinary scans make no frontier-model calls.
+| Region or task | Reader | Current role |
+| --- | --- | --- |
+| Valid native text or saved OCR | Retained-OCR input | Reuse before running another reader; preserve named layers. |
+| English print | Tesseract LSTM | Implemented for explicitly English regions. |
+| Japanese book or magazine print | [NDLOCR-Lite](https://github.com/ndl-lab/ndlocr-lite) | Implemented default; verify old forms and small annotations. |
+| Historical manuscript or woodblock | [NDL Koten OCR-Lite](https://github.com/ndl-lab/ndlkotenocr-lite) | Implemented explicit historical-Japanese adapter; upstream targets Japanese works through the Edo period and Chinese classics through the Qing period. |
+| Difficult historical vertical line | [Honkoku OCR v19](https://huggingface.co/yuta1984/honkoku-ocr) | External comparison on a single line; no bundled Honkoku adapter or automatic dispatch. |
+| Layout or disputed strokes | Source inspection, optionally AI vision | Record the actual reviewer/model and what it saw. Sol is not an automatic acceptance authority. |
+| Meaning and relationships | Cited sword library and native parsers | Preserve literal spans, negation, alternatives and source claims. |
 
-## Measured results
+Honkoku v19 is Yuta Hashimoto's September 2026 line recognizer for premodern
+cursive writing. It can emit reading-gloss and annotation tags. Its 7,710-token
+vocabulary bounds what it can represent; vocabulary inclusion does not establish
+character accuracy. It does not detect page lines or translate. Ledger layouts and
+split-line notes are known weaknesses. See the [model card](https://huggingface.co/yuta1984/honkoku-ocr#kuzushiji-ocr--line-level-recognition-with-annotation-structure).
+Use a reviewed, pinned external runtime; it is a comparison reader, not a default.
 
-These published development snapshots use provisional AI references, not expert
-translation judgments. The same 50 Fujishiro pages and OCR are compared below
-using the original area-overlap counting rule.
+## When readers disagree
 
-| Method | Correct groups | Rejections | Precision | Recall |
-| --- | ---: | ---: | ---: | ---: |
-| Published native entry selection | 114 | 29 | 79.7% | 35.1% |
-| Previous default | 61 | 20 | 75.3% | 18.8% |
-| Earlier BERT snapshot | 51 | 11 | 82.3% | 15.7% |
-| Earlier Jev snapshot | 30 | 4 | 88.2% | 9.2% |
+Keep every original output and align candidates to the same source region.
+An agreement is supporting evidence, not a vote that establishes truth. Sol can
+misread pixels or complete a familiar name; specialist OCR can omit a column or
+modernize a glyph. A confident score from one model is not comparable to another's.
 
-Image review found that narrow whole-line boxes can fail the old area test despite
-covering the reference term. A documented axis-overlap repair, applied to both
-releases, gives **122 correct / 21 rejected**, versus **64 / 17** previously:
-85.3% versus 79.0% precision. The original 79.7% result remains visible because it
-misses the declared 80% target. References, sources and OCR were not changed.
+Inspect the disputed crop with its surrounding column, separate annotations, and
+record the selected reading with its reason. For example, `國` and `国` may share
+a lookup link while the transcription retains the visible form. Similar-looking
+`冶` and `治` require a stroke check. If the image does not resolve a character,
+retain the alternatives or an unreadable span. Translation cannot repair missing evidence.
 
-The saved-OCR pilot retains 37/37 cited English selections and withholds both
-nested controls. Twelve reviewed native lines yield 8 of 15 reference relationships,
-with no extra claims and seven misses. Fifteen entry cases across six fresh pages
-were reviewed. OCR errors and unresolved boundaries remain visible.
+For a fair comparison, run each reader on identical held-out line crops, then
+measure page segmentation separately. Freeze independent reference readings before
+viewing predictions. Measure character errors, omitted lines, exact names/dates,
+reading order and caption/figure links separately; an overall text score can hide
+wrong genealogy. See the [benchmark protocol](benchmarks/README.md#ocr-reader-comparison).
+No complete Koten/Honkoku/Sol manuscript benchmark is published here.
 
-See [native semantics and limitations](docs/native_semantics.md),
-[counting and reproduction](benchmarks/README.md), and
-[approaches tried](docs/approaches.md). Expert English accuracy remains unmeasured.
+## From text to searchable meaning
+
+The four reviewable outputs are literal OCR/general dictionary meanings, complete
+terms or names, supported sword readings/English with citations, and alternatives.
+Match complete expressions with original offsets. Keep a character, a term, a school,
+a smith name and a historical person as different objects. A name match never merges people.
+
+A PostgreSQL deployment stores source identities, reader candidates, reviewed L1
+and dependent L2 with one current selection per purpose. Search can follow documented
+kanji variants, complete romanized forms, English meanings and cited relationships.
+It returns the original page/region and the basis of each link. Missing evidence and
+identity conflicts remain visible. A missing hit alone does not prove missing OCR:
+inspect the pixels, repair that region, refresh dependent L2, and repeat the query.
+Full-page English exports must remain aligned to those same reviewed regions.
+
+The default contextual selector uses source evidence and Japanese boundaries.
+Qwen only assists stroke comparison. BERT and Jev are optional role/meaning selectors;
+model scores are uncalibrated. The optional Astra/Sol **text-semantic** experiment
+is separate from visual transcription; its live comparison remains pending.
+See [native semantics](docs/native_semantics.md) and [approaches tried](docs/approaches.md).
+
+## What has been measured
+
+The published 50-page grouping benchmark keeps the original **114 correct / 29
+rejected, 79.7% precision, 35.1% recall** result, which missed its 80% precision target.
+A declared geometry-counting repair gives 122/21 and 85.3% precision, 37.5% recall.
+These are grouping scores against provisional AI references, not OCR or translation
+accuracy. [Frozen evidence and reproduction](benchmarks/README.md) preserve both policies.
+
+Honkoku's author reports **6.09% character error versus Koten-Lite's 8.05%** on
+58,521 shared test lines from 214 materials, excluding whitespace. The sample
+filters out severe NDL errors. This is an upstream comparison, not our manuscript
+score or a Sol comparison. [Protocol and limitations](https://huggingface.co/yuta1984/honkoku-ocr#evaluation).
 
 ## Install and use
 
@@ -88,38 +119,22 @@ cli="$KANJI_DATA_DIR/environment/bin/kanji-translator"
 "$cli" scan /path/to/scans --semantic-profile contextual --output /path/to/empty-results
 ```
 
-Add `--install-bert` during setup for `--semantic-profile bert`. Jev requires
-`TYPESAFE_API_KEY` and `--semantic-profile jev`; [offline replay](docs/jev_research.md)
-needs no key. Frontier experiments have [separate instructions](docs/native_semantics.md).
-
 Outputs include `raw_ndl.txt`, `text.txt`, `terms.jsonl`, `interpretations.jsonl`,
-`results.jsonl` and review files. Keep outputs outside the checkout. See the
-[researcher guide](docs/researcher_guide.md).
+`results.jsonl` and review files. Keep inputs, outputs, environments and models
+outside the checkout. See the [researcher guide](docs/researcher_guide.md).
+OCR configuration accepts `language=en` with external Tesseract/English data, or
+`backend=koten`, `language=ja`, `script=historical` and external `koten_package`.
+The adapters record external engine hashes; unsupported backends are rejected.
+Add `--install-bert` for BERT; Jev needs `TYPESAFE_API_KEY` and the `jev` profile.
+[Offline Jev replay](docs/jev_research.md) requires no key. No paid inference starts by default.
 
-The OCR configuration accepts `language=en` with external Tesseract/English data,
-or `backend=koten`, `language=ja`, `script=historical` and an external
-`koten_package` source directory. Install its documented dependencies outside Git.
-The [NDL Koten-Lite upstream](https://github.com/ndl-lab/ndlkotenocr-lite) supplies
-the separately licensed models/code; the adapter records their hashes. A source
-provider or filename cannot establish language, script or accuracy. Reuse saved
-extraction first. Invalid boxes remain unavailable; original text is preserved.
-Complete romaji and kanji forms share cited lookup candidates. `interpret_units`
-returns bounded source-offset proposals and shared meaning definitions, retaining
-oversized-unit holds and identity conflicts. It does not certify a translation.
+## Contribute
 
-## Improve the data
-
-Contribute complete Japanese spellings, supported readings/English, categories,
-source locators/hashes and review status. Keep conflicting meanings distinct.
-Library updates improve retrieval without retraining. Classifier training also
-needs reviewed surrounding text and role labels, with source works separated
-across training and evaluation.
-
-Fork current `main` and open a pull request with the correction, permitted derived
-facts, reproduction steps and before/after results. Run tests and `git diff --check`.
-Private books, full passages, credentials and corpus databases stay outside Git.
-The maintainer reviews private evidence and rebuilds accepted data and manifests.
-Follow the [contribution guide](docs/reviewed_contributions.md).
-
+Provide permitted complete spellings, readings/English, categories, exact citations
+and review status. Preserve conflicts and independent source boundaries. Library
+updates improve retrieval without retraining. Training/evaluation must split by work.
+Fork current main and submit reproduction steps and before/after evidence. Run tests,
+`git diff --check` and the release checks. Never commit private passages, scans,
+credentials or corpus databases. Follow the [contribution guide](docs/reviewed_contributions.md).
 [MIT](LICENSE) covers original code; [third-party notices](docs/notices/third_party_data.md)
-cover separate data and software terms.
+cover separate software and data terms. External models keep their own licenses.

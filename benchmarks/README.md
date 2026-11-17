@@ -1,5 +1,26 @@
 # Source-backed grouping and layout evidence
 
+## OCR reader comparison
+
+OCR recognition, page segmentation, semantic grouping and translation have separate
+scores. The grouping results below do not measure Honkoku, Sol vision or historical
+manuscript transcription. No full Koten/Honkoku/Sol comparison is published here.
+
+Use the same permitted, hash-bound native crops and model/configuration pins for
+all readers. Freeze source-only reference readings before revealing predictions;
+keep AI-only references explicitly provisional. Hold out whole works, not adjacent
+pages. Compare recognition on identical line crops, and separately count missed
+regions and wrong order on complete pages. A line-only reader needs an explicit
+shared detector in the page-level comparison; perfect supplied crops hide detection errors.
+
+Report literal character error rate (substitutions + deletions + insertions divided
+by reference characters), exact-line accuracy, name/date accuracy, missed lines,
+layout/figure association errors, abstentions and runtime/cost. Report normalized
+lookup scores separately so modernized glyphs do not disappear from literal errors.
+Keep every alternative and the selected reading's pixel evidence. Agreement alone
+cannot adjudicate a character. Book-clustered uncertainty and hard-case failures
+must accompany averages; a handful of successful title lines cannot certify a book.
+
 ## Current native entry and clause release
 
 The [current receipt](native_semantics_evaluation.json) preserves both counting

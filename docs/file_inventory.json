@@ -20,14 +20,14 @@
       "role": "installation and entry points",
       "reason_retained": "Researcher starting point and accurate capability statement.",
       "runtime_required": false,
-      "sha256": "cefd0a687bd7a7127a85721beb3a0a55bff083451543f8c55420302d560e8ae3"
+      "sha256": "bdd145706d366d7f209132a9697ac02284abfd4980207810f763ef6e4e199f28"
     },
     {
       "path": "benchmarks/README.md",
       "role": "evaluation evidence",
       "reason_retained": "Canonical counting, annotation, supervision and evaluation interpretation rules.",
       "runtime_required": false,
-      "sha256": "fb0c243da1f0244d6af60c8f06532ae38731a7d7c69e79ed9ce51450fe8c8692"
+      "sha256": "6838df1a140854eec4030c53d82c8a006b68cdc7302f95631c1bce98c0ea2c83"
     },
     {
       "path": "benchmarks/bert_evaluation.json",
@@ -734,7 +734,7 @@
       "role": "installation and entry points",
       "reason_retained": "Repository-only instructions for researcher agents.",
       "runtime_required": false,
-      "sha256": "9fbdd3a00bab2f717f1e4db37fbdd2c386db85aad76a1615001650ebd98a05b3"
+      "sha256": "014519d019863f897bd2625e5d478cbfd5530610691cef632d26ba1ebf1d9e5b"
     },
     {
       "path": "pyproject.toml",

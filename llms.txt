@@ -1,108 +1,63 @@
 # Koshirai researcher agent guide
 
-README.md owns the public pipeline explanation. benchmarks/README.md owns counting
-rules, reproducibility and measured evidence. This is the agent entry point.
+README.md owns the end-to-end L0/L1/L2 process, reader roles and implementation
+limits. benchmarks/README.md owns counting, reproducibility and comparisons.
+Use those owners; do not duplicate their workflow or create another parser/queue.
 
-The core result is raw OCR/general meanings, complete identified sequences,
-sword-specific meanings with library citations, and closest supported alternatives.
-An attested PrimaryReference or SupportingReference sequence-to-English mapping is source evidence.
-The same sequence in Fujishiro supports that sword meaning, subject to context and conflicts.
-Qwen vision only distinguishes visible strokes and similar character shapes.
-It must not perform semantic reasoning, translation, term selection, or identity resolution.
+One application lives in kanji_translator/. document_parser.py routes inputs;
+image_regions.py and document_layout.py own structure; readers/ocr owns explicit
+English, printed Japanese and historical Japanese adapters. Honkoku is an external
+single-line comparison, not an implemented backend. Source inspection chooses
+regions/scripts; do not claim automatic mixed-page dispatch or full-book translation.
+Saved source-bound OCR comes first. Preserve engine/model/configuration hashes,
+native coordinates, reading order and named original/corrected/normalized layers.
 
-[1. Source scan]
-        ↓
-[2. Regions, titles, chapters and oshigata links]
-        ↓
-[3. Reading order and literal text from region-selected OCR]
-        ↓
-[4. Group characters with the sword/name library]
-        ↓
-[5. Select supported Japanese meanings and clause relationships]
-        ↓
-[6. Cited English presentation and reviewed corrections]
+entry_structure.py owns explicit headings and era/province fields;
+japanese_clauses.py owns source-span relationship proposals with polarity/modality;
+semantic_groups.py owns grouping and interpretation; region_enrichment.py owns
+lexical caching; scan_folder.py and research_corpus.py own scan/import. English
+follows supported Japanese spans; never use a generated translation to repair OCR.
 
-OCR extracts characters, not their English meaning. Vertical Japanese reads top
-to bottom within a column and right to left between columns; horizontal segments
-are separate. Headings, sections, captions and figure boundaries constrain joins.
-Unknown chapters and uncertain figure associations must remain explicit.
+The four results are literal OCR/general meanings, complete expressions, cited
+sword readings/English, and supported alternatives. Match complete spans with
+original offsets and boxes. 雲次 can support Unji; 雲 alone cannot. 徳川 can support
+Tokugawa as a family name without selecting a particular historical person.
+Keep terms, schools, smith names, people, places, eras, measurements and unknowns
+separate. Preserve quantities/units and source-asserted relations. A shared name
+or repeated dealer record is not independent identity evidence.
 
-Match complete supported library spans with literal offsets and boxes. Preserve
-printed historical forms while normalizing lookup. 雲次 can support the smith name
-Unji; 雲 alone cannot. Context selects supported meanings and preserves alternatives.
-徳川 alone supports Tokugawa as a family name, not a specific historical person.
+PrimaryReference leads technical meanings; SupportingReference and registers
+support names/relations. Cite the actual evidence. Separate Japanese/English
+edition citations; two editions of one work are not independent votes. Keep
+complete_candidate boundary evidence and withhold unsupported whole-compound glosses.
+interpret_units retains offsets, shared cited meanings and oversized-unit holds.
 
-The contextual selector now handles cited multi-character technical terms inside
-Japanese prose. Inspect each candidate's boundary evidence and complete_candidate
-when a larger compound is withheld. Do not apply a smaller term's English to an
-unmapped whole. Bilingual facts retain distinct edition/page hashes and provisional
-image review. Two editions of one work do not supply independent votes.
-The library_ocr input reads an explicit hash-bound saved export without new OCR.
-It preserves raw lines, polygons, engine and corrected/ordered fields separately.
-Complete romanized forms use word boundaries. interpret_units keeps source offsets,
-shared cited meanings, oversized-unit holds and unaccepted identity proposals.
-See docs/researcher_guide.md for its input contract.
+Inspect original pixels before selecting a disputed reading. Preserve alternatives,
+visible old forms and uncertainty. Agreement, confidence and dictionary plausibility
+are not correctness proofs. Record the actual reviewer/model, crop and inspection
+scope; never credit Sol or a human for an inspection they did not perform.
+Qwen only assists stroke/shape inspection. It must not select meanings or identities.
+BERT/Jev may propose supported roles or abstain; scores are uncalibrated.
+frontier_semantics.py compares text semantics, not vision OCR. Live evaluation is
+pending; do not describe it as a completed visual benchmark. No paid inference by default.
 
-Keep Japanese as the authoritative parsing language. entry_structure.py owns explicit
-headings and bracketed era/province fields. japanese_clauses.py owns bounded relation
-proposals with polarity and modality. interpretations.jsonl retains those units.
-English summaries follow supported native argument/predicate selection; unsupported
-wording remains visible. Do not pivot through a whole-page English translation.
-The optional frontier_semantics.py experiment compares Astra and Sol on identical
-inputs; live model evaluation is pending. See docs/native_semantics.md.
-Preserve both legacy area-overlap and native_line_projection_v1 scores. The geometry
-repair is explicit, applies to both comparison sides and never changes references.
+For comparisons, freeze independent source-only references and hold out whole works.
+Run identical line crops and report full-page detection/reading-order errors separately.
+Preserve literal-glyph and normalized scores, false positives, misses and abstentions.
+Keep legacy area-overlap and native_line_projection_v1 grouping results reproducible.
+AI references are provisional; do not claim expert English accuracy or a three-reader
+manuscript win. Public results require permitted evidence and sufficient disclosed scope.
 
-PrimaryReference leads technical sword meanings. Club registers, SupportingReference and named scholarly
-sources support smiths and relationships; dealer records are attributed supplements.
-Keep technical terms, smiths/artisans, schools, sword traditions, measurements, historical people,
-clans, places/provinces, eras/dates, ordinary language and unresolved spans distinct.
-Retain measurement quantities/units and supported dimension links. Cite the actual
-source for each assertion; repeated dealer records are not independent evidence.
+Install/use and data locations are in README.md; saved-OCR contracts are in
+docs/researcher_guide.md. Use the installed Python environment. Inputs, outputs,
+models and environments stay outside the checkout. No alternate corpus database.
+Preserve source hashes, unique corrections, accepted receipts and idempotent imports.
+Private originals, credentials, source identities/paths and passages never enter a release.
+Public samples require reuse rights; external model licenses remain separate.
 
-The existing OCR owner routes explicit English to Tesseract, printed Japanese to
-NDLOCR-Lite, and inspected historical Japanese to externally pinned Koten-Lite.
-Saved extraction comes first; provider names do not choose scripts. Invalid boxes
-remain unresolved. Layout logic owns order and relations; the span
-matcher proposes supported groupings; source evidence ranks supported
-category/reading/meaning candidates. Unvalidated vision and translation adapters
-are retired; explicit source-reviewed character corrections remain separate.
-Similarity retrieval narrows candidates and cannot establish characters or identity.
-The optional bert profile uses a pinned Japanese BERT encoder and trained role head.
-It selects supported roles or abstains. Preserve competing readings and meanings.
-Do not call model scores measured correctness probabilities, AI labels expert truth,
-or lookup rules a trained model. No paid inference starts by default.
-
-Install: sh setup.sh --install-ocr; add --install-bert for the optional classifier.
-CLI: the printed executable accepts scan INPUT --semantic-profile contextual --output OUTPUT.
-Data: KANJI_DATA_DIR, default ${XDG_DATA_HOME:-$HOME/.local/share}/kanji-translator.
-Inputs, outputs, environments, models and dictionaries stay outside the checkout.
-Evaluate: python3 -B benchmarks/evaluate_semantics.py --manifest MANIFEST
---config CONFIG --output /external/evaluation; add --references REFERENCES
---score-only after independent reference freeze. Inference runs in parse/scan.
-
-One application lives in kanji_translator/. Starting owners: document_parser.py
-(routing); image_regions.py and document_layout.py (structure); readers/ocr/ndlocr_lite.py
-(literal OCR); semantic_groups.py (grouping/interpretation); region_enrichment.py (lexical cache); scan_folder.py and research_corpus.py
-(scan/import). Consolidate these owners as needed; do not create competing routes.
-
-Benchmark grouped mentions per page/category, including false positives and misses.
-benchmarks/README.md defines counting rules, source-exclusive splits, ten smoke frames and 50 declared test regions,
-three baselines, label origins and supporting relation/OCR measures. Historical
-selected-target and character-rewrite scores are not this benchmark. Keep compact
-unique negative evidence; never invent exhaustive labels or wins.
-
-Preserve source hashes, original OCR, unique human corrections and accepted receipts.
-Corpus import must be idempotent and separate human review from proposals. Accepted
-source acquisition remains terminal. Private originals, credentials and private URLs
-never enter a release. Public samples require documented reuse rights.
-
-Cardinal rule: every file needs a current runtime, installation, verification,
-reproducibility, rights or unique-evidence purpose. Human steering replaces old
-methods and backlog. Verify successor/callers, then delete superseded executable
-routes, models, configuration, tests and duplicate instructions. Do not keep a failed
-method as an optional legacy mode. Preserve necessary historical evidence compactly;
-keep published history intact and scan all reachable commits before publication.
-
-Run appropriate behavior/install/publication checks and one file-purpose inventory.
-Use the installed Python environment. Stop auditing after acceptance succeeds.
+Every file needs a runtime, installation, verification, reproducibility, rights or
+unique-evidence purpose. Human steering replaces old backlog. Verify callers and
+successors before deleting obsolete routes; retain unique historical evidence compactly.
+Edit existing owners. No new plans, checkpoint files, duplicate instructions or hooks.
+Run appropriate checks, update the existing file-purpose inventory once, and scan
+checkout, index and reachable history before publication. Stop auditing after acceptance.
