@@ -1,5 +1,6 @@
 """NDLOCR-Lite page recognition; literal text and regions remain proposals."""
 import json
+import re
 import math
 import os
 import subprocess
@@ -257,3 +258,75 @@ def decode_layout(xml):
         for child in element:visit(child,current)
     visit(root)
     return {'blocks':blocks,'lines':lines,'state':'native_detector_proposals'}
+
+
+def honkoku_layers(markup):
+    """Separate annotations from body without deleting unknown-glyph evidence."""
+    value=markup.replace('<UNK>','□').replace('<MASK>','□')
+    pattern=r'<(rt2?|KAERI|OKURI)>(.*?)</\1>'
+    annotations=[dict(kind=m.group(1),text=m.group(2)) for m in re.finditer(pattern,value,re.S)]
+    body=re.sub(pattern,'',value,flags=re.S)
+    body=re.sub(r'</?(?:ruby|WARI)>|<(?:TATE|WARI_SEP|BLOCK)>','',body)
+    return dict(body=body,annotations=annotations,malformed_annotation=bool(re.search(r'</?(?:rt2?|KAERI|OKURI)>',body)))
+
+
+class LineComparison:
+    """Isolated local comparison; upstream preprocessing, immutable model pins, no L1 selection."""
+    def __init__(self, honkoku, koten, ndl):
+        import hashlib, importlib.util
+        import numpy as np
+        import onnxruntime as ort
+        import yaml
+        self.np=np; self.paths={}; self.sessions={}; self.models={}
+        options=ort.SessionOptions(); options.intra_op_num_threads=1; options.inter_op_num_threads=1
+        options.add_session_config_entry('session.intra_op.allow_spinning','0')
+        def session(path):
+            self.paths[str(path)]=hashlib.sha256(path.read_bytes()).hexdigest()
+            return ort.InferenceSession(str(path),options,providers=['CPUExecutionProvider'])
+        for name in ('encoder','decoder_prefill','decoder_step'):
+            self.sessions[name]=session(honkoku/'onnx'/f'{name}.int8.onnx')
+        tk=json.loads((honkoku/'tokenizer.json').read_text()); vocab=dict(tk['model']['vocab'])
+        vocab.update({t['content']:t['id'] for t in tk.get('added_tokens',[])})
+        self.inv={v:k for k,v in vocab.items()}
+        self.paths[str(honkoku/'tokenizer.json')]=hashlib.sha256((honkoku/'tokenizer.json').read_bytes()).hexdigest()
+        for name,folder,pattern in [('koten',koten,'parseq-ndl-32x384-tiny-10.onnx'),
+                                    ('ndl_print_100',ndl,'*100-tiny*.onnx')]:
+            source=folder/'parseq.py'; spec=importlib.util.spec_from_file_location('comparison_'+name,source)
+            module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+            models=list((folder/'model').glob(pattern))
+            if len(models)!=1:raise ValueError('Expected exactly one recognition model: '+name)
+            model=module.PARSEQ.__new__(module.PARSEQ); model.session=session(models[0])
+            charset=folder/'config/NDLmoji.yaml'
+            model.charlist=list(yaml.safe_load(charset.read_text())['model']['charset_train'])
+            model.input_names=[i.name for i in model.session.get_inputs()]
+            model.output_names=[i.name for i in model.session.get_outputs()]
+            model.input_height,model.input_width=model.session.get_inputs()[0].shape[2:]
+            self.models[name]=model
+            for p in (source,charset):self.paths[str(p)]=hashlib.sha256(p.read_bytes()).hexdigest()
+        self.producer=dict(name='identical-native-crop-reader-comparison',version='1',files=self.paths,
+                           onnxruntime=ort.__version__,device='CPU',threads=1,decode='greedy; Honkoku maximum 192 tokens',
+                           implementation_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+
+    def read(self, image):
+        from PIL import Image
+        np=self.np; array=np.array(image)
+        texts={name:model.read(array) for name,model in self.models.items()}
+        # Exact upstream Honkoku ONNX image preparation and cached greedy decoding.
+        rotated=image.rotate(-90,expand=True) if image.height>image.width else image
+        width=max(1,min(2048,round(rotated.width*256/rotated.height)))
+        resized=rotated.resize((width,256),Image.Resampling.BICUBIC)
+        padded=Image.new('RGB',(2048,256),'white');padded.paste(resized,(0,0))
+        tensor=((np.asarray(padded,np.float32)/255-np.array([.485,.456,.406],np.float32))/np.array([.229,.224,.225],np.float32)).transpose(2,0,1)[None]
+        enc,pre,step=(self.sessions[k] for k in ('encoder','decoder_prefill','decoder_step'))
+        h=enc.run(None,{enc.get_inputs()[0].name:tensor})[0]
+        out=pre.run(None,{'input_ids':np.array([[2]],np.int64),'encoder_hidden_states':h})
+        ids=[int(out[0][0,-1].argmax())]
+        past_names=[i.name for i in step.get_inputs() if i.name.startswith('past_')]
+        for _ in range(191):
+            if ids[-1]==3:break
+            out=step.run(None,{'input_ids':np.array([[ids[-1]]],np.int64),'encoder_hidden_states':h,
+                              **dict(zip(past_names,out[1:]))})
+            ids.append(int(out[0][0,-1].argmax()))
+        markup=''.join(self.inv.get(i,'') for i in ids if i not in (0,2,3))
+        texts['honkoku']=re.sub(r'<[^>]+>','',markup)
+        return dict(texts=texts,honkoku_markup=markup,honkoku_ended=ids[-1]==3)

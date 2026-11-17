@@ -43,7 +43,7 @@ geometry stays unresolved. Never silently replace original glyphs with modern fo
 | English print | Tesseract LSTM | Implemented for explicitly English regions. |
 | Japanese book or magazine print | [NDLOCR-Lite](https://github.com/ndl-lab/ndlocr-lite) | Implemented default; verify old forms and small annotations. |
 | Historical manuscript or woodblock | [NDL Koten OCR-Lite](https://github.com/ndl-lab/ndlkotenocr-lite) | Implemented explicit historical-Japanese adapter; upstream targets Japanese works through the Edo period and Chinese classics through the Qing period. |
-| Difficult historical vertical line | [Honkoku OCR v19](https://huggingface.co/yuta1984/honkoku-ocr) | External comparison on a single line; no bundled Honkoku adapter or automatic dispatch. |
+| Difficult historical vertical line | [Honkoku OCR v19](https://huggingface.co/yuta1984/honkoku-ocr) | Implemented identical-crop comparison with Koten and printed NDL; external model files, explicit invocation, no automatic selection. |
 | Layout or disputed strokes | Source inspection, optionally AI vision | Record the actual reviewer/model and what it saw. Sol is not an automatic acceptance authority. |
 | Meaning and relationships | Cited sword library and native parsers | Preserve literal spans, negation, alternatives and source claims. |
 
@@ -52,7 +52,11 @@ cursive writing. It can emit reading-gloss and annotation tags. Its 7,710-token
 vocabulary bounds what it can represent; vocabulary inclusion does not establish
 character accuracy. It does not detect page lines or translate. Ledger layouts and
 split-line notes are known weaknesses. See the [model card](https://huggingface.co/yuta1984/honkoku-ocr#kuzushiji-ocr--line-level-recognition-with-annotation-structure).
-Use a reviewed, pinned external runtime; it is a comparison reader, not a default.
+`readers.ocr.comparison_engine` runs all three local readers on the same RGB line
+crop. Supply `honkoku_package`, `koten_package` and `ndl_package` directories; model,
+tokenizer, code and runtime hashes travel with the results. It preserves each raw
+output, Honkoku annotation markup and decoder-limit status. `honkoku_layers`
+separates body text from reading annotations and preserves unknown characters.
 
 ## When readers disagree
 
@@ -88,6 +92,21 @@ It returns the original page/region and the basis of each link. Missing evidence
 identity conflicts remain visible. A missing hit alone does not prove missing OCR:
 inspect the pixels, repair that region, refresh dependent L2, and repeat the query.
 Full-page English exports must remain aligned to those same reviewed regions.
+
+`source_evidence.lookup` combines the portable facts with optional character
+libraries and a source retrieval adapter. `parse` accepts up to eight explicit
+`reference_queries`; it does not search the entire corpus for every character.
+The private deployment supplies PostgreSQL search/fetch through this same entry
+point. Returned passages retain citations, continuation and identity conflicts;
+`limit` bounds hits and `max_bytes` bounds fetched passage data, not all metadata.
+
+KANJIDIC2, Unihan, MJ and IVD support character readings, forms and documented
+variants. PrimaryReference and SupportingReference supply cited sword meanings. Club smith records
+support name, school, era and generation claims; dealer and NihontoDB records
+describe objects and their attributed makers. Certificates remain attached evidence.
+Tanobe quotations and sayagaki retain their actual source and attribution status.
+A shared name or a quotation copied by several dealers is not independent proof.
+Dictionary presence, related passages and majority OCR agreement cannot overwrite L1.
 
 The default contextual selector uses source evidence and Japanese boundaries.
 Qwen only assists stroke comparison. BERT and Jev are optional role/meaning selectors;

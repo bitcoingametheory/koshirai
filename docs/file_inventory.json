@@ -20,7 +20,7 @@
       "role": "installation and entry points",
       "reason_retained": "Researcher starting point and accurate capability statement.",
       "runtime_required": false,
-      "sha256": "bdd145706d366d7f209132a9697ac02284abfd4980207810f763ef6e4e199f28"
+      "sha256": "3e54ed8402f49145215371599e3fc4207107c357dc19166a20ed1df10e9293c5"
     },
     {
       "path": "benchmarks/README.md",
@@ -433,7 +433,7 @@
       "role": "application",
       "reason_retained": "The sole public executable parser entry point; JSON in, deterministic JSON out.",
       "runtime_required": true,
-      "sha256": "68a8d32934f9b2c4306f88d8204edd7ddc8c55be1a453401b447eaff5e3b7370"
+      "sha256": "225acb564f7195545d10a1c4098a7c4357c8fb3c36665615a2d7488bb431abc5"
     },
     {
       "path": "kanji_translator/context_constraints.py",
@@ -454,7 +454,7 @@
       "role": "application",
       "reason_retained": "One typed lexical adapter for native text and recognized literal spans.",
       "runtime_required": true,
-      "sha256": "7ecebac6a83bf243493bc3f34b28a6d1bd62416f85cd68174d8a13b434512516"
+      "sha256": "5b48f965f5141c7109309015814ace3ba67653c3e28aec294e5aee0f4c8cae87"
     },
     {
       "path": "kanji_translator/dictionary_sources.py",
@@ -475,7 +475,7 @@
       "role": "application",
       "reason_retained": "Native -> exact reviewed transcript -> failed-region OCR -> proposal queue.",
       "runtime_required": true,
-      "sha256": "b38ff880036323c326f4681a46d85c1f13d6830d808317402634c3e1d2b65e20"
+      "sha256": "40080fbceb0b2190c298e17f684222723a93477df2e764eed1000f3a168b30c7"
     },
     {
       "path": "kanji_translator/entry_structure.py",
@@ -573,14 +573,14 @@
       "role": "application",
       "reason_retained": "Region-selected literal OCR; engine output is a proposal, never a review.",
       "runtime_required": true,
-      "sha256": "9c436b569b530b76e5a8ef4da066cf53c9be47c0c529f8430937cc8d34c91d22"
+      "sha256": "0fb6976e3372701ebfefb72bcf9f1afade23e255492ef6cc2385e198820de573"
     },
     {
       "path": "kanji_translator/readers/ocr/ndlocr_lite.py",
       "role": "application",
       "reason_retained": "NDLOCR-Lite page recognition; literal text and regions remain proposals.",
       "runtime_required": true,
-      "sha256": "7dff78ba51feff9acb8d4b20c71b4a4d3706979556f9cab7a599c60ae594a9f1"
+      "sha256": "03ee0a60038765fe3b912043761255dd8a9193a1d50ebd70f42737bd410085e1"
     },
     {
       "path": "kanji_translator/readers/ocr/retained.py",
@@ -608,7 +608,7 @@
       "role": "application",
       "reason_retained": "Finite public request validation and deterministic serialization.",
       "runtime_required": true,
-      "sha256": "f928e0e5661dea66fe54f2007012230f1f0d520d2391adbfbb2829579786ee59"
+      "sha256": "0e928157abd575b1b080f26ae04b16aae3666cddd2ec48d32398f863efe8bfbf"
     },
     {
       "path": "kanji_translator/research_corpus.py",
@@ -713,7 +713,7 @@
       "role": "application",
       "reason_retained": "Read-only reviewed evidence reuse. Explicit human reviews remain separate from model proposals.",
       "runtime_required": true,
-      "sha256": "1b497aa455c27c71f51e68f1be77181187a107606d7e008c11911fd4dc2ea5f5"
+      "sha256": "6f1acc2099ad651e1a4ba9c54afb93740acf1e1998140321c62a3ad286b9080b"
     },
     {
       "path": "kanji_translator/sword_library.py",
@@ -734,7 +734,7 @@
       "role": "installation and entry points",
       "reason_retained": "Repository-only instructions for researcher agents.",
       "runtime_required": false,
-      "sha256": "014519d019863f897bd2625e5d478cbfd5530610691cef632d26ba1ebf1d9e5b"
+      "sha256": "0b17401a485b432f7e6bb9526e1c106c88e97dfd1ca133f8403dfd225a1e983b"
     },
     {
       "path": "pyproject.toml",
@@ -776,14 +776,14 @@
       "role": "verification",
       "reason_retained": "Verifies dictionary sources behavior and its current source/evidence contract.",
       "runtime_required": false,
-      "sha256": "6a2d905b134efba7aecd5d0391fb2eba802c2944987a32aecf901b6a559196d5"
+      "sha256": "631ab9b9b1a71b3bf271dcc382eba5536af24e266a01a63dd2c3ac6500dca5bc"
     },
     {
       "path": "tests/test_document_parser.py",
       "role": "verification",
       "reason_retained": "Verifies document parser behavior and its current source/evidence contract.",
       "runtime_required": false,
-      "sha256": "a2d6a730969c4a8820f8e7171025eef9f239be2568a7795f9db0a6c3143bed89"
+      "sha256": "eec650c15c058e67cb12de1fc5af6ea4c4693efa6023f726da65d8018402e5d3"
     },
     {
       "path": "tests/test_frontier_semantics.py",

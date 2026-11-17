@@ -34,6 +34,12 @@ def test_restrictions_variants_names_and_kana(public_db):
         assert names[0]['senses'][0]['name_types']==['place']
         assert reader.domain('学校')['assertions']==[]
         assert reader.lookup('龘龘')['candidates']==[]
+        evidence=reader.character_evidence('学學龘')
+        assert evidence['characters']['学']['kanjidic2']['tag']=='character'
+        assert evidence['characters']['龘']['kanjidic2'] is None
+        assert any({e['literal'],e['target']}=={'学','學'} for e in evidence['variants'])
+        assert {r['source'] for r in evidence['releases']}=={'jmdict','jmnedict','kanjidic2'}
+        assert reader.character_evidence([])['characters']=={}
     finally:reader.close()
     result=read('學校',{'path':str(path),'profile':'unavailable'})
     assert result['literal_text']=='學校'

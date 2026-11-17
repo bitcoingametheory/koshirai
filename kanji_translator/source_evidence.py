@@ -1,8 +1,31 @@
 """Read-only reviewed evidence reuse. Explicit human reviews remain separate from model proposals."""
 import json
 from pathlib import Path
-from .request_contracts import digest,require_hash,canonical
+from .request_contracts import digest,require_hash,canonical,reference_request
 PROVENANCE_KEYS=('source_sha256','crop_sha256','locator','style','geometry','orientation')
+
+def lookup(request, *, retrieve=None):
+    """One bounded reference query; related passages never rewrite a source reading."""
+    from .sword_library import lookup as facts
+    request=reference_request(request);text=request['text']
+    result=facts(text)
+    from .dictionary_lookup import LexicalReader,identity
+    library=identity(request.get('lexicon_path')) if request.get('lexicon_path') else identity()
+    if library.get('state')!='unavailable':
+        reader=LexicalReader(request['lexicon_path']) if request.get('lexicon_path') else LexicalReader()
+        try:
+            evidence=reader.character_evidence(c for c in text if ord(c)>127 and c.isalpha())
+            result['character_support']={
+                'characters':{c:{'codepoint':v['codepoint'],'present_in':[k for k in ('kanjidic2','unihan','mj','ivd') if v[k]]} for c,v in evidence['characters'].items()},
+                'variants':evidence['variants'],'releases':[{k:r[k] for k in ('source','sha256')} for r in evidence['releases']],
+                'scope':'Compact exact-codepoint evidence; full character records are available through LexicalReader.character_evidence.'}
+        finally:reader.close()
+    result['reference_context']=retrieve(request) if retrieve else {
+        'state':'no_external_provider','passages':[],'scope':'Portable derived facts only; connect a source-bound retrieval adapter for original passages.'}
+    result['reference_policy']='Character dictionaries support forms; references support cited meanings; smith and object records remain distinct source claims.'
+    result['identity_accepted']=False
+    return result
+
 def retained_json(spec):
     raw=Path(spec['path']).read_bytes()
     if digest(raw)!=require_hash(spec['sha256']):raise ValueError('Retained payload hash mismatch')

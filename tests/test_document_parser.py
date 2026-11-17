@@ -8,6 +8,17 @@ from kanji_translator.request_contracts import canonical,digest
 from kanji_translator.reading_candidates import readings,romaji
 
 class Pipeline(unittest.TestCase):
+ def test_reference_context_cannot_rewrite_literal_or_accept_identity(self):
+  seen=[]
+  def retrieve(request):
+   seen.append(request);return {'passages':[{'literal':'国光','claim':'synthetic different source'}]}
+  request={'text':'國□','reference_queries':['國光','國光'],'reference_config':{'text':'wrong query','lexicon_path':'/nonexistent/fixture.sqlite3'}}
+  result=parse(request,reference_provider=retrieve)
+  self.assertEqual(result['regions'][0]['raw_text'],'國□')
+  self.assertEqual(len(seen),1);self.assertEqual(seen[0]['text'],'國光')
+  self.assertFalse(result['reference_evidence'][0]['identity_accepted'])
+  with patch('kanji_translator.document_parser._native',side_effect=AssertionError('must validate before extraction')):
+   with self.assertRaises(ValueError):parse({**request,'reference_config':{'max_bytes':0}},reference_provider=retrieve)
  def test_literal_ivs_and_retired_option_migration(self):
   text='English: 國\U000e0100光 123 original prose.'
   row=parse({'text':text})['enrichment']['regions'][0]

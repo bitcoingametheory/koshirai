@@ -2,7 +2,7 @@
 import argparse,json,sys
 from . import parse,candidate_lookup as candidates,read_retained
 from .request_contracts import canonical
-from .source_evidence import export_reviewed
+from .source_evidence import export_reviewed,lookup
 from .reviewed_readings import record_review
 
 def main(argv=None,*,operations=None):
@@ -17,8 +17,8 @@ def main(argv=None,*,operations=None):
     try:
         request=json.load(sys.stdin if args.request=='-' else open(args.request,encoding='utf-8'))
         handlers={'parse':parse,'candidates':candidates,'read-retained':read_retained,'export-reviewed':export_reviewed,'record-review':record_review}
-        from . import research_corpus as corpus,sword_library as sword
-        handlers.update({'corpus-ingest':corpus.ingest,'corpus-inspect':corpus.inspect,'corpus-review':corpus.review,'lookup':lambda r:sword.lookup(r['text'])})
+        from . import research_corpus as corpus
+        handlers.update({'corpus-ingest':corpus.ingest,'corpus-inspect':corpus.inspect,'corpus-review':corpus.review,'lookup':lookup})
         handlers.update(operations or {})
         result=handlers[args.operation](request)
         sys.stdout.buffer.write(canonical(result)+b'\n');return 0

@@ -6,8 +6,9 @@ Use those owners; do not duplicate their workflow or create another parser/queue
 
 One application lives in kanji_translator/. document_parser.py routes inputs;
 image_regions.py and document_layout.py own structure; readers/ocr owns explicit
-English, printed Japanese and historical Japanese adapters. Honkoku is an external
-single-line comparison, not an implemented backend. Source inspection chooses
+English, printed Japanese and historical Japanese adapters. comparison_engine
+compares Honkoku/Koten/printed NDL on identical lines using external pinned models.
+It preserves raw markup and candidates without selecting L1. Source inspection chooses
 regions/scripts; do not claim automatic mixed-page dispatch or full-book translation.
 Saved source-bound OCR comes first. Preserve engine/model/configuration hashes,
 native coordinates, reading order and named original/corrected/normalized layers.
@@ -26,8 +27,11 @@ Keep terms, schools, smith names, people, places, eras, measurements and unknown
 separate. Preserve quantities/units and source-asserted relations. A shared name
 or repeated dealer record is not independent identity evidence.
 
-PrimaryReference leads technical meanings; SupportingReference and registers
-support names/relations. Cite the actual evidence. Separate Japanese/English
+source_evidence.lookup owns reference retrieval; dictionary_lookup owns character
+evidence. A deployment injects source-bound retrieval, not another parser. Explicit
+reference_queries attach context without changing literals or accepting identities.
+PrimaryReference leads technical meanings; SupportingReference,
+Club and object records retain separate claims. Cite the actual evidence. Separate Japanese/English
 edition citations; two editions of one work are not independent votes. Keep
 complete_candidate boundary evidence and withhold unsupported whole-compound glosses.
 interpret_units retains offsets, shared cited meanings and oversized-unit holds.

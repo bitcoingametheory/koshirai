@@ -103,7 +103,7 @@ def _usable(text):
     # escalate only their region; rare and out-of-lexicon CJK remain literal.
     return bool(text.strip()) and not re.search(r'\[unreadable\]|[\ufffd□〓]',text)
 
-def parse(request, *, ocr_adapter=None, vision_adapter=None):
+def parse(request, *, ocr_adapter=None, vision_adapter=None, reference_provider=None):
     """Preserve native characters, then interpret source-supported complete spans."""
     request=dict(request)
     validate_request(request)
@@ -228,9 +228,14 @@ def parse(request, *, ocr_adapter=None, vision_adapter=None):
                            for b in block_semantics)
     from .document_layout import unique_mentions
     mentions=unique_mentions(mentions)
-    return {'schema':SCHEMA,'raw_ndl_transcript':payload['raw_transcript'] if request.get('kind')=='library_ocr' else '\n'.join(r['raw_text'] for r in out),
+    result={'schema':SCHEMA,'raw_ndl_transcript':payload['raw_transcript'] if request.get('kind')=='library_ocr' else '\n'.join(r['raw_text'] for r in out),
             'enhanced_transcript':'\n'.join(r['literal_text'] for r in enriched),
             'document_groups':groups,'regions':out,'enrichment':{'schema':'kanji-enrichment-v2','regions':enriched,'automatic_promotion':False},
             'semantic_mentions':mentions,'semantic_blocks':block_semantics,'japanese_interpretations':interpretations,'native_payload':payload,'metrics':metrics,
             'enhancement':{'profile':'retired','changes':[]},'vision_proposals':[],
             'unresolved_regions':len(unresolved),'vision_deferred':0,'probability_correct':None}
+    queries=request.get('reference_queries',[])
+    if queries:
+        from .source_evidence import lookup
+        result['reference_evidence']=[lookup({**request.get('reference_config',{}),'text':q},retrieve=reference_provider) for q in dict.fromkeys(queries)]
+    return result

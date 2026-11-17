@@ -2,7 +2,13 @@
 import csv,io,os,shutil,subprocess,tempfile
 from pathlib import Path
 from ...request_contracts import digest
-from .ndlocr_lite import NDLOCR
+from .ndlocr_lite import NDLOCR,LineComparison
+
+def comparison_engine(config):
+    """Explicit comparison only; no candidate is promoted to selected L1."""
+    required=('honkoku_package','koten_package','ndl_package')
+    if any(not config.get(key) for key in required):raise ValueError('Comparison requires all three external pinned model directories')
+    return LineComparison(*(Path(config[key]).expanduser().resolve() for key in required))
 
 def backend(config):
     language=config.get('language','auto')

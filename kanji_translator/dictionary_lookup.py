@@ -69,6 +69,34 @@ class LexicalReader:
  def __init__(self,path=MASTER):
   self.db=sqlite3.connect(Path(path).resolve().as_uri()+'?mode=ro',uri=True)
  def close(self):self.db.close()
+ def character_forms(self,codepoints):
+  marks=','.join('?' for _ in codepoints)
+  return self.db.execute("select mj_id,payload_json from mj_characters where json_extract(payload_json,'$.\"実装したUCS\"') in ("+marks+")",tuple(codepoints))
+ def character_evidence(self,characters):
+  """Exact character records and variant edges; dictionary presence is not OCR accuracy."""
+  chars=sorted(set(characters))
+  if not chars:return {'characters':{},'variants':[],'releases':[],'available_tables':[]}
+  if any(not isinstance(c,str) or len(c)!=1 for c in chars):raise ValueError('Character evidence requires individual Unicode codepoints')
+  marks=','.join('?' for _ in chars);cps=[f'U+{ord(c):04X}' for c in chars]
+  tables={r[0] for r in self.db.execute("select name from sqlite_master where type='table'")}
+  records={c:dict(codepoint=cp,kanjidic2=None,unihan=[],mj=[],ivd=[]) for c,cp in zip(chars,cps)}
+  if 'dictionary_characters' in tables:
+   for c,payload in self.db.execute('select literal,payload_json from dictionary_characters where literal in ('+marks+')',tuple(chars)):records[c]['kanjidic2']=json.loads(payload)
+  if 'unicode_properties' in tables:
+   for source,cp,prop,value in self.db.execute('select source,codepoint,property,value from unicode_properties where codepoint in ('+marks+')',tuple(cps)):
+    records[chr(int(cp[2:],16))]['unihan'].append(dict(source=source,property=prop,value=value))
+  if 'mj_characters' in tables:
+   for mj,payload in self.character_forms(cps):
+    data=json.loads(payload);records[chr(int(data['実装したUCS'][2:],16))]['mj'].append(dict(id=mj,payload=data))
+  if 'glyph_sequences' in tables:
+   for seq,collection,glyph,source in self.db.execute('select sequence,collection,glyph,source from glyph_sequences where substr(sequence,1,1) in ('+marks+')',tuple(chars)):
+    records[seq[0]]['ivd'].append(dict(sequence=seq,collection=collection,glyph=glyph,source=source))
+  variants=[]
+  if 'japanese_variant_relations' in tables:
+   for a,b,relation,source,evidence in self.db.execute('select literal,target,relation,source,evidence from japanese_variant_relations where literal in ('+marks+') or target in ('+marks+')',tuple(chars+chars)):
+    variants.append(dict(literal=a,target=b,relation=relation,source=source,evidence=evidence))
+  releases=[dict(source=s,sha256=h,manifest=json.loads(m)) for s,h,m in self.db.execute('select source,sha256,manifest_json from dictionary_releases order by source')] if 'dictionary_releases' in tables else []
+  return dict(characters=records,variants=variants,releases=releases,available_tables=sorted(tables))
  def exact(self,text,method='exact',path=None,limit=128):
   db=self.db
   ids=db.execute('select source,entry_id from dictionary_spellings where literal=? union select source,entry_id from dictionary_readings where kana=?',(text,text)).fetchall()
@@ -195,15 +223,16 @@ def candidates(request):
  from .source_evidence import witness_chain
  from .context_constraints import compare
  text=request['pattern'];path=Path(request.get('lexicon_path',MASTER))
- library={'state':'available' if path.is_file() else 'unavailable','path':str(path)}
  unknown=bool(re.search(r'[?*□〓�\[\]]',text))
  rows=[];seen=set();excluded=request.get('exclude_chain_ids',[]);book=request.get('source_work_id')
  explicit='witnesses' in request or request.get('use_master_lexicon') is False
- if explicit:library={'state':'explicit_witnesses'}
+ ident={} if explicit else identity(path)
+ library={'state':'explicit_witnesses'} if explicit else {'state':'unavailable' if ident.get('state')=='unavailable' else 'available',
+                                                        'path':str(path),'authority':ident.get('authority','local_dictionary')}
  dictionary={'candidates':[]};domain={}
  if not unknown:
   witnesses=request.get('witnesses',[]) if explicit else []
-  if not explicit and path.is_file():
+  if not explicit and library['state']=='available':
    reader=LexicalReader(path)
    try:
     dictionary=reader.lookup(text);domain=reader.domain(text)
